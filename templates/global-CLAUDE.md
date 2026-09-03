@@ -1,11 +1,18 @@
-# chibi — 運用ルール
+# グローバル運用ルール（Claude Fable 5.1）
 
-このリポジトリで Claude Code を動かすときの共通ルール。
-出典は Anthropic 公式の「Prompting Claude Fable 5.1」ガイド（Claude Fable 5.1 の挙動差分に対する推奨指示文）。
+`~/.claude/CLAUDE.md` に置くための汎用版。全プロジェクトのセッションに効く。
+
+出典は Anthropic 公式の「Prompting Claude Fable 5.1」ガイド。
 英文ブロックは公式の原文で、**文面を変えずに使うこと**が推奨されている。書き換えると効果が落ちる。
 
-自前で API を叩くハーネスを書くとき（`tool_choice`・履歴の扱い・per-message effort など）は
-`.claude/reference/fable-5-1-prompting.md` を参照。
+置き方：
+
+```
+mkdir -p ~/.claude && cp templates/global-CLAUDE.md ~/.claude/CLAUDE.md
+```
+
+すでに `~/.claude/CLAUDE.md` がある場合は上書きせず、中身を見比べて追記すること。
+特に「箇条書きを使うな」「太字を最小限に」系の**禁止**ルールが既にあれば、それは消して §6 のブロックに置き換える。
 
 ---
 
