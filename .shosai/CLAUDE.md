@@ -1,4 +1,4 @@
-# Company（仮想組織）
+# 書斎（Shosai）
 
 作成日: 2026-09-07
 オーナー: 龍 宏美（Hiromi Ryu） / hiromi@chibi-ism.com
@@ -42,7 +42,7 @@
 ## 組織構成
 
 ```
-.company/
+.shosai/
 ├── CLAUDE.md          ← このファイル
 ├── secretary/         ← 秘書室（常設・窓口）
 │   ├── inbox/         ← ネタの瞬間キャプチャ
