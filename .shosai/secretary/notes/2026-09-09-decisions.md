@@ -20,3 +20,11 @@
 **ADHDライフハック帳 / adhd_hacknote** に決定。
 「帳」で一般名詞から人格に寄せ、ID は note と掛ける。
 名義はペンネーム、ADHDと名乗って書く。書斎の話者設定もそれに合わせた。
+
+## 完全匿名で運営する
+
+業種・店名・地名など、本人や本業を特定できる情報は一切出さない。
+「12TAPのビール在庫」等、識別可能な具体例は全て一般化した表現に置き換えた
+（`content/CLAUDE.md` 安全ライン、`content/ideas/backlog.md`、`content/series/plan.md`、
+`marketing/note-account.md` 長文プロフィール、`content/itoori-preset.md` 話者設定）。
+「仕事の場面」は書くが、どの業種かは分からないようにぼかす。
