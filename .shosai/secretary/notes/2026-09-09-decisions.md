@@ -28,3 +28,9 @@
 （`content/CLAUDE.md` 安全ライン、`content/ideas/backlog.md`、`content/series/plan.md`、
 `marketing/note-account.md` 長文プロフィール、`content/itoori-preset.md` 話者設定）。
 「仕事の場面」は書くが、どの業種かは分からないようにぼかす。
+
+## 入口記事1本目を執筆
+
+「診断はない。それでも毎日つまずいている人へ」を書いた（`content/drafts/shindan-wa-nai.md`）。
+挿絵も自作（`content/assets/2026-09-shindan-wa-nai-eyecatch.png`、抽象・匿名性重視、
+顔や特定できる特徴を描かない構成）。無料・S4「入口」。まだ note には公開していない。
