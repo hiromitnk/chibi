@@ -62,6 +62,38 @@
        background:linear-gradient(180deg,var(--brass-2),var(--brass) 55%,#a8843f);box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 6px 14px -8px rgba(0,0,0,.8)}
   .btn:focus-visible{outline:3px solid var(--verdigris-2);outline-offset:2px}
 
+
+  /* ---------- クリップボード ---------- */
+  .board{position:relative;padding:74px 34px 34px 56px;border-radius:10px;
+        background:
+          linear-gradient(180deg,rgba(255,255,255,.10),rgba(0,0,0,.08)),
+          repeating-linear-gradient(90deg, rgba(255,255,255,.045) 0 1px, transparent 1px 3px),
+          repeating-linear-gradient(90deg, rgba(0,0,0,.05) 0 2px, transparent 2px 7px),
+          linear-gradient(90deg,#b8b6a8,#cfcdbf 30%,#c4c2b3 55%,#d4d2c4 80%,#b5b3a4);
+        box-shadow:0 1px 0 rgba(255,255,255,.55) inset, 0 -1px 0 rgba(0,0,0,.25) inset,
+                   0 36px 60px -28px rgba(0,0,0,.95), 0 0 0 1px rgba(0,0,0,.35)}
+  .rivet{position:absolute;width:14px;height:14px;border-radius:50%;
+        background:radial-gradient(circle at 40% 35%,#f2f1ea,#9a9889 60%,#6f6d60);
+        box-shadow:0 1px 2px rgba(0,0,0,.5), 0 0 0 1px rgba(0,0,0,.25)}
+  .rivet::after{content:"";position:absolute;left:5px;top:5px;width:4px;height:4px;border-radius:50%;background:#55534a}
+  .rivet.tl{left:14px;top:14px}.rivet.tr{right:14px;top:14px}.rivet.bl{left:14px;bottom:14px}.rivet.br{right:14px;bottom:14px}
+  .clip{position:absolute;left:50%;top:-14px;transform:translateX(-50%);width:min(320px,62%);height:64px;border-radius:6px 6px 8px 8px;
+        background:linear-gradient(180deg,#ecd58f,#c9a55a 45%,#b08a3f 70%,#d6b76a);
+        box-shadow:0 8px 14px -6px rgba(0,0,0,.7), 0 1px 0 rgba(255,255,255,.55) inset, 0 -2px 0 rgba(0,0,0,.25) inset, 0 0 0 1px rgba(90,64,20,.5);
+        display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px}
+  .clip::before{content:"";position:absolute;left:50%;top:-10px;width:56px;height:14px;margin-left:-28px;border:3px solid #8f7130;border-bottom:0;border-radius:8px 8px 0 0;background:transparent}
+  .clip::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:6px;background:linear-gradient(180deg,#8a6c2c,#5a4416);border-radius:0 0 4px 4px;opacity:.9}
+  .clip b{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.34em;color:#5a4416;text-shadow:0 1px 0 rgba(255,255,255,.45)}
+  .clip small{font-family:var(--mono);font-size:8.5px;letter-spacing:.22em;color:#6e5522;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+  .ruler{position:absolute;left:14px;top:96px;bottom:34px;width:22px;
+        background:repeating-linear-gradient(180deg, rgba(60,58,50,.55) 0 1px, transparent 1px 8px),
+                   repeating-linear-gradient(180deg, transparent 0 39px, rgba(60,58,50,.6) 39px 40px);
+        background-size:8px 100%, 14px 100%;background-repeat:repeat-y;background-position:left top}
+  .ruler i{position:absolute;left:0;width:22px;text-align:right;font-family:var(--mono);font-style:normal;font-size:8px;color:rgba(60,58,50,.7);line-height:1;transform:translateY(-4px)}
+  .board .slip{transform:rotate(-.4deg);box-shadow:0 1px 0 #fff inset, 0 18px 30px -18px rgba(0,0,0,.8), 0 0 0 1px rgba(0,0,0,.15)}
+  .board .slip::before{display:none}
+  @media (max-width:560px){.board{padding:66px 14px 22px 34px}.ruler{left:8px;width:18px}.clip{height:54px}}
+
   /* ---------- 仕立て台 ---------- */
   .strip{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
   .strip span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:4px 9px;border-radius:2px;border:1px solid rgba(233,223,198,.18);color:var(--on-dark-faint);background:rgba(0,0,0,.25)}
@@ -129,8 +161,14 @@
   <!-- 一 注文票 -->
   <section>
     <p class="eyebrow">一 ｜ 注文票</p>
+    <div class="board">
+      <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
+      <div class="clip"><b>BUNPITSUYA</b><small>ORDER SLIP ／ No. 0042</small></div>
+      <div class="ruler" aria-hidden="true">
+        <i style="top:40px">1</i><i style="top:80px">2</i><i style="top:120px">3</i><i style="top:160px">4</i><i style="top:200px">5</i><i style="top:240px">6</i><i style="top:280px">7</i><i style="top:320px">8</i><i style="top:360px">9</i><i style="top:400px">10</i><i style="top:440px">11</i><i style="top:480px">12</i>
+      </div>
     <div class="slip">
-      <div class="slip-title"><h2>ご注文</h2><span>No. 0042 ／ 2026-09-11</span></div>
+      <div class="slip-title"><h2>ご注文</h2><span>2026-09-11</span></div>
 
       <div class="field">
         <label>品名</label>
@@ -206,6 +244,7 @@
         <div class="cost">この注文で使う券 ── <strong>1枚</strong>（残り 7枚 → 6枚）</div>
         <button class="btn" id="btn-order">仕立てる</button>
       </div>
+    </div>
     </div>
   </section>
 
