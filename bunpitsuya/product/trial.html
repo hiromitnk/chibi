@@ -1,0 +1,436 @@
+<title>文筆屋さん 試作</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&family=Zen+Kurenaido&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#ecd0a4; --patina-a:#3a2419; --patina-b:#5a2f27; --patina-c:#6b3b4a; --verdigris:#2f7a63; --verdigris-2:#57a184;
+    --brass:#c9a55a; --brass-2:#e2c47e; --ivory:#f3ead6; --ivory-2:#e9dfc6; --slip:#f6efdf;
+    --ink:#35291f; --ink-soft:#6a5a4a; --ink-faint:#9a8a75;
+    --on-dark:#35291f; --on-dark-soft:#6a5a4a; --on-dark-faint:#9a8a75;
+    --rust:#a1543f; --rust-soft:#c07a63;
+    --line:#cdbfa0; --rule:#e1e6e9; --lh:34px;
+    --st-y:#f5e6a3; --st-p:#f2c9c1; --st-g:#d3e2c4; --st-b:#cfe0e8; --st-w:#f3efe4;
+    --mincho:"Zen Old Mincho","Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+    --hand:"Zen Kurenaido","Klee One","Hiragino Maru Gothic ProN",cursive;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{color:var(--on-dark);font-family:var(--mincho);padding-inline:20px;padding-block:32px 96px;line-height:1.8;
+    background-color:#ecd0a4;
+    background-image:
+      radial-gradient(70% 50% at 50% 0%, rgba(255,245,225,.35), transparent 70%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><defs><filter id='w' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='0.012 0.0012' numOctaves='4' seed='7' stitchTiles='stitch' result='n'/><feColorMatrix in='n' type='matrix' values='0 0 0 0 0.86  0 0 0 0 0.68  0 0 0 0 0.45  0 0 0 0.55 0' result='c'/><feTurbulence type='fractalNoise' baseFrequency='0.06 0.002' numOctaves='2' seed='3' stitchTiles='stitch' result='f'/><feColorMatrix in='f' type='matrix' values='0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.78  0 0 0 0.35 0' result='fc'/><feBlend in='c' in2='fc' mode='multiply'/></filter></defs><rect width='100%25' height='100%25' fill='%23f0d6ac'/><rect width='100%25' height='100%25' filter='url(%23w)'/></svg>");
+    background-size:auto, 900px 900px;
+    background-attachment:fixed}
+  .wrap{max-width:980px;margin-inline:auto}
+
+  header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+  .brand{font-family:var(--mincho);font-weight:500;font-size:22px;letter-spacing:.06em;color:#4a341f}
+  .brand small{font-family:var(--mono);font-weight:400;font-size:11px;color:var(--on-dark-faint);letter-spacing:.12em;margin-left:12px}
+  .tickets{font-family:var(--mono);font-size:12px;color:var(--on-dark-soft);display:flex;gap:14px;align-items:center}
+  .tickets b{font-family:var(--hand);font-size:18px;color:#7a5a1e;font-weight:600;border:1px solid var(--brass);border-radius:999px;padding:0 12px;background:linear-gradient(180deg,rgba(226,196,126,.18),rgba(201,165,90,.06))}
+  .tickets a{color:#8c6f34}
+
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:#8c6f34;margin:0 0 10px}
+  section{margin-bottom:64px}
+
+  /* ---------- 注文票 ---------- */
+  .slip{background:var(--slip);border:1px solid var(--line);padding:26px 28px 24px;position:relative;color:var(--ink);
+        box-shadow:0 1px 0 #fff inset, 0 24px 40px -28px rgba(60,40,20,.45), 0 0 0 1px rgba(0,0,0,.25)}
+  .slip::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;
+        background:repeating-linear-gradient(90deg,var(--verdigris) 0 14px,transparent 14px 20px);opacity:.6}
+  .slip-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;
+        border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+  .slip-title h2{font-size:18px;font-weight:600;margin:0;letter-spacing:.1em}
+  .slip-title span{font-family:var(--mono);font-size:11px;color:var(--ink-faint)}
+  .field{display:grid;grid-template-columns:5.5em 1fr;gap:6px 16px;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .field:last-of-type{border-bottom:0}
+  .field label{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--ink-soft)}
+  .hand{font-family:var(--hand);font-size:21px;line-height:1.6}
+  .hand.muted{color:var(--ink-faint);font-size:15px}
+  .opts{display:flex;flex-wrap:wrap;gap:6px 14px}
+  .opt{font-family:var(--hand);font-size:18px;padding:2px 8px;border-radius:999px;color:var(--ink-soft);position:relative;cursor:pointer}
+  .opt.on{color:var(--ink)}
+  .opt.on::after{content:"";position:absolute;inset:-3px -6px;border:2px solid var(--verdigris);border-radius:50% 45% 55% 48% / 55% 50% 48% 52%;transform:rotate(-2deg);opacity:.85}
+  .opt small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--ink-faint);line-height:1.3}
+  .badge{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:#7a5a1e;border:1px solid var(--brass);border-radius:3px;padding:1px 6px;margin-left:8px;vertical-align:middle}
+  .slip-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+  .slip-foot .cost{font-family:var(--mono);font-size:12px;color:var(--ink-soft)}
+  .btn{font-family:var(--mincho);font-weight:600;letter-spacing:.2em;color:#2a1d0c;border:1px solid #8c6f34;padding:12px 26px;border-radius:2px;cursor:pointer;
+       background:linear-gradient(180deg,var(--brass-2),var(--brass) 55%,#a8843f);box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 6px 14px -8px rgba(0,0,0,.8)}
+  .btn:focus-visible{outline:3px solid var(--verdigris-2);outline-offset:2px}
+
+
+  /* ---------- クリップボード ---------- */
+  .board{position:relative;padding:22px 34px 34px 56px;border-radius:10px;
+        background:
+          linear-gradient(180deg,rgba(255,255,255,.10),rgba(0,0,0,.08)),
+          repeating-linear-gradient(90deg, rgba(255,255,255,.045) 0 1px, transparent 1px 3px),
+          repeating-linear-gradient(90deg, rgba(0,0,0,.05) 0 2px, transparent 2px 7px),
+          linear-gradient(90deg,#b8b6a8,#cfcdbf 30%,#c4c2b3 55%,#d4d2c4 80%,#b5b3a4);
+        box-shadow:0 1px 0 rgba(255,255,255,.55) inset, 0 -1px 0 rgba(0,0,0,.25) inset,
+                   0 30px 50px -28px rgba(60,40,20,.55), 0 0 0 1px rgba(0,0,0,.35)}
+  .rivet{position:absolute;width:14px;height:14px;border-radius:50%;
+        background:radial-gradient(circle at 40% 35%,#f2f1ea,#9a9889 60%,#6f6d60);
+        box-shadow:0 1px 2px rgba(0,0,0,.5), 0 0 0 1px rgba(0,0,0,.25)}
+  .rivet::after{content:"";position:absolute;left:5px;top:5px;width:4px;height:4px;border-radius:50%;background:#55534a}
+  .rivet.tl{left:14px;top:14px}.rivet.tr{right:14px;top:14px}.rivet.bl{left:14px;bottom:14px}.rivet.br{right:14px;bottom:14px}
+  .clip{position:absolute;left:50%;top:-14px;transform:translateX(-50%);z-index:5;width:min(320px,62%);height:64px;border-radius:6px 6px 8px 8px;
+        background:linear-gradient(180deg,#ecd58f,#c9a55a 45%,#b08a3f 70%,#d6b76a);
+        box-shadow:0 8px 14px -6px rgba(0,0,0,.7), 0 1px 0 rgba(255,255,255,.55) inset, 0 -2px 0 rgba(0,0,0,.25) inset, 0 0 0 1px rgba(90,64,20,.5);
+        display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px}
+  .clip::before{content:"";position:absolute;left:50%;top:-10px;width:56px;height:14px;margin-left:-28px;border:3px solid #8f7130;border-bottom:0;border-radius:8px 8px 0 0;background:transparent}
+  .clip::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:6px;background:linear-gradient(180deg,#8a6c2c,#5a4416);border-radius:0 0 4px 4px;opacity:.9}
+  .clip b{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.34em;color:#5a4416;text-shadow:0 1px 0 rgba(255,255,255,.45)}
+  .clip small{font-family:var(--mono);font-size:8.5px;letter-spacing:.22em;color:#6e5522;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+  .ruler{position:absolute;left:14px;top:60px;bottom:34px;width:22px;z-index:1;
+        background:repeating-linear-gradient(180deg, rgba(60,58,50,.55) 0 1px, transparent 1px 8px),
+                   repeating-linear-gradient(180deg, transparent 0 39px, rgba(60,58,50,.6) 39px 40px);
+        background-size:8px 100%, 14px 100%;background-repeat:repeat-y;background-position:left top}
+  .ruler i{position:absolute;left:0;width:22px;text-align:right;font-family:var(--mono);font-style:normal;font-size:8px;color:rgba(60,58,50,.7);line-height:1;transform:translateY(-4px)}
+  .board .slip{transform:rotate(-.4deg);position:relative;z-index:2;padding-top:64px;box-shadow:0 1px 0 #fff inset, 0 18px 30px -18px rgba(0,0,0,.8), 0 0 0 1px rgba(0,0,0,.15)}
+  .board .slip::before{display:none}
+  @media (max-width:760px){.notes{grid-template-columns:repeat(2,1fr);gap:28px 18px}}
+  @media (max-width:560px){.board{padding:18px 14px 22px 34px}.ruler{left:8px;width:18px}.clip{height:54px}.board .slip{padding-top:56px}}
+
+  /* ---------- 仕立て台 ---------- */
+  .strip{font-family:var(--hand);font-size:17px;color:#5a4330;margin:0 0 14px;line-height:1.9;letter-spacing:.02em}
+  .strip span{white-space:nowrap}
+  .strip span.done{color:var(--ink-faint);text-decoration:line-through;text-decoration-color:rgba(53,41,31,.45);text-decoration-thickness:1.5px}
+  .strip span.now{color:var(--ink);position:relative}
+  .strip span.now::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-1px;height:8px;background:rgba(87,161,132,.45);z-index:-1;transform:rotate(-1deg)}
+  .strip i{font-style:normal;color:var(--on-dark-faint);margin:0 8px}
+  .desk{padding:18px 0 26px}
+  .notes{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 26px;align-items:start;padding:4px 2px}
+  .stack{display:flex;flex-direction:column;min-width:0}
+  .note{width:100%;padding:11px 13px 12px;font-family:var(--hand);font-size:13.5px;line-height:1.6;color:var(--ink);
+        box-shadow:0 10px 16px -12px rgba(60,40,20,.5), 0 1px 0 rgba(255,255,255,.35) inset;position:relative}
+  .note + .note{margin-top:-6px}
+  .stack{cursor:default}
+  .stack.long{cursor:pointer}
+  /* 畳んだ列: 1枚目が上。同じ大きさの紙が下で少しずつ回って、角だけのぞく */
+  .stack.long:not(.open){position:relative}
+  .stack.long:not(.open) .note:first-child{position:relative;z-index:10}
+  .stack.long:not(.open) .note:not(:first-child){position:absolute;left:0;top:0;width:100%;height:100%;margin:0;padding:0;overflow:hidden;
+        box-shadow:0 10px 16px -10px rgba(0,0,0,.7), 0 1px 0 rgba(255,255,255,.35) inset}
+  .stack.long:not(.open) .note:not(:first-child)::before{display:none}
+  .stack.long:not(.open) .note:not(:first-child) *{visibility:hidden}
+  .stack.long:not(.open) .note:nth-child(2){transform:rotate(3.5deg) translate(6px,4px);z-index:3}
+  .stack.long:not(.open) .note:nth-child(3){transform:rotate(-2.5deg) translate(-5px,7px);z-index:2}
+  .stack.long:not(.open) .note:nth-child(4){transform:rotate(5deg) translate(9px,10px);z-index:1}
+  .stack.long:not(.open) .note:nth-child(n+5){transform:rotate(-4deg) translate(-8px,12px);z-index:0}
+  .stack.long:not(.open) .hint{position:relative;z-index:11;margin-top:18px}
+  .stack.long .hint{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--on-dark-faint);margin-top:8px;text-align:center}
+  .stack.long.open .hint::before{content:"畳む ▲"}
+  .stack.long:not(.open) .hint::before{content:"開く ▼"}
+  .stack .note:nth-child(1){z-index:1}.stack .note:nth-child(2){z-index:2}.stack .note:nth-child(3){z-index:3}.stack .note:nth-child(4){z-index:4}
+  .note::before{content:"";position:absolute;left:50%;top:-7px;width:48px;height:14px;margin-left:-24px;background:rgba(255,255,255,.45);
+        transform:rotate(-2deg);box-shadow:0 1px 2px rgba(0,0,0,.15)}
+  .note h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;font-weight:500;margin:0 0 6px;color:var(--ink-soft)}
+  .note p{margin:0}
+  .note .k{font-weight:600}
+  .stack .note:nth-child(odd){transform:rotate(-1.1deg)}
+  .stack .note:nth-child(even){transform:rotate(1.2deg)}
+  .s1 .note{background:var(--st-y)}.s2 .note{background:var(--st-b)}.s3 .note{background:var(--st-p)}.s4 .note{background:var(--st-g)}.s5 .note{background:var(--st-y)}
+  .s5 .note.now{outline:2px dashed var(--verdigris-2);outline-offset:4px}
+  .stack.todo .note{background:var(--st-w);opacity:.5;min-height:110px}
+  .stack.todo .note h4{color:var(--ink-faint)}
+  .caret{display:inline-block;width:2px;height:1em;background:var(--verdigris);vertical-align:-2px;animation:blink 1s steps(2) infinite}
+  @keyframes blink{50%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){.caret{animation:none}}
+  .desk-note{font-family:var(--mono);font-size:11px;color:#8a6a48;margin-top:10px}
+
+  /* ---------- 清書（リーガルパッド） ---------- */
+  .pad-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:0 4px 14px;max-width:760px;margin-inline:auto}
+  .pad-bar .t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--on-dark-soft)}
+  .pad-bar .acts{display:flex;gap:8px;flex-wrap:wrap}
+  .pad-bar button{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;background:rgba(255,255,255,.35);border:1px solid #8c6f34;color:#5a4416;padding:5px 11px;border-radius:2px;cursor:pointer}
+  .pad{position:relative;max-width:760px;margin-inline:auto;color:var(--ink);transform:rotate(.35deg)}
+  .pad::before,.pad::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:100%;background:#f9f8f3;z-index:-1;
+        box-shadow:0 1px 0 rgba(0,0,0,.08)}
+  .pad::after{bottom:-6px;left:1px;right:-1px;background:#f4f3ec;transform:rotate(-.3deg)}
+  .pad-top{height:30px;background:linear-gradient(180deg,#3a3d3a,#2b2e2b 60%,#232523);
+        box-shadow:0 2px 0 rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.08) inset;position:relative;z-index:2}
+  .pad-top::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.25) 0 3px,transparent 3px 6px)}
+  .page{background:#fdfdfa;padding:var(--lh) 44px calc(var(--lh) * 1.5);position:relative;z-index:1;
+        background-image:repeating-linear-gradient(180deg, transparent 0 calc(var(--lh) - 1px), #d9e1e6 calc(var(--lh) - 1px) var(--lh));
+        background-origin:content-box;background-clip:padding-box;
+        box-shadow:0 26px 40px -24px rgba(60,40,20,.55), 0 0 0 1px rgba(0,0,0,.06)}
+  .page h1{font-family:var(--mincho);font-weight:500;font-size:26px;line-height:calc(var(--lh) * 2);margin:0 0 var(--lh);letter-spacing:.02em;text-wrap:balance}
+  .page p{font-family:var(--mincho);font-size:16.5px;line-height:var(--lh);margin:0 0 var(--lh);max-width:38em}
+  .page.hand-mode h1,.page.hand-mode p{font-family:var(--hand)}
+  .page.hand-mode p{font-size:19px}
+  .page.hand-mode h1{font-size:30px}
+  .fold{max-width:760px;margin:18px auto 0;padding:0 4px;font-family:var(--mono);font-size:11.5px;color:var(--on-dark-soft);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  /* ---------- 鉛筆（飾り。狭い画面では消す） ---------- */
+  .pencil{position:absolute;right:-92px;top:110px;width:14px;height:230px;transform:rotate(9deg);transform-origin:top center;pointer-events:none;z-index:3;
+        filter:drop-shadow(6px 10px 8px rgba(60,40,20,.45))}
+  .pencil .body{position:absolute;left:0;top:0;width:14px;height:190px;border-radius:2px 2px 0 0;
+        background:linear-gradient(90deg,#8a6a2c 0 12%,#e4c67d 12% 30%,#b9933f 30% 50%,#d8b968 50% 68%,#9e7b33 68% 86%,#6e5322 86%)}
+  .pencil .body::before{content:"";position:absolute;left:0;right:0;top:0;height:22px;background:linear-gradient(180deg,#f0d896,#b08a3f);border-radius:2px 2px 0 0;box-shadow:0 1px 0 rgba(0,0,0,.3)}
+  .pencil .pclip{position:absolute;left:9px;top:26px;width:4px;height:58px;border-radius:2px;background:linear-gradient(90deg,#f2dc9c,#a88235);box-shadow:1px 1px 1px rgba(0,0,0,.35)}
+  .pencil .pclip::before{content:"";position:absolute;left:-2px;top:-6px;width:8px;height:8px;border-radius:2px;background:linear-gradient(180deg,#f2dc9c,#a88235)}
+  .pencil .grip{position:absolute;left:0;right:0;top:132px;height:48px;background:repeating-linear-gradient(180deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
+  .pencil .cone{position:absolute;left:0;top:190px;width:14px;height:26px;background:linear-gradient(90deg,#8a6a2c,#e4c67d 30%,#b9933f 60%,#6e5322);clip-path:polygon(0 0,100% 0,60% 100%,40% 100%)}
+  .pencil .lead{position:absolute;left:5px;top:214px;width:4px;height:16px;background:linear-gradient(90deg,#3a3a3a,#111);clip-path:polygon(0 0,100% 0,50% 100%)}
+  @media (max-width:1000px){.pencil{display:none}}
+  .fold b{font-family:var(--hand);font-weight:600;color:var(--verdigris);font-size:14px}
+
+  @media (max-width:560px){
+    body{padding-inline:16px}
+    .slip{padding:20px 16px}
+    .field{grid-template-columns:1fr}
+    .page{padding-inline:18px}
+    .page p{font-size:15.5px}
+  }
+
+  /* ---------- 試作の追加分 ---------- */
+  textarea.hand, input.hand{width:100%;border:0;border-bottom:1px dashed var(--line);background:transparent;color:var(--ink);outline:none;resize:vertical;padding:0;font-family:var(--hand)}
+  textarea.hand::placeholder, input.hand::placeholder{color:var(--ink-faint)}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .err{font-family:var(--mono);font-size:12px;color:#8a3a2a;margin-top:12px;white-space:pre-wrap}
+  .note.partial{outline:2px dashed var(--verdigris-2);outline-offset:4px}
+  .s6 .note{background:var(--st-b)}.s7 .note{background:var(--st-p)}.s8 .note{background:var(--st-g)}
+  .note.sel{box-shadow:0 0 0 2px var(--brass-2), 0 12px 18px -12px rgba(0,0,0,.6)}
+  .note p{white-space:pre-wrap;overflow-wrap:anywhere}
+  .reading{margin-top:22px;padding:18px 22px;background:var(--slip);color:var(--ink);border:1px solid var(--line);font-family:var(--hand);font-size:16px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere}
+  .reading h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--ink-soft);margin:0 0 8px}
+  .empty{font-family:var(--mono);font-size:12px;color:#8a6a48;padding:24px 0}
+  .warn{font-family:var(--mono);font-size:11px;color:#8a6a48;margin-top:14px;line-height:1.7}
+  .page p{white-space:pre-wrap}
+  [hidden]{display:none!important}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">文筆屋さん <small>bunpitsuya.com ／ 試作</small></div>
+    <div class="tickets">仕立て券 <b id="tickets">3枚</b> <span id="cap-note">（試作。減っても戻ります）</span></div>
+  </header>
+
+  <section id="sec-order">
+    <p class="eyebrow">1 ｜ 注文票</p>
+    <div class="board">
+      <span class="rivet tl"></span><span class="rivet tr"></span><span class="rivet bl"></span><span class="rivet br"></span>
+      <div class="clip"><b>BUNPITSUYA</b><small>ORDER SLIP</small></div>
+      <div class="ruler" aria-hidden="true"></div>
+      <div class="slip">
+        <div class="slip-title"><h2>ご注文</h2><span id="today"></span></div>
+        <div class="field"><label>品名</label><textarea class="hand" id="f-title" rows="2" placeholder="お題を書く"></textarea></div>
+        <div class="field"><label>主語</label><div>
+          <div class="opts" data-knob="subject"></div>
+          <input class="hand" id="f-subject-other" style="margin-top:6px;max-width:16em;font-size:17px" placeholder="主語を記入" hidden>
+        </div></div>
+        <div class="field"><label>素材</label><textarea class="hand" id="f-material" rows="2" placeholder="下敷きにする自分の文章があれば、ここに貼る（任意）"></textarea></div>
+        <div id="knobs"></div>
+        <div class="slip-foot">
+          <div class="cost" id="cost"></div>
+          <button class="btn" id="btn-order">仕立てる</button>
+        </div>
+        <div class="err" id="err" hidden></div>
+        <p class="warn">この試作は、開いている人のClaudeアカウントで仕立てます（最初に一度、確認が出ます）。1本で工程ぶんの呼び出しが走るので、まず「軽く」で試すのが安いです。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-desk">
+    <p class="eyebrow">2 ｜ 仕立て台</p>
+    <p class="strip" id="strip"></p>
+    <div class="desk">
+      <p class="empty" id="desk-empty">注文票を出すと、ここに付箋が貼られていきます。</p>
+      <div class="notes" id="notes" hidden></div>
+      <div class="reading" id="reading" hidden><h5>付箋の原文</h5><div id="reading-body"></div></div>
+    </div>
+  </section>
+
+  <section id="sec-book" hidden>
+    <p class="eyebrow">3 ｜ 清書</p>
+    <div class="pad-bar">
+      <span class="t" id="book-meta"></span>
+      <div class="acts"><button id="toggle-hand">手書きで見る</button><button id="copy-plain">本文をコピー</button><button id="copy-md">Markdown</button><button id="copy-all">付箋を全コピー</button></div>
+    </div>
+    <div class="pad">
+      <div class="pencil" aria-hidden="true"><div class="body"></div><div class="pclip"></div><div class="grip"></div><div class="cone"></div><div class="lead"></div></div>
+      <div class="pad-top"></div>
+      <div class="page" id="page"></div>
+    </div>
+    <div class="fold"><span>途中の付箋（1〜8）は上の仕立て台に残してあります。</span><span id="book-note"></span></div>
+  </section>
+</div>
+
+<script>
+const RECIPE = "# 文筆屋さん ｜ 仕立ての手順（原本）\n\nお題（または下書き）を受け取り、1から8までの工程を順に通して一本の文章に仕立てる。\nこの文書は店の手順そのものであり、アプリの中で動くプロンプトの原本でもある。\n\n## 一番大事な決まり\n\n**工程はひとつずつ、必ず書き出してから次へ進む。** 1から5までを頭の中で済ませて\nいきなり一筆目を書くことを禁じる。途中の書き出しは最後には捨てられる。それでも書く。\n書かずに飛ばした工程は、必ず仕上がりの薄さとして現れる。\n\n各工程の冒頭に `# N ｜ 〈工程名〉` の見出しを置く（N は通し番号）。\n\n## 最初に読むもの\n\n1. **書き手の台帳**（あれば）。一人称、確定している事実、避ける言い回しが半分以上埋まっていれば、\n   全工程でそれに従い、注文のトーン指定より優先する。埋まっていなければ「台帳なし」と一言告げ、\n   注文書の指定に従う。台帳のひな型は `ledger-template.md`。\n2. `checks.md` は見直しと仕上げで使う。\n\n## 注文票の項目\n\n- **品名**：お題。\n- **主語**：一人称。私／わたし／僕／ぼく／俺／その他（記入）／おまかせ。**おまかせなら店がお題から決める。**\n  記入があれば、工程1の「話者」はこれを最優先にし、全工程で動かさない。\n- **素材**（任意）：下敷きにする自分の文章。あれば工程2の一次資料として最初に使う。\n\n## つまみ\n\n未指定は既定値（**太字**）で進め、確認のために客を止めない。\n筆（使うモデル）は客のつまみではなく店が決める。券の枚数を変えるのは手間だけ。\n\n| つまみ | 値 | 効く工程 |\n|---|---|---|\n| 仕入れ先 | **手持ちだけ** / 国内で / 国内外で | 仕入れ |\n| 手間 | 軽く（仕入れ1周・見直し1回） / **ふつう（3周・2回）** / 念入りに（5周・3回） | 仕入れ・見直し |\n| 論旨 | **あなたの指示をふくらませる**（お題を主張として扱い、覆さず・中立に逃げず、その向きのまま立てる） / 引っかかりを起点に | お題を解く |\n| トーン | **親しみやすく品のある語り口で**（敬体・専門語はかみ砕く） / 腹ごたえのある語りかけ（密度を上げる） / フランクな対話（常体・話し言葉） | 全部 |\n| 仕立て | 論として / **随筆として** / 文書そのもの（手紙・挨拶・告知） / おまかせ | お題を解く・構成・一筆目 |\n| 崩し | **崩さない** / 少し / 大きく | 構成のほつれ・仕上げの強さ |\n| 分量 | **ふつう（3000〜5000字）** / たっぷり（5000〜8000字） | 構成・一筆目 |\n| 相談 | 要所で聞く（お題を解く・芯のあとで止まる） / **おまかせ** | お題を解く・芯 |\n\n---\n\n# 1 ｜ お題を解く\n\n- **土俵**：どの土俵の問いか。読む人が期待しているものは何か。\n- **温度**：論証寄りか、実感寄りか。\n- **受け取り**：額面ではなく、**本当に欲しがっているものに読み替える**。\n  「教えて」＝写せる例が欲しい、に見えて、実は設計の考え方を知りたい、のように。額面のまま受けない。\n- **仕立ての形**：①主張を立てる論 / ②文書そのもの（手紙・挨拶・告知） / ③現象を解きほぐす /\n  ④体験から立ち上げる。**②を選んだら、見直しの物差しが切り替わる。**\n- **話者**：誰の言葉として書くか。注文票の**主語**があればそれを使う。なければ当事者か、実務者か、観察者かを決める。**一度決めたら最後まで動かさない。**\n- **芯の候補**：一文で。\n- **確かめたいこと**：二つ。\n- **一段だけ上流へ**：何を守るべき区別なのかを決め、すぐ具体に降ろす。\n- **次の問い**：仕入れの入口になる一問。\n\n# 2 ｜ 仕入れ（手間で決めた周回数だけ）\n\n周ごとに `# 2 ｜ 仕入れ N/M` と番号を振る。仕入れ先が「手持ちだけ」なら検索をせず、\n客の体験・台帳・既知の事実だけを材料にする。\n\n- **土俵 / 温度**：その周で立つ場所を毎回引き直す。\n- **材料**：一次資料・数字・具体。**出典URLを付ける。** 渡された素材そのものが一次資料なら、その構造を使う。\n- **土俵の言葉**：その分野の現場語を1〜2個。**必ず対比先とセットで定義する。** 対比先のない語は札にしかならない。\n- **芯に不利な材料**：自分から出す。隠さない。\n- **次の問い**：前の周の答えではなく、答えから開いた次の穴。\n\n検索が使えない周は冒頭にそう書き、**出典URLを捏造しない。** 数値の断定を避ける。\n\n# 3 ｜ 芯\n\n- **芯**：一文。\n- **支え**：芯を支える具体は何か。不利な材料は迷いとして放置せず、\n  「だからこそこの形が要った」という向きで芯の土台に作り替える。\n- **刺さった一件**：最も具体の立った、創作なしで使える材料。出典つき。\n- **土俵の言葉**：軸に据える2語と、その使い方。\n- **捨てる**：書かないものを名指しする。逃げ込みやすい深掘り先を先に塞ぐ。\n- **影**：展開すると芯がぼやけるが、気配としては残すもの。一段落を割かない。前に出さない。\n\n# 4 ｜ 裏紙\n\n**整えない。言い淀んだまま置く。** ここが仕上がりの手ざわりを決める。\n\n- **違和感**：自分の言い方のどこがしっくり来ないか\n- **言いかけ**：途中で切れた文のまま\n- **畳んだ枝**：広げたくなったが逸れるので畳んだもの\n- **まだ自信のないところ**：断言できない理由も添えて\n- **まだ名前のないもの**：言いたいのに一言で言えていないもの\n- **本当は言いたい一文**：三つほど\n\n一筆目はここから拾う。**迷いをその場で演じるのではなく、先に迷いだけを作って渡す。**\n\n## 決着（構成に進む前に必ず）\n\n「まだ自信のないところ」のうち、**事実の断定・因果・効能や安全に関わるもの**は、\n決めきれないまま本文に出さない。次のどれかに振り分ける。\n\n- **言い切る**（裏が取れた）\n- **たとえとして使う**（仕組みの説明ではないと文面で分かるようにする）\n- **書かない**\n\n「〜かもしれません」を付けて出すのは決着ではない。\n\n# 5 ｜ 構成\n\n- **ねらい**：どの順で読む人を折るか。まず誰もが思いつく答えを試させ、崩れる場面を見せてから\n  芯に折り込む、が基本形。\n- **流れ**：7項目前後。番号つき。\n- **温度**：流れの各項目に温度を割り当てる（淡々／うんざり／急に熱が入る／熱を保って淡々／そっと・宙づり）。\n  **折り目（大きく曲がる箇所）は一箇所。** 締めは決意やまとめにせず、問いを置いたまま止めてよい。\n- **語り口の境目**：途中で語り口を切り替える位置があるなら（例：無料と有料の境）、流れの何番目の直後かと、\n  前後の語り口を一行で。なければ「なし」。\n- **ほつれ**：人が考えるときの乱れを**先に設計して**仕込む。\n  順番のほつれ（一番重い具体を締めでなく不意な位置に）／言いさし（問いを立てて答えずに流れる）／\n  偏った重み（どうでもいい細部に不釣り合いに長く居座る）／矛盾の放置／飛躍（橋を架けずに横に滑る）／\n  引き返し（勢いよく言ってから自分でブレーキ）。\n  個数は崩しのつまみで決める：崩さない＝0、少し＝1〜2、大きく＝3以上。流れの何番目に仕込むかまで書く。\n  一筆目はここに書いた通りに乱す。書いていないほつれを即興で足さない。\n- **型のばらし方**：隣り合う段落で同じ運び（断定してすぐ引き返す、具体→すぐ抽象、否定→肯定）を\n  続けない。段落ごとに 積む・留まる／言い切る／前へ問う／連想で滑る のどれかを割り当てる。\n  開きと閉じを同じ場面で挟む額縁にしない。\n\n# 6 ｜ 一筆目\n\n構成の流れと温度に従って書き切る。裏紙の断片を拾う。\n語り口の境目を置いたなら、その位置で実際に切り替える。前後で同じ語り口が続いていたら構成に戻る。\n\n# 7 ｜ 見直し（手間で決めた回数だけ）\n\n周ごとに `# 7 ｜ 見直し N/M` として点検を出し、続けて `# 第N稿` を出す。\n**感想を書かず、箇所を名指す。原文を引く。**\n\n物差しは仕立ての形で切り替える。\n- ①③④ → `checks.md` の「見直しの五つの目」。\n- ② → 芯が伝わったかは見ない。「文書として生きているか」で読む（`checks.md` の文書そのものの節）。\n\nどちらでも、**その原稿だけの物差しをその周で立てる**。「隣に座る声」と「説明する声」のように、\nその文章でしか使えない対で軸を作ると、指摘が感想ではなく箇所の名指しになる。\n\n点検のあとに **裏取り** を置く。本文が実在の人物・引用・数値・経歴に触れているなら、その周で出典に\n当たり直し、（1）引用の帰属（誰の発言か）、（2）数値・年・順序、（3）一次出典が見つからない引用、\nを箇条書きにする。**見つからなかった引用は第N稿から外す。** 「見送るのが安全」と書いて残すのは失敗。\n仕入れ先が「手持ちだけ」でも、この裏取りだけは行う（回数は最小限）。\n\n# 8 ｜ 仕上げ\n\n`checks.md` の「仕上げの表」を**実際に数えて**当て、仕上がりを出す。印象で「くどい」と書かない。\n\n最初に **見分け方** を一段落。汎用の定義ではなく、**この原稿で**「誰が書いても同じ文」と「書き手の声」の\n境目がどこに出ているかを、原稿の癖に即して言う。これが摘発の基準になる。\n\n**三つに分ける。摘発だけで終わらせない。**\n\n1. **摘発**：表を回し、項目ごとに回数と箇所。\n2. **直し**：実際に直す。直さないものは項目ごとに一行で理由。\n3. **数え直し**：直した稿でもう一度数え、摘発と同じ表の形（項目｜前｜後｜箇所）で出す。\n   文章で「減らした」と書くのは数え直しではない。\n\n**第N稿と仕上がりの本文が同じなら、この工程は動いていない。** 直しの前後で本文が変わっていることを\n自分で確かめてから仕上がりを出す。\n\n---\n\n## 納品\n\n既定では **仕上がりだけ**を渡し、途中の工程は求められたときに開く。ただし工程は必ず全部通し、書き出す。\n";
+const CHECKS = "# 点検表\n\n## 見直しの五つの目\n\n感想を書かない。**箇所を名指し、原文を引く。**\n\n### 1. 芯はどこで弱まるか\n- 芯が具体で支えられている箇所と、支えを失っている箇所を分けて名指す。\n- とくに**終盤の留保**。芯の急所（本当に効くのか、確かめられるのか）に触れる留保が続くと、\n  読む人は「結局わからないんだな」で持ち帰る。\n- 不利な材料は、迷いとして放置されているか、芯の土台に作り替えられているか。放置なら書き直す。\n\n### 2. 脇道\n- 芯に奉仕していない段落を特定する。\n- 「影」として残すと決めたものは残してよい。ただし一段落を割いて前に出ていないか。出ていれば一言に落とす。\n\n### 3. 読み違え\n- 抜き出したときに芯を条件つきにしてしまう一文を探す。\n- 「〜とも言い切れません」の類は、そこで止めず、なぜそれでも芯が立つかまで書き切る。\n\n### 4. 運びの崩れ\n- 折り目は一箇所に絞れているか。二箇所以上なら往復になる。\n- 二倍ダッシュ（——）の残存\n- 説明なしに出る固有名・業界語\n- 100字を超える頭でっかちな文\n- 同じたとえの一文内での反復\n\n### 5. 事実・因果・効能の断定\n- 属性や診断を読む人に断定している文（「あなたは〜だ」「〜な人は必ず〜」）\n- 治る・改善する・効く、など効果を約束する語\n- 「〜だから〜になる」の因果を根拠なしに一般化している文\n- 「ゼロにした」「必ず」「絶対」などの誇大\n- 医学・法律・金銭の助言を、専門家でない話者が断定している箇所\n見つけたら、主語を書き手の体験に戻すか、削る。\n\n---\n\n## 文書そのもの（仕立て②）の物差し\n\n手紙・挨拶・告知など、文書そのものを差し出す場合は上の五つの目を使わない。\n**その文書として生きているか**で読む。\n\n### 1. 声が割れていないか\n説明する声が、語りかける声の上に乗っている箇所を名指す。「なぜこの言葉が効くか」の注釈、\n概念の対比の図式化、問いを立てて論駁する運び。混じった瞬間、隣に座っていた人が一歩引いて分析を始めたように読める。\n\n### 2. 話者が動いていないか\n「お題を解く」で決めた話者から外れた文を探す。一箇所でも外れると、誰の言葉でもなくなる。\n\n### 3. 具体が報告になっていないか\n同じ長さの場面が横に並んでいたら、それは描写ではなく事例の列挙。ひとつかふたつに絞り、\nその分だけ細部（音・匂い・体の動き）を厚くする。\n\n### 4. 外形が壊れていないか\n文書の体裁に属さないもの（末尾の参照欄、見出しつきの出典一覧、本文から浮いた強調）が付いていないか。\n付いていれば外すか、地の文に溶かす。\n\n---\n\n## 仕上げの表\n\n**実際に数える。そして数えたら直す。**\n\n- [ ] **否定→肯定の型**（「Aではない。Bだ」）の回数 → 6以上なら2に絞る。他は言い切りか具体に開く\n- [ ] **「という」**の回数 → 20超なら札貼りが目立つ。半分は直接つなぐ\n- [ ] **三つ並べ**（名詞を三つ列挙して締める）の回数 → 数を崩す（二つ、四つ、長さ不揃い）\n- [ ] **見出し直後の太字一文** → 外すか具体に差し替える\n- [ ] **題がスローガン**になっていないか → 主題を名指す名詞句に\n- [ ] **留保の連続**（終盤に「まだわからない」「言い切れない」が固まる）→ 一つに絞る\n- [ ] **数字の几帳面な列挙**（「4本、3本、6個」）→ 一部を地の文に溶かす\n- [ ] **二倍ダッシュ（——）**\n- [ ] **「すべき」「絶対に」**などの断定語\n- [ ] **進行の実況**（「〜をもう少し丁寧に見てみます」「ここで〜を考えてみます」）→ 削って中身から始める\n- [ ] **読む人の反応の先取り**（「〜という疑いは当然出てくると思います」）→ 自分の判断として置き直す\n- [ ] **書いている自分の実況**（「この場面を書いていて、ふと立ち止まる」）→ 削って次の文から入る\n- [ ] **定義から入る段落の連続**（「◯◯という言葉があります。それは〜」が2回続く）\n- [ ] **「ということでもある／でもあり」**の近接反復\n- [ ] **同じ長さの場面の横並び** → ひとつかふたつに絞って細部を厚く\n- [ ] **同じ助詞が重なって平板な文** → 語順を入れ替えるか文を割る\n- [ ] **文の長さの均一**（「長い説明→短い着地」が等間隔）→ 極端に短い文を数か所挟む\n- [ ] **推量語尾の均一**（確定していい事実にまで「〜だと思います」）→ 事実は言い切る\n- [ ] **結びが三つ並べ**で終わっていないか\n\n### 見分け方の基準\n\n「誰が書いても同じ」文は、一文一文がすでに\"まとめ\"の顔をしている。迷いや言い淀みが構文に均されて消え、\n同じ型が等間隔で戻ってくることで露呈する。\n型があってもよい。ただし**発生源がその都度違う**こと（具体の匂い・自分の生活・その場の恥）。\n読み終えて「この人にしか書けない」と思うか「よくできた説明だ」と思うかが分かれ目。\n";
+const STAGE_NAMES = ["お題を解く","仕入れ","芯","裏紙","構成","一筆目","見直し","仕上げ"];
+const SUBJECTS = [{v:"私"},{v:"わたし"},{v:"僕"},{v:"ぼく"},{v:"俺"},{v:"その他",note:"使いたい主語を記入"},{v:"おまかせ",note:"お題から店が決める"}];
+const KNOBS = {
+  source:{label:"仕入れ先",options:[{v:"手持ちだけ",note:"調べない。原価が安い"},{v:"国内で",note:"（試作では調べられないので手持ち扱い）"}]},
+  effort:{label:"手間",options:[{v:"軽く",note:"仕入れ1周・見直し1回"},{v:"ふつう",note:"3周・2回"},{v:"念入りに",note:"5周・3回",badge:"券2枚"}]},
+  thesis:{label:"論旨",options:[{v:"指示をふくらませる"},{v:"引っかかりを起点に"}]},
+  tone:{label:"トーン",options:[{v:"親しみやすく品よく"},{v:"腹ごたえのある語り"},{v:"フランクに"}]},
+  form:{label:"仕立て",options:[{v:"論として"},{v:"随筆として"},{v:"文書そのもの"},{v:"おまかせ"}]},
+  rough:{label:"崩し",options:[{v:"崩さない"},{v:"少し"},{v:"大きく",note:"遅く・迷いが多く残る"}]},
+  length:{label:"分量",options:[{v:"ふつう",note:"3000〜5000字"},{v:"たっぷり",note:"5000〜8000字"}]},
+  consult:{label:"相談",options:[{v:"おまかせ"},{v:"要所で聞く",note:"（試作では止まらず進みます）"}]},
+};
+const state = { subject:"私", knobs:{source:"手持ちだけ",effort:"軽く",thesis:"指示をふくらませる",tone:"親しみやすく品よく",form:"随筆として",rough:"少し",length:"ふつう",consult:"おまかせ"}, tickets:3, busy:false };
+const $ = (s)=>document.querySelector(s);
+
+// ---- 注文票 ----
+function radio(el, items, cur, onPick){
+  el.innerHTML='';
+  items.forEach(o=>{
+    const sp=document.createElement('span'); sp.className='opt'+(cur===o.v?' on':''); sp.setAttribute('role','radio'); sp.tabIndex=0;
+    sp.append(o.v); if(o.note){const sm=document.createElement('small'); sm.textContent=o.note; sp.append(sm);} if(o.badge){const b=document.createElement('span'); b.className='badge'; b.textContent=o.badge; sp.append(b);}
+    const pick=()=>{onPick(o.v); el.querySelectorAll('.opt').forEach(x=>x.classList.remove('on')); sp.classList.add('on');};
+    sp.addEventListener('click',pick); sp.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}});
+    el.append(sp);
+  });
+}
+function cost(){ return state.knobs.effort==='念入りに'?2:1; }
+function renderCost(){ const c=cost(); $('#cost').innerHTML=`この注文で使う券 ── <strong>${c}枚</strong>（残り ${state.tickets}枚 → ${Math.max(0,state.tickets-c)}枚）`; $('#tickets').textContent=state.tickets+'枚'; $('#btn-order').disabled=state.busy||state.tickets<c; }
+$('#today').textContent=new Date().toISOString().slice(0,10);
+radio($('[data-knob=subject]'), SUBJECTS, state.subject, v=>{state.subject=v; $('#f-subject-other').hidden=(v!=='その他');});
+for(const [k,def] of Object.entries(KNOBS)){
+  const f=document.createElement('div'); f.className='field'; const l=document.createElement('label'); l.textContent=def.label; const o=document.createElement('div'); o.className='opts';
+  f.append(l,o); $('#knobs').append(f); radio(o, def.options, state.knobs[k], v=>{state.knobs[k]=v; renderCost();});
+}
+renderCost();
+
+// ---- 工程の列 ----
+function rounds(e){ return e==='軽く'?{stock:1,review:1}:e==='念入りに'?{stock:5,review:3}:{stock:3,review:2}; }
+function buildStages(k){
+  const r=rounds(k.effort); const s=[];
+  const push=(no,suffix='',extra='')=>{const name=STAGE_NAMES[no-1]; const head=`${no} ｜ ${name}${suffix?' '+suffix:''}`; s.push({id:suffix?`${no}-${suffix.split('/')[0]}`:String(no),no,name,label:head,
+    instruction:`次は「# ${head}」の工程だけを書き出してください。他の工程には進まないでください。項目ごとに段落を分け、段落は空行で区切ってください。`+(extra?'\n'+extra:'')});};
+  push(1); for(let i=1;i<=r.stock;i++) push(2,`${i}/${r.stock}`,'この試作では検索ができません。仕入れ先の指定にかかわらず「検索が使えない周」として扱い、出典URLを捏造せず、手持ちの材料だけで進めてください。');
+  push(3); push(4); push(5); push(6);
+  for(let i=1;i<=r.review;i++) push(7,`${i}/${r.review}`,`点検のあとに「# 第${i}稿」として本文全体を出してください。`);
+  push(8,'',['摘発・直し・数え直しのあと、最後に必ず次の形で仕上がりを出してください。','','===仕上がり===','# （題）','（本文。段落は空行で区切る）','===ここまで==='].join('\n'));
+  return s;
+}
+function orderText(){
+  const subj = state.subject==='その他' ? ($('#f-subject-other').value.trim()||'おまかせ') : state.subject;
+  const lines=['# 注文票',`- 品名：${$('#f-title').value.trim()}`,`- 主語：${subj}`, ...Object.entries(KNOBS).map(([k,d])=>`- ${d.label}：${state.knobs[k]}`)];
+  const m=$('#f-material').value.trim(); if(m) lines.push('','## 素材（下敷きにする客の文章）','',m);
+  return lines.join('\n');
+}
+const bytes=(s)=>new TextEncoder().encode(s).length;
+const head=(s,n)=>s.length>n? s.slice(0,n)+'\n…（長いので前半だけ）':s;
+
+/** その工程に渡す材料を組む。上限に収まるよう、古い仕入れから削る */
+function buildPrompt(stages, i, outputs, limit){
+  const st=stages[i];
+  const sys=[ '以下は文章を仕立てる店の手順書です。あなたはこの店の仕立て手として、注文票の通りに一本の文章を仕立てます。',
+    '工程は一つずつ求められます。求められた工程だけを、見出し `# N ｜ 〈工程名〉` から書き出し、次の工程に進まないでください。','',
+    '=== 手順書 ===', RECIPE ];
+  if(st.no>=7) sys.push('','=== 点検表 ===', CHECKS);
+  sys.push('','=== 書き手の台帳 ===','台帳なし。注文票の指定に従う。');
+  // 持ち越す出力: 優先度つき
+  const carry=[]; // {label, text, prio}  prio 小さいほど守る
+  let latestDraft=null;
+  stages.slice(0,i).forEach((s,j)=>{
+    const t=outputs[j]; if(!t) return;
+    if(s.no===6||s.no===7){ latestDraft={label:s.label,text:t}; return; }
+    if(s.no===2){ carry.push({label:s.label,text:t,prio:9}); return; }
+    carry.push({label:s.label,text:t,prio:s.no===4?5:s.no===1?4:2});
+  });
+  if(latestDraft) carry.push({label:latestDraft.label,text:latestDraft.text,prio:1});
+  // 仕入れは新しい2周だけ
+  const stock=carry.filter(c=>c.prio===9); while(stock.length>2){ const x=stock.shift(); carry.splice(carry.indexOf(x),1); }
+  const fixed=sys.join('\n')+'\n\n=== 注文票 ===\n'+orderText()+'\n\n=== 今回の工程 ===\n'+st.instruction;
+  let budget=limit-bytes(fixed)-2000;
+  const order=[...carry].sort((a,b)=>b.prio-a.prio); // 削る順（優先度の低いものから）
+  const size=()=>carry.reduce((n,c)=>n+bytes(c.text)+40,0);
+  for(const c of order){ if(size()<=budget) break; const over=size()-budget; const keep=Math.max(600, c.text.length-Math.ceil(over/2)); c.text=head(c.text,keep); if(size()>budget) c.text=head(c.text,600); }
+  const prior=carry.length? '\n\n=== これまでの工程（控え） ===\n'+carry.map(c=>`# ${c.label}\n${c.text}`).join('\n\n'):'';
+  return sys.join('\n')+'\n\n=== 注文票 ===\n'+orderText()+prior+'\n\n=== 今回の工程 ===\n'+st.instruction;
+}
+
+// ---- 仕立て台の描画 ----
+const stacks=new Map(); // no -> {el, notes:[{el,text}], label}
+let selected=null;
+function renderStrip(current, doneSet){
+  $('#strip').innerHTML=STAGE_NAMES.map((n,i)=>{const no=i+1; const cls=doneSet.has(no)&&current>no?'done':current===no?'now':''; return `<span class="${cls}">${no} ${n}</span>`+(no<8?'<i>&gt;</i>':'');}).join('');
+}
+function ensureDesk(){ $('#desk-empty').hidden=true; const n=$('#notes'); n.hidden=false; if(!n.children.length){ for(let no=1;no<=8;no++){ const d=document.createElement('div'); d.className='stack todo'; d.dataset.no=no; d.innerHTML=`<div class="note"><h4>${no} ｜ ${STAGE_NAMES[no-1]}</h4></div>`; n.append(d);} } }
+function startStage(st){
+  ensureDesk();
+  const el=$(`#notes .stack[data-no="${st.no}"]`);
+  let s=stacks.get(st.no);
+  if(!s){ el.className=`stack s${st.no}`; el.innerHTML=''; s={el,notes:[],label:st.label}; stacks.set(st.no,s); }
+  s.label=st.label; s.partial=null;
+  if(s.notes[0]) s.notes[0].el.querySelector('h4').textContent=st.label+'　仕立て中';
+}
+function paragraphs(text){ return text.split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean); }
+function renderStage(st, text, final){
+  const s=stacks.get(st.no); const ps=paragraphs(text);
+  const base=s.baseCount||0; // この工程より前（同じ列の前の周）の付箋数
+  ps.forEach((p,i)=>{
+    const idx=base+i; let n=s.notes[idx];
+    if(!n){ const d=document.createElement('div'); d.className='note'; if(idx===0){const h=document.createElement('h4'); h.textContent=st.label+(final?'':'　仕立て中'); d.append(h);} const para=document.createElement('p'); d.append(para); s.el.append(d); n={el:d,p:para,text:''}; s.notes[idx]=n;
+      d.addEventListener('click',(e)=>{ if(s.el.classList.contains('long')&&!s.el.classList.contains('open')) return; e.stopPropagation(); select(n); }); }
+    n.text=p; n.p.textContent=p; const partial=!final&&i===ps.length-1; n.el.classList.toggle('partial',partial);
+  });
+  if(final){ s.baseCount=base+ps.length; if(s.notes[0]) s.notes[0].el.querySelector('h4').textContent=st.label; foldIfLong(s); }
+}
+function foldIfLong(s){
+  if(s.el.classList.contains('long')) return;
+  if(s.el.scrollHeight>360 && s.notes.length>2){ s.el.classList.add('long'); const h=document.createElement('div'); h.className='hint'; s.el.append(h); s.el.addEventListener('click',()=>s.el.classList.toggle('open')); }
+}
+function select(n){ document.querySelectorAll('.note.sel').forEach(x=>x.classList.remove('sel')); if(selected===n){selected=null; $('#reading').hidden=true; return;} selected=n; n.el.classList.add('sel'); $('#reading-body').textContent=n.text; $('#reading').hidden=false; }
+
+// ---- 清書 ----
+let finalDoc=null;
+function extractFinal(text, fallbackTitle){
+  const m=text.match(/===仕上がり===\s*([\s\S]*?)(?:===ここまで===|$)/); const raw=(m?m[1]:text).trim(); const lines=raw.split('\n'); let title='';
+  if(lines[0]&&lines[0].startsWith('# ')) title=lines.shift().replace(/^#\s*/,'').trim();
+  return {title:title||fallbackTitle, body:paragraphs(lines.join('\n'))};
+}
+function showBook(doc, tickets, note){
+  finalDoc=doc; const pg=$('#page'); pg.innerHTML=''; const h=document.createElement('h1'); h.textContent=doc.title; pg.append(h); doc.body.forEach(p=>{const e=document.createElement('p'); e.textContent=p; pg.append(e);});
+  $('#book-meta').textContent=`仕上がり ／ ${doc.body.join('').length.toLocaleString()}字 ／ 券 ${tickets}枚`; $('#book-note').textContent=note||''; $('#sec-book').hidden=false; $('#sec-book').scrollIntoView({behavior:'smooth',block:'start'});
+}
+$('#toggle-hand').addEventListener('click',()=>{const on=$('#page').classList.toggle('hand-mode'); $('#toggle-hand').textContent=on?'明朝で見る':'手書きで見る';});
+const copy=(t)=>navigator.clipboard&&navigator.clipboard.writeText(t);
+$('#copy-plain').addEventListener('click',()=>finalDoc&&copy([finalDoc.title,'',...finalDoc.body.flatMap(p=>[p,''])].join('\n').trim()));
+$('#copy-md').addEventListener('click',()=>finalDoc&&copy(['# '+finalDoc.title,'',...finalDoc.body.flatMap(p=>[p,''])].join('\n').trim()));
+let allOutputs=[];
+$('#copy-all').addEventListener('click',()=>copy(allOutputs.join('\n\n---\n\n')));
+
+// ---- 缶詰（Claudeを呼べない場所で見るとき） ----
+function mockText(no,label,title){
+  const M={1:[`受け取り　「${title}」の額面ではなく、読む人が本当に欲しがっているものに読み替える。`,'話者　注文票の主語を最後まで動かさない。','芯の候補　一文で。'],2:['材料　手持ちだけ。検索はしない。','土俵の言葉　対比先とセットで一語。'],3:['芯　一文。','捨てる　書かないものを名指す。'],4:['違和感　この言い方、どこかしっくり来ない……','本当は言いたい一文　三つほど。'],5:['流れ　1. まず誰もが思いつく答え　2. 崩れる場面　3. 折り目　4. 芯　5. 締め','ほつれ　3の直後に言いさしを一つ。'],6:[`# ${title}\n\n一筆目の段落。`,'二つ目の段落。'],7:['見直しの五つの目で点検。箇所を名指す。',`# 第1稿\n\n直した本文。`],8:['見分け方　この原稿では、締めの三拍子が境目。','数え直し　否定→肯定 3→1 ／ 三つ並べ 2→0',`===仕上がり===\n# ${title}\n\n仕上がりの最初の段落です。缶詰なので中身はありません。\n\n二つ目の段落。\n===ここまで===`]};
+  return (M[no]||[label]).join('\n\n');
+}
+async function mockRun(st, onText){ const t=mockText(st.no,st.label,$('#f-title').value.trim()); let acc=''; for(const ch of t.match(/[\s\S]{1,20}/g)){ acc+=ch; onText({text:acc}); await new Promise(r=>setTimeout(r,25)); } return {text:acc,truncated:false}; }
+
+// ---- 仕立てる ----
+let samplePromise = window.claude && window.claude.use ? window.claude.use('sample') : Promise.resolve(null);
+$('#btn-order').addEventListener('click', async ()=>{
+  const title=$('#f-title').value.trim(); if(!title){ $('#f-title').focus(); return; }
+  const c=cost(); if(state.busy||state.tickets<c) return;
+  state.busy=true; state.tickets-=c; renderCost(); $('#err').hidden=true; $('#sec-book').hidden=true; $('#reading').hidden=true;
+  stacks.clear(); $('#notes').innerHTML=''; allOutputs=[];
+  const sample=await samplePromise; const limit = sample ? ((await sample.limits().catch(()=>null))||{}).maxPromptBytes||65536 : 65536;
+  if(!sample) $('#cap-note').textContent='（この場所からはClaudeを呼べないので缶詰で動きます）';
+  const stages=buildStages(state.knobs); const outputs=[]; const doneSet=new Set();
+  $('#sec-desk').scrollIntoView({behavior:'smooth',block:'start'});
+  try{
+    for(let i=0;i<stages.length;i++){
+      const st=stages[i]; startStage(st); renderStrip(st.no, doneSet);
+      const onText=({text})=>renderStage(st,text,false);
+      let res;
+      if(sample){ res=await sample(buildPrompt(stages,i,outputs,limit), {onText, cache:false, modelTier: st.no>=6?'complex':'default'}); }
+      else res=await mockRun(st,onText);
+      renderStage(st,res.text,true); outputs[i]=res.text; allOutputs.push(`# ${st.label}\n\n${res.text}`);
+      if(res.truncated){ const s=stacks.get(st.no); const w=document.createElement('div'); w.className='note'; w.innerHTML='<p>（ここで長さの上限に当たって切れました）</p>'; s.el.append(w); }
+      doneSet.add(st.no);
+    }
+    renderStrip(9, doneSet);
+    const lastText=outputs[outputs.length-1]; const doc=extractFinal(lastText,title);
+    showBook(doc, c, sample?'':'缶詰の出力です。Claudeを呼べる場所で開くと本物が動きます。');
+  }catch(e){
+    const msg=(e&&e.message)||String(e); $('#err').textContent='仕立てが止まりました: '+msg+(e&&e.text?'\n（途中まで）\n'+e.text.slice(0,400):''); $('#err').hidden=false;
+    state.tickets+=c; // 止まったら券は戻す
+  }finally{ state.busy=false; renderCost(); }
+});
+</script>

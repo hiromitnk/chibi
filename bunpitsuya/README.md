@@ -27,6 +27,7 @@ bunpitsuya.com ／ 文章を「書く」のではなく「仕立てる」店。
 - `product/ui-notes.md` ── 画面の観察メモ（何を残し、何を変えるか）。
 - `product/mvp.md` ── 画面の三状態、1週目／2週目の範囲、技術。
 - `product/mock.html` ── 画面の下書き（静的）。焼けた銅と緑青のトーンで確定。
+- `product/trial.html` ── 動く試作。claude.ai のアーティファクトとして開くと、開いた人のClaudeで工程が走る（`sample` 機構）。Vercel不要。
 - `app/` ── Next.js の土台。注文票→仕立て台→清書、工程ごとにClaude APIを呼んで付箋単位でストリーミング。鍵が無ければ `MOCK=1` で動く。
 
 ## 決めていること
