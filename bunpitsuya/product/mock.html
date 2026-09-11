@@ -5,7 +5,7 @@
     --paper:#efe6d3; --paper-2:#e6dbc2; --slip:#f7f1e3;
     --ink:#35291f; --ink-soft:#6a5a4a; --ink-faint:#9a8a75;
     --rust:#a1543f; --rust-soft:#c07a63;
-    --line:#cdbfa0; --rule:#b9c8d1;
+    --line:#cdbfa0; --rule:#e1e6e9; --lh:34px;
     --desk:#6b4a33; --desk-2:#7d583d; --desk-edge:#4f3626;
     --st-y:#f5e6a3; --st-p:#f2c9c1; --st-g:#d3e2c4; --st-b:#cfe0e8; --st-w:#f3efe4;
     --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
@@ -89,11 +89,11 @@
   .book-bar .t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink-faint)}
   .book-bar .acts{display:flex;gap:8px}
   .book-bar button{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;background:transparent;border:1px solid var(--ink-soft);color:var(--ink);padding:5px 11px;border-radius:2px;cursor:pointer}
-  .page{padding:34px 40px 40px;
-        background-image:repeating-linear-gradient(180deg, transparent 0 calc(2.05em - 1px), var(--rule) calc(2.05em - 1px) 2.05em);
-        background-position:0 34px}
-  .page h1{font-family:var(--mincho);font-weight:800;font-size:26px;line-height:2.05em;margin:0 0 1.025em;letter-spacing:.02em;text-wrap:balance}
-  .page p{font-family:var(--mincho);font-size:16.5px;line-height:2.05em;margin:0 0 2.05em;max-width:38em}
+  .page{padding:var(--lh) 40px calc(var(--lh) * 1.5);
+        background-image:repeating-linear-gradient(180deg, transparent 0 calc(var(--lh) - 1px), var(--rule) calc(var(--lh) - 1px) var(--lh));
+        background-origin:content-box;background-clip:padding-box}
+  .page h1{font-family:var(--mincho);font-weight:800;font-size:26px;line-height:calc(var(--lh) * 2);margin:0 0 var(--lh);letter-spacing:.02em;text-wrap:balance}
+  .page p{font-family:var(--mincho);font-size:16.5px;line-height:var(--lh);margin:0 0 var(--lh);max-width:38em}
   .fold{margin-top:0;padding:14px 22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;background:var(--slip)}
   .fold b{font-family:var(--hand);font-weight:600;color:var(--rust);font-size:14px}
 
@@ -101,7 +101,7 @@
     body{padding-inline:16px}
     .slip{padding:20px 16px}
     .field{grid-template-columns:1fr}
-    .page{padding:26px 18px 30px}
+    .page{padding-inline:18px}
     .page p{font-size:15.5px}
   }
 </style>
