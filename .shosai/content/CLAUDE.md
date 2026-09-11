@@ -128,7 +128,10 @@ Hiromiの指示や構成メモを骨格に使う場合でも、それを itoori 
 - 執筆中: `drafts/kebab-case.md`
 - 公開済み: `drafts/` から `published/YYYY-MM-DD-kebab-case.md` に**移動**（下記テンプレを先頭に付ける）
 - 販売実績は記事ファイルには書かない。`../marketing/logs/YYYY-MM.md` に月1回まとめて記録する
-- シリーズ設計: `series/`
+- シリーズ設計: `series/`。公開順は `series/plan.md` の「公開順」に従う
+- 有料記事の下書きは、有料ラインの位置に `===有料ライン===` という行を1つだけ置く
+- 投稿用の梱包: `python3 .shosai/tools/pack-for-note.py drafts/<slug>.md` で
+  `publish/<slug>/` に貼り付け用本文・タイトル・挿絵・手順チェックリストが出る
 
 ### published のテンプレ
 
