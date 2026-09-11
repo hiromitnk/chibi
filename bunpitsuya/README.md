@@ -22,7 +22,8 @@ bunpitsuya.com ／ 文章を「書く」のではなく「仕立てる」店。
 - `core/recipe.md` ── 1〜8の工程の原本。アプリのシステムプロンプトはこれから生成する。
 - `core/checks.md` ── 見直し・仕上げで使う点検表。
 - `core/ledger-template.md` ── 書き手の台帳のひな型。
-- `product/pricing.md` ── 料金。MVPの範囲・画面は追って。
+- `product/pricing.md` ── 料金。
+- `product/ui-notes.md` ── 画面の観察メモ（何を残し、何を変えるか）。MVPの範囲は追って。
 
 ## 決めていること
 
