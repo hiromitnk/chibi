@@ -1,7 +1,8 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-const CORE = path.resolve(process.cwd(), "..", "core");
+// app/core/ は ../core の写し（scripts/sync-core.mjs）。Vercel ではこの写しだけが見える。
+const CORE = path.resolve(process.cwd(), "core");
 
 async function read(name: string): Promise<string> {
   return readFile(path.join(CORE, name), "utf8");
