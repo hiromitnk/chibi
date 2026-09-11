@@ -1,5 +1,5 @@
 <title>文筆屋さん</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Klee+One:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Zen+Kurenaido&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
     --paper:#efe6d3; --paper-2:#e6dbc2; --slip:#f7f1e3;
@@ -9,7 +9,7 @@
     --desk:#6b4a33; --desk-2:#7d583d; --desk-edge:#4f3626;
     --st-y:#f5e6a3; --st-p:#f2c9c1; --st-g:#d3e2c4; --st-b:#cfe0e8; --st-w:#f3efe4;
     --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
-    --hand:"Klee One","Hiragino Maru Gothic ProN",cursive;
+    --hand:"Zen Kurenaido","Klee One","Hiragino Maru Gothic ProN",cursive;
     --mono:"IBM Plex Mono",ui-monospace,monospace;
   }
   *{box-sizing:border-box}
@@ -38,10 +38,10 @@
   .field{display:grid;grid-template-columns:5.5em 1fr;gap:6px 16px;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line)}
   .field:last-of-type{border-bottom:0}
   .field label{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--ink-soft)}
-  .hand{font-family:var(--hand);font-size:18px;line-height:1.6}
+  .hand{font-family:var(--hand);font-size:19px;line-height:1.6}
   .hand.muted{color:var(--ink-faint);font-size:15px}
   .opts{display:flex;flex-wrap:wrap;gap:6px 14px}
-  .opt{font-family:var(--hand);font-size:16px;padding:2px 8px;border-radius:999px;color:var(--ink-soft);position:relative;cursor:pointer}
+  .opt{font-family:var(--hand);font-size:17px;padding:2px 8px;border-radius:999px;color:var(--ink-soft);position:relative;cursor:pointer}
   .opt.on{color:var(--ink)}
   .opt.on::after{content:"";position:absolute;inset:-3px -6px;border:2px solid var(--rust);border-radius:50% 45% 55% 48% / 55% 50% 48% 52%;transform:rotate(-2deg);opacity:.85}
   .opt small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--ink-faint);line-height:1.3}
@@ -63,7 +63,7 @@
         border-top:6px solid var(--desk-edge);border-bottom:10px solid var(--desk-edge);
         padding:26px 18px 30px;overflow-x:auto;scroll-snap-type:x proximity}
   .notes{display:flex;gap:22px;align-items:flex-start;min-width:max-content;padding:4px 6px}
-  .note{width:236px;min-height:210px;padding:16px 16px 20px;font-family:var(--hand);font-size:14.5px;line-height:1.7;color:var(--ink);
+  .note{width:236px;min-height:210px;padding:16px 16px 20px;font-family:var(--hand);font-size:15.5px;line-height:1.75;color:var(--ink);
         box-shadow:0 12px 18px -12px rgba(0,0,0,.55), 0 1px 0 rgba(255,255,255,.35) inset;scroll-snap-align:start;position:relative;flex:none}
   .note::before{content:"";position:absolute;left:50%;top:-8px;width:52px;height:16px;margin-left:-26px;background:rgba(255,255,255,.45);
         transform:rotate(-2deg);box-shadow:0 1px 2px rgba(0,0,0,.15)}
