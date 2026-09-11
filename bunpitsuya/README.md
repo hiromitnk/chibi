@@ -26,7 +26,7 @@ bunpitsuya.com ／ 文章を「書く」のではなく「仕立てる」店。
 - `product/pricing.md` ── 料金。
 - `product/ui-notes.md` ── 画面の観察メモ（何を残し、何を変えるか）。
 - `product/mvp.md` ── 画面の三状態、1週目／2週目の範囲、技術。
-- `product/mock.html` ── 画面の下書き（静的）。
+- `product/mock.html` ── 画面の下書き（静的）。焼けた銅と緑青のトーンで確定。
 
 ## 決めていること
 
