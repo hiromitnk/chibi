@@ -107,22 +107,23 @@
         border:1px solid rgba(201,165,90,.35);border-top-width:3px;
         box-shadow:0 30px 60px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(0,0,0,.4) inset;
         padding:26px 18px 30px;overflow-x:auto;scroll-snap-type:x proximity}
-  .notes{display:flex;gap:22px;align-items:flex-start;min-width:max-content;padding:4px 6px}
-  .note{width:236px;min-height:210px;padding:16px 16px 20px;font-family:var(--hand);font-size:15.5px;line-height:1.75;color:var(--ink);
-        box-shadow:0 12px 18px -12px rgba(0,0,0,.55), 0 1px 0 rgba(255,255,255,.35) inset;scroll-snap-align:start;position:relative;flex:none}
-  .note::before{content:"";position:absolute;left:50%;top:-8px;width:52px;height:16px;margin-left:-26px;background:rgba(255,255,255,.45);
+  .notes{display:flex;gap:26px;align-items:flex-start;min-width:max-content;padding:4px 6px}
+  .stack{display:flex;flex-direction:column;width:236px;flex:none;scroll-snap-align:start}
+  .note{width:236px;padding:14px 16px 16px;font-family:var(--hand);font-size:15.5px;line-height:1.75;color:var(--ink);
+        box-shadow:0 12px 18px -12px rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,.35) inset;position:relative}
+  .note + .note{margin-top:-18px}
+  .stack .note:nth-child(1){z-index:1}.stack .note:nth-child(2){z-index:2}.stack .note:nth-child(3){z-index:3}.stack .note:nth-child(4){z-index:4}
+  .note::before{content:"";position:absolute;left:50%;top:-7px;width:48px;height:14px;margin-left:-24px;background:rgba(255,255,255,.45);
         transform:rotate(-2deg);box-shadow:0 1px 2px rgba(0,0,0,.15)}
-  .note h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;font-weight:500;margin:0 0 8px;color:var(--ink-soft)}
-  .note p{margin:0 0 6px}
+  .note h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;font-weight:500;margin:0 0 6px;color:var(--ink-soft)}
+  .note p{margin:0}
   .note .k{font-weight:600}
-  .n1{background:var(--st-y);transform:rotate(-1.6deg)}
-  .n2{background:var(--st-b);transform:rotate(1.1deg)}
-  .n3{background:var(--st-p);transform:rotate(-.7deg)}
-  .n4{background:var(--st-g);transform:rotate(1.8deg)}
-  .n5{background:var(--st-y);transform:rotate(-1.2deg)}
-  .note.now{outline:2px dashed var(--verdigris-2);outline-offset:4px}
-  .note.todo{background:var(--st-w);opacity:.55;min-height:150px}
-  .note.todo h4{color:var(--ink-faint)}
+  .stack .note:nth-child(odd){transform:rotate(-1.1deg)}
+  .stack .note:nth-child(even){transform:rotate(1.2deg)}
+  .s1 .note{background:var(--st-y)}.s2 .note{background:var(--st-b)}.s3 .note{background:var(--st-p)}.s4 .note{background:var(--st-g)}.s5 .note{background:var(--st-y)}
+  .s5 .note.now{outline:2px dashed var(--verdigris-2);outline-offset:4px}
+  .stack.todo .note{background:var(--st-w);opacity:.5;min-height:110px}
+  .stack.todo .note h4{color:var(--ink-faint)}
   .caret{display:inline-block;width:2px;height:1em;background:var(--verdigris);vertical-align:-2px;animation:blink 1s steps(2) infinite}
   @keyframes blink{50%{opacity:0}}
   @media (prefers-reduced-motion:reduce){.caret{animation:none}}
@@ -257,40 +258,36 @@
     </div>
     <div class="desk">
       <div class="notes">
-        <div class="note n1">
-          <h4>1 ｜ お題を解く</h4>
-          <p><span class="k">受け取り</span>　「売れる方法」の額面じゃなくて、誰に・どの棚で・何と比べられるか、を決めてほしいのだと思う。</p>
-          <p><span class="k">話者</span>　実務者。当事者でも観察者でもない。</p>
-          <p><span class="k">芯の候補</span>　れもん酒は「日本酒」の棚では戦えない。RTDの棚なら戦える。</p>
+        <div class="stack s1">
+          <div class="note"><h4>1 ｜ お題を解く</h4><p><span class="k">受け取り</span>　「売れる方法」の額面じゃなくて、誰に・どの棚で・何と比べられるか、を決めてほしいのだと思う。</p></div>
+          <div class="note"><p><span class="k">話者</span>　実務者。当事者でも観察者でもない。</p></div>
+          <div class="note"><p><span class="k">芯の候補</span>　れもん酒は「日本酒」の棚では戦えない。RTDの棚なら戦える。</p></div>
+          <div class="note"><p><span class="k">次の問い</span>　海外で、誰が最初の一本を開けるのか。</p></div>
         </div>
-        <div class="note n2">
-          <h4>2 ｜ 仕入れ 3/3</h4>
-          <p><span class="k">材料</span>　手持ちだけ。海外のRTD市場の空気、日本酒輸出の王道（純米大吟醸→プレミアム）との差。</p>
-          <p><span class="k">土俵の言葉</span>　「食後酒」vs「食中酒」。れもん酒はどっちでもない、が入口。</p>
+        <div class="stack s2">
+          <div class="note"><h4>2 ｜ 仕入れ 3/3</h4><p><span class="k">材料</span>　手持ちだけ。海外のRTD市場の空気、日本酒輸出の王道（純米大吟醸→プレミアム）との差。</p></div>
+          <div class="note"><p><span class="k">土俵の言葉</span>　「食後酒」vs「食中酒」。れもん酒はどっちでもない、が入口。</p></div>
         </div>
-        <div class="note n3">
-          <h4>3 ｜ 芯</h4>
-          <p><span class="k">芯</span>　日本酒の文脈から降りて、カクテル素材として海外の棚に置く。</p>
-          <p><span class="k">不利な材料</span>　「日本酒ベース」を捨てると、蔵の看板が使えない。</p>
-          <p><span class="k">捨てる</span>　関税・物流の話。</p>
+        <div class="stack s3">
+          <div class="note"><h4>3 ｜ 芯</h4><p><span class="k">芯</span>　日本酒の文脈から降りて、カクテル素材として海外の棚に置く。</p></div>
+          <div class="note"><p><span class="k">不利な材料</span>　「日本酒ベース」を捨てると、蔵の看板が使えない。</p></div>
+          <div class="note"><p><span class="k">捨てる</span>　関税・物流の話。</p></div>
         </div>
-        <div class="note n4">
-          <h4>4 ｜ 裏紙</h4>
-          <p>「降りる」って言い方、蔵に失礼じゃないか……いや、棚を変えるだけで、酒は変えない、と言えば</p>
-          <p><span class="k">言いかけ</span>　海外で売れるかどうかより、誰が最初の一本を開けるのか、というか</p>
-          <p><span class="k">本当は言いたい一文</span>　看板を降ろすんじゃなくて、看板を読める人のいる場所に持っていく。</p>
+        <div class="stack s4">
+          <div class="note"><h4>4 ｜ 裏紙</h4><p>「降りる」って言い方、蔵に失礼じゃないか……いや、棚を変えるだけで、酒は変えない、と言えば</p></div>
+          <div class="note"><p><span class="k">言いかけ</span>　海外で売れるかどうかより、誰が最初の一本を開けるのか、というか</p></div>
+          <div class="note"><p><span class="k">本当は言いたい一文</span>　看板を降ろすんじゃなくて、看板を読める人のいる場所に持っていく。</p></div>
         </div>
-        <div class="note n5 now">
-          <h4>5 ｜ 構成　仕立て中</h4>
-          <p><span class="k">流れ</span>　1. 日本酒の輸出の王道を一度なぞる　2. れもん酒がそこに乗らない理由　3. RTDの棚を眺める</p>
-          <p><span class="k">折り目</span>　3の直後。<span class="caret"></span></p>
+        <div class="stack s5">
+          <div class="note"><h4>5 ｜ 構成　仕立て中</h4><p><span class="k">流れ</span>　1. 日本酒の輸出の王道を一度なぞる　2. れもん酒がそこに乗らない理由　3. RTDの棚を眺める</p></div>
+          <div class="note now"><p><span class="k">折り目</span>　3の直後。<span class="caret"></span></p></div>
         </div>
-        <div class="note todo"><h4>6 ｜ 一筆目</h4></div>
-        <div class="note todo"><h4>7 ｜ 見直し</h4></div>
-        <div class="note todo"><h4>8 ｜ 仕上げ</h4></div>
+        <div class="stack todo"><div class="note"><h4>6 ｜ 一筆目</h4></div></div>
+        <div class="stack todo"><div class="note"><h4>7 ｜ 見直し</h4></div></div>
+        <div class="stack todo"><div class="note"><h4>8 ｜ 仕上げ</h4></div></div>
       </div>
     </div>
-    <p class="desk-note">付箋は左から増える。横にスクロールで前の工程に戻れる。</p>
+    <p class="desk-note">工程ごとに一列。段落が増えるたびに、同じ色の付箋が縦に貼り重なる。横にスクロールで前の工程に戻れる。</p>
   </section>
 
   <!-- 三 清書 -->
