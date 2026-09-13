@@ -7,7 +7,7 @@
     --line:#cdbfa0; --rule:#e1e6e9; --lh:34px;
     --st-y:#f5e6a3; --st-p:#f2c9c1; --st-g:#d3e2c4; --st-b:#cfe0e8; --st-w:#f3efe4;
     --mincho:"Zen Old Mincho","Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
-    --hand:"Zen Kurenaido","Klee One","Hiragino Maru Gothic ProN",cursive;
+    --hand:"ads-arinco","Zen Kurenaido","Klee One","Hiragino Maru Gothic ProN",cursive;
     --mono:"IBM Plex Mono",ui-monospace,monospace;
   }
   *{box-sizing:border-box}
