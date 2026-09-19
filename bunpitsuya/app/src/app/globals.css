@@ -176,6 +176,8 @@
   textarea.hand::placeholder, input.hand::placeholder{color:var(--ink-faint)}
   .btn:disabled{opacity:.5;cursor:not-allowed}
   .err{font-family:var(--mono);font-size:12px;color:var(--rust-soft);margin-top:12px}
+  .note.search{font-family:var(--mono);font-size:11px;padding:8px 12px;background:#e8efe9!important;color:#3f5a4b}
+  .note.search::before{display:none}
   .note.partial{outline:2px dashed var(--verdigris-2);outline-offset:4px}
   .stack.s6 .note{background:var(--st-b)}.stack.s7 .note{background:var(--st-p)}.stack.s8 .note{background:var(--st-g)}
   .note.sel{box-shadow:0 0 0 2px var(--brass-2), 0 12px 18px -12px rgba(0,0,0,.6)}

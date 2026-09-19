@@ -3,7 +3,8 @@ export type Subject = "私" | "わたし" | "僕" | "ぼく" | "俺" | "その�
 export const KNOBS = {
   source: { label: "仕入れ先", options: [
     { v: "手持ちだけ", note: "調べない。原価が安い" },
-    { v: "国内で", note: "日本語の一次資料を優先" },
+    { v: "国内で", note: "日本語の一次資料を優先して調べる" },
+    { v: "国内外で", note: "海外の資料も調べる。遅く、少し高い" },
   ]},
   effort: { label: "手間", options: [
     { v: "軽く", note: "仕入れ1周・見直し1回" },
@@ -59,6 +60,12 @@ export type Order = {
 /** 券の枚数は手間だけで決まる */
 export function ticketCost(o: Pick<Order, "knobs">): number {
   return o.knobs.effort === "念入りに" ? 2 : 1;
+}
+
+/** 仕入れ先 → 1周あたりの検索の上限（0 = 検索しない） */
+export function searchUses(source: Knobs["source"], effort: Knobs["effort"]): number {
+  if (source === "手持ちだけ") return 0;
+  return effort === "軽く" ? 3 : effort === "念入りに" ? 8 : 5;
 }
 
 /** 手間 → 仕入れの周回数・見直しの回数 */

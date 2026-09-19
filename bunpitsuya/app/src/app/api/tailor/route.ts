@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest } from "next/server";
 import type { Order } from "@/lib/order";
-import { orderToText, ticketCost } from "@/lib/order";
+import { orderToText, ticketCost, searchUses } from "@/lib/order";
 import { buildStages } from "@/lib/stages";
 import { buildSystemPrompt } from "@/lib/recipe";
 import { mockStageText } from "@/lib/mock";
@@ -10,7 +10,10 @@ import type { TailorEvent } from "@/lib/events";
 export const runtime = "nodejs";
 export const maxDuration = 300; // Vercel の上限に合わせ、1リクエスト＝1工程
 
+// 筆は店が決める。前半（1〜5）と後半（6〜8）で変えられる
 const MODEL = process.env.BUNPITSUYA_MODEL || "claude-sonnet-5";
+const MODEL_HEAVY = process.env.BUNPITSUYA_MODEL_HEAVY || MODEL;
+const MAX_CONTINUATIONS = 5; // 検索の周回が長いと pause_turn で止まるので、続きを頼む回数の上限
 
 type Body = {
   order: Order;
@@ -42,6 +45,17 @@ export async function POST(req: NextRequest) {
   const useMock = process.env.MOCK === "1" || !process.env.ANTHROPIC_API_KEY;
   const enc = new TextEncoder();
 
+  // 検索は 仕入れ（2）と 見直しの裏取り（7）だけ。上限は仕入れ先と手間で決まる
+  const uses = st.no === 2 ? searchUses(order.knobs.source, order.knobs.effort) : st.no === 7 ? Math.min(3, searchUses(order.knobs.source, order.knobs.effort)) : 0;
+  const tools = uses > 0
+    ? [{
+        type: "web_search_20260209" as const,
+        name: "web_search" as const,
+        max_uses: uses,
+        ...(order.knobs.source === "国内で" ? { user_location: { type: "approximate" as const, country: "JP", timezone: "Asia/Tokyo" } } : {}),
+      }]
+    : undefined;
+
   // 会話を組み直す: 注文票 → (指示, 出力) × index → 今回の指示
   const messages: Anthropic.MessageParam[] = [{ role: "user", content: orderToText(order) }];
   for (let i = 0; i < index; i++) {
@@ -53,6 +67,7 @@ export async function POST(req: NextRequest) {
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
       const send = (e: TailorEvent) => controller.enqueue(enc.encode(`data: ${JSON.stringify(e)}\n\n`));
+      let searches = 0;
       try {
         send({ type: "stage-start", id: st.id, no: st.no, label: st.label, index, total: stages.length });
         let full = "";
@@ -74,20 +89,36 @@ export async function POST(req: NextRequest) {
         } else {
           const system = await buildSystemPrompt();
           const client = new Anthropic();
-          const s = client.messages.stream({
-            model: MODEL,
-            max_tokens: 8000,
-            system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
-            messages,
-          });
-          for await (const ev of s) {
-            if (ev.type === "content_block_delta" && ev.delta.type === "text_delta") {
-              full += ev.delta.text; buf += ev.delta.text; flush(false);
+          const model = st.no >= 6 ? MODEL_HEAVY : MODEL;
+
+          // 検索で pause_turn が返ったら、同じ会話で続きを頼む
+          for (let round = 0; round <= MAX_CONTINUATIONS; round++) {
+            const s = client.messages.stream({
+              model,
+              max_tokens: 16000,
+              system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
+              messages,
+              ...(tools ? { tools } : {}),
+            });
+            s.on("contentBlock", (block) => {
+              if (block.type === "server_tool_use" && block.name === "web_search") {
+                searches++;
+                const q = (block.input as { query?: string })?.query ?? "";
+                send({ type: "search", id: st.id, query: q });
+              }
+            });
+            for await (const ev of s) {
+              if (ev.type === "content_block_delta" && ev.delta.type === "text_delta") {
+                full += ev.delta.text; buf += ev.delta.text; flush(false);
+              }
             }
+            const msg = await s.finalMessage();
+            if (msg.stop_reason !== "pause_turn") break;
+            messages.push({ role: "assistant", content: msg.content });
           }
         }
         flush(true);
-        send({ type: "stage-end", id: st.id, text: full, last });
+        send({ type: "stage-end", id: st.id, text: full, last, searches });
         if (last) {
           const { title, body } = extractFinal(full);
           send({ type: "done", title: title || order.title, body, chars: body.join("").length, tickets: ticketCost(order) });

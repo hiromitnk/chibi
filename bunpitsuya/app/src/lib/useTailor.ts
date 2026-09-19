@@ -3,9 +3,9 @@ import { useCallback, useRef, useState } from "react";
 import type { Order } from "./order";
 import type { TailorEvent } from "./events";
 
-export type Note = { text: string; partial?: boolean };
+export type Note = { text: string; partial?: boolean; search?: boolean };
 export type StackState = { id: string; no: number; label: string; notes: Note[]; done: boolean };
-export type Final = { title: string; body: string[]; chars: number; tickets: number };
+export type Final = { title: string; body: string[]; chars: number; tickets: number; searches: number };
 
 /** 工程ごとに1リクエスト。前の工程の全文を控えとして次に渡す（サーバーは状態を持たない） */
 export function useTailor() {
@@ -13,6 +13,7 @@ export function useTailor() {
   const [final, setFinal] = useState<Final | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const searchesRef = useRef(0);
   const abort = useRef<AbortController | null>(null);
 
   const apply = (e: TailorEvent) => {
@@ -29,6 +30,14 @@ export function useTailor() {
           if (last?.partial) last.text = e.text; else s.notes.push({ text: e.text, partial: true });
           break;
         }
+        case "search": {
+          const s = find(e.id); if (!s) break;
+          // 書きかけの付箋の前に、🔍の付箋を差し込む
+          const partialIdx = s.notes.findIndex((n) => n.partial);
+          const note = { text: "🔍 " + e.query, search: true };
+          if (partialIdx >= 0) s.notes.splice(partialIdx, 0, note); else s.notes.push(note);
+          break;
+        }
         case "note": {
           const s = find(e.id); if (!s) break;
           const last = s.notes[s.notes.length - 1];
@@ -37,13 +46,14 @@ export function useTailor() {
         }
         case "stage-end": {
           const s = find(e.id); if (!s) break;
-          s.done = true; s.notes = s.notes.filter((n) => n.text).map((n) => ({ text: n.text }));
+          s.done = true; s.notes = s.notes.filter((n) => n.text).map((n) => ({ text: n.text, search: n.search }));
           break;
         }
       }
       return next;
     });
-    if (e.type === "done") setFinal({ title: e.title, body: e.body, chars: e.chars, tickets: e.tickets });
+    if (e.type === "stage-end") searchesRef.current += e.searches;
+    if (e.type === "done") setFinal({ title: e.title, body: e.body, chars: e.chars, tickets: e.tickets, searches: searchesRef.current });
     if (e.type === "error") setError(e.message);
   };
 
@@ -74,7 +84,7 @@ export function useTailor() {
   const start = useCallback(async (order: Order) => {
     abort.current?.abort();
     const ac = new AbortController(); abort.current = ac;
-    setStacks([]); setFinal(null); setError(null); setBusy(true);
+    setStacks([]); setFinal(null); setError(null); setBusy(true); searchesRef.current = 0;
     try {
       const transcript: string[] = [];
       for (let i = 0; i < 64; i++) {

@@ -12,7 +12,7 @@ function Stack({ s, sel, onSel }: { s: StackState; sel: string | null; onSel: (k
       {s.notes.map((n, i) => {
         const key = `${s.id}:${i}`;
         return (
-          <div key={key} className={"note" + (n.partial ? " partial" : "") + (sel === key ? " sel" : "")}
+          <div key={key} className={"note" + (n.partial ? " partial" : "") + (n.search ? " search" : "") + (sel === key ? " sel" : "")}
             onClick={(e) => { if (long && !open) return; e.stopPropagation(); onSel(key, n.text); }}>
             {i === 0 && <h4>{s.label}{!s.done ? "　仕立て中" : ""}</h4>}
             <p>{n.text}{n.partial && <span className="caret" />}</p>

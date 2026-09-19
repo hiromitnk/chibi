@@ -29,12 +29,19 @@ export function buildStages(order: Order): Stage[] {
     });
   };
   push(1);
-  for (let i = 1; i <= r.stock; i++) push(2, `${i}/${r.stock}`);
+  const searching = order.knobs.source !== "手持ちだけ";
+  const searchNote = searching
+    ? "検索が使えます。材料には必ず出典URLを本文中に書いてください（引用の枠ではなく、文として）。" +
+      (order.knobs.source === "国内で" ? "日本語の一次資料を優先してください。" : "国内外の資料を使ってください。")
+    : "この周は検索を使いません。手持ちの材料だけで進め、出典URLを捏造しないでください。";
+  for (let i = 1; i <= r.stock; i++) push(2, `${i}/${r.stock}`, searchNote);
   push(3);
   push(4);
   push(5);
   push(6);
-  for (let i = 1; i <= r.review; i++) push(7, `${i}/${r.review}`, `点検のあとに「# 第${i}稿」として本文全体を出してください。`);
+  for (let i = 1; i <= r.review; i++) push(7, `${i}/${r.review}`,
+    `点検のあとに「# 第${i}稿」として本文全体を出してください。` +
+    (searching ? "裏取りでは、実在の人物・引用・数値に検索で当たり直し、見つからなかった引用は稿から外してください。" : ""));
   push(8, "", [
     "摘発・直し・数え直しのあと、最後に必ず次の形で仕上がりを出してください。",
     "",
