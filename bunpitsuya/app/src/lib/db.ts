@@ -1,9 +1,29 @@
 import postgres from "postgres";
 
-const url = process.env.DATABASE_URL || process.env.POSTGRES_URL || "";
+// Vercel は作り方によって入れる名前が違うので、よくある名前を順に見る
+const CANDIDATES = [
+  "DATABASE_URL",
+  "POSTGRES_URL",
+  "POSTGRES_PRISMA_URL",
+  "POSTGRES_URL_NON_POOLING",
+  "DATABASE_URL_UNPOOLED",
+  "NEON_DATABASE_URL",
+] as const;
+
+const found = CANDIDATES.find((n) => (process.env[n] ?? "").trim());
+// Prisma 用の URL には postgres が知らない飾りが付くことがあるので落とす
+const url = found ? process.env[found]!.trim().replace(/([?&])pgbouncer=[^&]*&?/g, "$1").replace(/[?&]$/, "") : "";
 
 /** 台帳（データベース）が繋がっているか。無ければ店は「控えを取らない」で動く */
 export const hasDb = Boolean(url);
+
+/** 台帳が見つからないときの手がかり。名前だけを見せる（中身は見せない） */
+export function ledgerHints(): { checked: string[]; seen: string[] } {
+  const seen = Object.keys(process.env)
+    .filter((k) => /POSTGRES|DATABASE|^PG[A-Z]+$|NEON/.test(k))
+    .sort();
+  return { checked: [...CANDIDATES], seen };
+}
 
 let client: postgres.Sql | null = null;
 
