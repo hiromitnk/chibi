@@ -10,9 +10,21 @@ const CANDIDATES = [
   "NEON_DATABASE_URL",
 ] as const;
 
+// 接続先によっては、ドライバが解釈できない飾りが付いてくる（付いたままだと接続で弾かれる）
+const DROP_PARAMS = ["pgbouncer", "channel_binding", "options"];
+
+function tidy(raw: string): string {
+  try {
+    const u = new URL(raw);
+    for (const p of DROP_PARAMS) u.searchParams.delete(p);
+    return u.toString();
+  } catch {
+    return raw;
+  }
+}
+
 const found = CANDIDATES.find((n) => (process.env[n] ?? "").trim());
-// Prisma 用の URL には postgres が知らない飾りが付くことがあるので落とす
-const url = found ? process.env[found]!.trim().replace(/([?&])pgbouncer=[^&]*&?/g, "$1").replace(/[?&]$/, "") : "";
+const url = found ? tidy(process.env[found]!.trim()) : "";
 
 /** 台帳（データベース）が繋がっているか。無ければ店は「控えを取らない」で動く */
 export const hasDb = Boolean(url);

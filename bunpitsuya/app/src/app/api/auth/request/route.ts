@@ -14,10 +14,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "メールの宛先を確かめてください" }, { status: 400 });
   }
 
-  await ensureSchema();
   const token = randomUUID().replace(/-/g, "") + randomUUID().replace(/-/g, "");
   const expires = new Date(Date.now() + 30 * 60 * 1000); // 30分
-  await db()`insert into login_tokens (token, email, expires_at) values (${token}, ${address}, ${expires})`;
+  try {
+    await ensureSchema();
+    await db()`insert into login_tokens (token, email, expires_at) values (${token}, ${address}, ${expires})`;
+  } catch (err) {
+    // 接続先が違う・止まっている、など。黙って500にせず、何が起きたか返す
+    const detail = err instanceof Error ? err.message : String(err);
+    console.error("[auth] 台帳に書けませんでした", err);
+    return NextResponse.json({ error: `台帳に繋がりませんでした。接続先を確かめてください（${detail}）` }, { status: 503 });
+  }
 
   const origin = process.env.APP_ORIGIN || req.nextUrl.origin;
   const url = `${origin}/api/auth/verify?token=${token}`;
