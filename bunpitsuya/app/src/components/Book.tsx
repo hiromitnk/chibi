@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import type { Final } from "@/lib/useTailor";
+import { renderInline } from "@/lib/inline";
 
 export function Book({ final }: { final: Final }) {
   const [hand, setHand] = useState(false);
@@ -22,7 +23,7 @@ export function Book({ final }: { final: Final }) {
         <div className="pad-top" />
         <div className={"page" + (hand ? " hand-mode" : "")}>
           <h1>{final.title}</h1>
-          {final.body.map((p, i) => <p key={i}>{p}</p>)}
+          {final.body.map((p, i) => <p key={i}>{renderInline(p)}</p>)}
         </div>
       </div>
       <div className="fold"><span>途中の付箋（1〜8）は上の仕立て台に残してあります。</span></div>

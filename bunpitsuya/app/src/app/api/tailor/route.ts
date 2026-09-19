@@ -72,12 +72,14 @@ export async function POST(req: NextRequest) {
         send({ type: "stage-start", id: st.id, no: st.no, label: st.label, index, total: stages.length });
         let full = "";
         let buf = "";
+        // 工程の見出し行（# 2 ｜ 仕入れ 1/3 など）は付箋の h4 と重なるので、付箋には流さない。控え（full）には残る
+        const stripHeading = (p: string) => p.replace(/^#\s*\d+\s*[｜|][^\n]*\n?/, "").trim();
         const flush = (final: boolean) => {
           const parts = buf.split(/\n\s*\n/);
           const tail = final ? "" : parts.pop() ?? "";
-          for (const p of parts) if (p.trim()) send({ type: "note", id: st.id, text: p.trim() });
+          for (const p of parts) { const t = stripHeading(p); if (t) send({ type: "note", id: st.id, text: t }); }
           buf = tail;
-          if (!final && tail.trim()) send({ type: "partial", id: st.id, text: tail.trim() });
+          const t = stripHeading(tail); if (!final && t) send({ type: "partial", id: st.id, text: t });
         };
 
         if (useMock) {
