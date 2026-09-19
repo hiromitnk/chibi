@@ -99,7 +99,7 @@ export function useTailor() {
           res = await runStage(order, i, transcript, ac.signal);
         } catch (err) {
           // 通信が切れた工程は一度だけやり直す。その工程の付箋は貼り直す
-          if ((err as Error).name === "AbortError" || !/通信が切れました/.test((err as Error).message)) throw err;
+          if ((err as Error).name === "AbortError" || !/通信が切れました|文章が返りませんでした/.test((err as Error).message)) throw err;
           setStacks((prev) => prev.filter((s) => s.done));
           res = await runStage(order, i, transcript, ac.signal);
         }

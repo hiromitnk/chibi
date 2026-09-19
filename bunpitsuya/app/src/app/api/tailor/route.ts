@@ -98,7 +98,7 @@ export async function POST(req: NextRequest) {
           for (let round = 0; round <= MAX_CONTINUATIONS; round++) {
             const s = client.messages.stream({
               model,
-              max_tokens: 16000,
+              max_tokens: 32000,
               system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
               messages,
               ...(tools ? { tools } : {}),
@@ -116,7 +116,13 @@ export async function POST(req: NextRequest) {
               }
             }
             const msg = await s.finalMessage();
-            if (msg.stop_reason !== "pause_turn") break;
+            console.log(`[tailor] ${st.label} stop=${msg.stop_reason} in=${msg.usage.input_tokens} out=${msg.usage.output_tokens} cache_read=${msg.usage.cache_read_input_tokens ?? 0}`);
+            if (msg.stop_reason !== "pause_turn") {
+              // からっぽで返ったら「完了」にしない。理由を添えて止める（画面側が一度やり直す）
+              if (!full.trim()) throw new Error(`仕立て手から文章が返りませんでした（stop_reason: ${msg.stop_reason}）。もう一度お試しください`);
+              if (msg.stop_reason === "max_tokens") send({ type: "note", id: st.id, text: "（ここで長さの上限に当たって切れました）" });
+              break;
+            }
             messages.push({ role: "assistant", content: msg.content });
           }
         }
