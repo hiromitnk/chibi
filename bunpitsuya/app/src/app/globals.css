@@ -190,3 +190,21 @@
   .reading{margin-top:22px;padding:18px 22px;background:var(--slip);color:var(--ink);border:1px solid var(--line);font-family:var(--hand);font-size:18px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere}
   .reading h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--ink-soft);margin:0 0 8px}
   .empty{font-family:var(--mono);font-size:12px;color:var(--on-dark-faint);padding:24px 0}
+
+  /* ---------- 控え（履歴） ---------- */
+  /* 机の上に直に置かれたリンクは真鍮、紙の上のリンクは墨 */
+  a{color:var(--brass);text-underline-offset:3px}
+  .slip a, .page a, .reading a{color:#5a4416}
+  .tickets form{display:inline}
+  table.ledger{width:100%;border-collapse:collapse;color:var(--ink)}
+  table.ledger th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;font-weight:500;color:var(--ink-soft);
+        text-align:left;padding:0 10px 8px 0;border-bottom:1px solid var(--line)}
+  table.ledger td{padding:11px 10px 11px 0;border-bottom:1px dashed var(--line);font-family:var(--mincho);font-size:15px;vertical-align:baseline}
+  table.ledger tr:last-child td{border-bottom:0}
+  table.ledger td.mono{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);white-space:nowrap}
+  table.ledger td.num{text-align:right}
+  table.ledger a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+  table.ledger a:hover{border-bottom-color:var(--verdigris)}
+  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:#8a3a2a;margin-left:10px;white-space:nowrap}
+  .wrap .empty a{color:var(--brass-2)}
+  .warn a{color:var(--brass-2)}

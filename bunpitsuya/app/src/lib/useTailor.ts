@@ -5,7 +5,7 @@ import type { TailorEvent } from "./events";
 
 export type Note = { text: string; partial?: boolean; search?: boolean };
 export type StackState = { id: string; no: number; label: string; notes: Note[]; done: boolean };
-export type Final = { title: string; body: string[]; chars: number; tickets: number; searches: number };
+export type Final = { title: string; body: string[]; chars: number; tickets: number; searches: number; ticketsLeft?: number };
 
 /** 工程ごとに1リクエスト。前の工程の全文を控えとして次に渡す（サーバーは状態を持たない） */
 export function useTailor() {
@@ -15,6 +15,7 @@ export function useTailor() {
   const [busy, setBusy] = useState(false);
   const searchesRef = useRef(0);
   const abort = useRef<AbortController | null>(null);
+  const workIdRef = useRef<string | undefined>(undefined);
 
   const apply = (e: TailorEvent) => {
     setStacks((prev) => {
@@ -22,6 +23,7 @@ export function useTailor() {
       const find = (id: string) => next.find((s) => s.id === id);
       switch (e.type) {
         case "stage-start": {
+          if (e.workId) workIdRef.current = e.workId;
           const s = find(e.id);
           if (!s) next.push({ id: e.id, no: e.no, label: e.label, notes: [], done: false });
           else { s.notes = []; s.done = false; }
@@ -56,14 +58,14 @@ export function useTailor() {
       return next;
     });
     if (e.type === "stage-end") searchesRef.current += e.searches;
-    if (e.type === "done") setFinal({ title: e.title, body: e.body, chars: e.chars, tickets: e.tickets, searches: searchesRef.current });
+    if (e.type === "done") setFinal({ title: e.title, body: e.body, chars: e.chars, tickets: e.tickets, searches: searchesRef.current, ticketsLeft: e.ticketsLeft });
     if (e.type === "error") setError(e.message);
   };
 
   const runStage = async (order: Order, index: number, transcript: string[], signal: AbortSignal) => {
     const res = await fetch("/api/tailor", {
       method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ order, index, transcript }), signal,
+      body: JSON.stringify({ order, index, transcript, workId: workIdRef.current }), signal,
     });
     if (!res.ok || !res.body) throw new Error((await res.text()) || `HTTP ${res.status}`);
     const reader = res.body.getReader(); const dec = new TextDecoder(); let buf = "";
@@ -90,7 +92,7 @@ export function useTailor() {
   const start = useCallback(async (order: Order) => {
     abort.current?.abort();
     const ac = new AbortController(); abort.current = ac;
-    setStacks([]); setFinal(null); setError(null); setBusy(true); searchesRef.current = 0;
+    setStacks([]); setFinal(null); setError(null); setBusy(true); searchesRef.current = 0; workIdRef.current = undefined;
     try {
       const transcript: string[] = [];
       for (let i = 0; i < 64; i++) {
