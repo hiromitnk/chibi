@@ -68,6 +68,7 @@ export async function POST(req: NextRequest) {
     async start(controller) {
       const send = (e: TailorEvent) => controller.enqueue(enc.encode(`data: ${JSON.stringify(e)}\n\n`));
       let searches = 0;
+      const t0 = Date.now();
       try {
         send({ type: "stage-start", id: st.id, no: st.no, label: st.label, index, total: stages.length });
         let full = "";
@@ -120,12 +121,14 @@ export async function POST(req: NextRequest) {
           }
         }
         flush(true);
+        console.log(`[tailor] ${st.label} ${((Date.now() - t0) / 1000).toFixed(1)}s ${full.length}字 検索${searches}回`);
         send({ type: "stage-end", id: st.id, text: full, last, searches });
         if (last) {
           const { title, body } = extractFinal(full);
           send({ type: "done", title: title || order.title, body, chars: body.join("").length, tickets: ticketCost(order) });
         }
       } catch (err) {
+        console.error(`[tailor] ${st.label} failed after ${((Date.now() - t0) / 1000).toFixed(1)}s`, err);
         send({ type: "error", message: err instanceof Error ? err.message : String(err) });
       } finally {
         controller.close();
