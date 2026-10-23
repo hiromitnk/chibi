@@ -178,6 +178,25 @@ const samples = {
     const doc = await window.PDFLib.PDFDocument.load(bytes);
     console.log(`${key}: ${file} (${(bytes.length / 1024).toFixed(0)} KB, ${doc.getPageCount()} pages)  name=${InvoicePDF.filename(inv)}`);
   }
+
+  // ---- 見積書 ----
+  // 日付の推定: 見積日 = 請求日の14日前（月・年またぎ）、有効期限 = 見積日 + 30日
+  assert.deepStrictEqual(InvoicePDF.estimateFields({ number: '202601-001', issueDate: '2026-01-10' }),
+    { number: 'Q202601-001', issueDate: '2025-12-27', validUntil: '2026-01-26' });
+  assert.deepStrictEqual(InvoicePDF.estimateFields({ number: '202603-001', issueDate: '2026-03-10' }),
+    { number: 'Q202603-001', issueDate: '2026-02-24', validUntil: '2026-03-26' });
+  assert.deepStrictEqual(InvoicePDF.estimateFields({ number: 'x', issueDate: '2024-03-01' }).issueDate, '2024-02-16');
+  assert.deepStrictEqual(InvoicePDF.estimateFields({ number: '1', issueDate: '2026-10-23', estimate: { number: 'E-9', issueDate: '2026-10-01' } }),
+    { number: 'E-9', issueDate: '2026-10-01', validUntil: '2026-10-31' });
+  assert.deepStrictEqual(InvoicePDF.estimateFields({ estimate: { validUntil: '2026-12-31' } }),
+    { number: '', issueDate: '', validUntil: '2026-12-31' });
+  const est = Object.assign({}, samples.a_normal, { withholding: true });
+  const opts = { docType: 'estimate' };
+  assert.strictEqual(InvoicePDF.filename(est, opts), '見積書_Q202610-001_株式会社サンプル商事.pdf');
+  assert.strictEqual(InvoicePDF.filename(est), '請求書_202610-001_株式会社サンプル商事.pdf');
+  const ebytes = await InvoicePDF.generate(est, settings, opts);
+  fs.writeFileSync(path.join(outDir, 'd_estimate.pdf'), ebytes);
+  console.log(`d_estimate: ${path.join(outDir, 'd_estimate.pdf')}  name=${InvoicePDF.filename(est, opts)}`);
   assert.strictEqual(fontFetches, 1, 'フォントは1回だけ読むこと');
   assert.strictEqual(InvoicePDF.filename({ number: '2026/10:001', clientSnapshot: { name: 'A社 <東京>' } }), '請求書_2026_10_001_A社_東京.pdf');
   console.log('PDF: ok');

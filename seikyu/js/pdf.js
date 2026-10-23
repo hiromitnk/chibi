@@ -12,8 +12,58 @@
     fontUrl: 'fonts/ipag.ttf',
     generate: generate,
     download: download,
-    filename: filename
+    filename: filename,
+    estimateFields: estimateFields
   };
+
+  // 帳票の種類ごとの文言
+  var LABELS = {
+    invoice: {
+      prefix: '請求書', title: '請　求　書', cont: '請求書（続き）',
+      date: '請求日', number: '請求書番号',
+      lead: '下記のとおりご請求申し上げます。',
+      amount: 'ご請求金額', due: 'お支払期限', billed: 'ご請求金額', bank: true
+    },
+    estimate: {
+      prefix: '見積書', title: '見　積　書', cont: '見積書（続き）',
+      date: '見積日', number: '見積番号',
+      lead: '下記のとおりお見積り申し上げます。',
+      amount: 'お見積金額', due: '有効期限', billed: 'お見積金額', bank: false
+    }
+  };
+
+  function labelsFor(opts) {
+    return opts && opts.docType === 'estimate' ? LABELS.estimate : LABELS.invoice;
+  }
+
+  // YYYY-MM-DD に日数を足す（UTC で計算するのでタイムゾーンの影響なし）
+  function addDays(ymd, days) {
+    var m = /^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(str(ymd));
+    if (!m) return '';
+    var d = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]) + days));
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate());
+  }
+
+  // 見積書の番号・日付（invoice.estimate が無ければ請求書から推定）
+  function estimateFields(invoice) {
+    invoice = invoice || {};
+    var e = invoice.estimate || {};
+    var issueDate = str(e.issueDate) || addDays(invoice.issueDate, -14);
+    return {
+      number: str(e.number) || (str(invoice.number) ? 'Q' + str(invoice.number) : ''),
+      issueDate: issueDate,
+      validUntil: str(e.validUntil) || addDays(issueDate, 30)
+    };
+  }
+
+  // 描画用に番号・日付を差し替えた請求書
+  function viewFor(invoice, opts) {
+    invoice = invoice || {};
+    if (labelsFor(opts) !== LABELS.estimate) return invoice;
+    var f = estimateFields(invoice);
+    return Object.assign({}, invoice, { number: f.number, issueDate: f.issueDate, dueDate: f.validUntil });
+  }
 
   // ---- フォント ----
 
@@ -119,7 +169,8 @@
   // ---- 描画コンテキスト ----
   // y はすべて「ページ上端からの距離」で扱う
 
-  function Ctx(doc, font, C, invoice) {
+  function Ctx(doc, font, C, invoice, L) {
+    this.L = L;
     this.doc = doc;
     this.font = font;
     this.C = C;
@@ -176,8 +227,8 @@
   Ctx.prototype.contHeader = function () {
     var inv = this.invoice, cs = inv.clientSnapshot || {};
     this.newPage();
-    this.text('請求書（続き）', M, 40, 12, { color: this.C.accent, bold: true });
-    var right = '請求書番号 ' + str(inv.number);
+    this.text(this.L.cont, M, 40, 12, { color: this.C.accent, bold: true });
+    var right = this.L.number + ' ' + str(inv.number);
     this.text(right, W - M, 42, 8.5, { align: 'right', color: this.C.grey });
     var to = str(cs.name) ? str(cs.name) + ' ' + str(cs.honorific || '御中') : '';
     if (to) {
@@ -204,14 +255,14 @@
     var is = settings.issuer || {};
 
     // タイトル
-    ctx.text('請　求　書', W / 2, 40, 22, { align: 'center', bold: true });
+    ctx.text(ctx.L.title, W / 2, 40, 22, { align: 'center', bold: true });
     ctx.hline(W / 2 - 78, W / 2 + 78, 72, 1.2, C.accent);
     ctx.hline(W / 2 - 78, W / 2 + 78, 74.6, 0.4, C.accent);
 
     // 右上: 請求日・番号
     var rx = W - M - 200;
     var ry = 96;
-    [['請求日', fmtDate(invoice.issueDate)], ['請求書番号', str(invoice.number)]].forEach(function (p) {
+    [[ctx.L.date, fmtDate(invoice.issueDate)], [ctx.L.number, str(invoice.number)]].forEach(function (p) {
       ctx.text(p[0], rx, ry, 8.5, { color: C.grey });
       ctx.text(p[1], W - M, ry - 0.5, 9.5, { align: 'right' });
       ctx.hline(rx, W - M, ry + 14, 0.4, C.faint);
@@ -309,7 +360,7 @@
     }
 
     y += 14;
-    ctx.text('下記のとおりご請求申し上げます。', M, y, 9.5);
+    ctx.text(ctx.L.lead, M, y, 9.5);
     y += 22;
 
     // 件名
@@ -327,7 +378,7 @@
     var bh = 42, lab = 92;
     ctx.rect(M, y, lab, bh, { fill: C.accent });
     ctx.rect(M + lab, y, lw - lab, bh, { border: C.accent, borderWidth: 1 });
-    ctx.text('ご請求金額', M + lab / 2, y + 11, 10.5, { align: 'center', color: C.white, bold: true });
+    ctx.text(ctx.L.amount, M + lab / 2, y + 11, 10.5, { align: 'center', color: C.white, bold: true });
     ctx.text('（税込）', M + lab / 2, y + 26, 7.5, { align: 'center', color: C.white });
     var amt = yen(sum.billed) + ' -';
     var as = fitSize(amt, font, 20, lw - lab - 20, 12);
@@ -339,7 +390,7 @@
       var dh = 22;
       ctx.rect(M, y, lab, dh, { fill: C.tint });
       ctx.rect(M, y, lw, dh, { border: C.rule, borderWidth: 0.5 });
-      ctx.text('お支払期限', M + lab / 2, y + 6.5, 9, { align: 'center', color: C.accent });
+      ctx.text(ctx.L.due, M + lab / 2, y + 6.5, 9, { align: 'center', color: C.accent });
       ctx.text(fmtDate(invoice.dueDate), M + lw - 12, y + 6, 10, { align: 'right' });
       y += dh;
     }
@@ -454,7 +505,7 @@
 
     var right = [['小計（税抜）', yen(sum.subtotal)], ['消費税', yen(sum.taxTotal)], ['合計（税込）', yen(sum.total)]];
     if (invoice.withholding) right.push(['源泉徴収税額', '▲' + yen(sum.withholding)]);
-    right.push(['ご請求金額', yen(sum.billed)]);
+    right.push([ctx.L.billed, yen(sum.billed)]);
     var leftH = rh * (sum.byRate.length + 1);
     var rightH = rh * right.length;
     ctx.ensure(Math.max(leftH, rightH) + 10);
@@ -539,11 +590,12 @@
 
   // ---- 公開 API ----
 
-  function generate(invoice, settings) {
+  function generate(invoice, settings, opts) {
     var PDFLib = window.PDFLib;
     if (!PDFLib) return Promise.reject(new Error('pdf-lib が読み込まれていません'));
     if (!window.fontkit) return Promise.reject(new Error('fontkit が読み込まれていません'));
-    invoice = invoice || {};
+    var L = labelsFor(opts);
+    invoice = viewFor(invoice, opts);
     settings = settings || {};
     var doc, ctx;
 
@@ -554,19 +606,19 @@
     }).then(function (font) {
       var cs = invoice.clientSnapshot || {};
       var is = settings.issuer || {};
-      doc.setTitle('請求書 ' + str(invoice.number));
+      doc.setTitle(L.prefix + ' ' + str(invoice.number));
       if (str(is.name)) doc.setAuthor(str(is.name));
       doc.setSubject(str(cs.name) + ' ' + str(invoice.title));
       doc.setCreator('seikyu');
       doc.setProducer('seikyu (pdf-lib)');
 
-      ctx = new Ctx(doc, font, palette(), invoice);
+      ctx = new Ctx(doc, font, palette(), invoice, L);
       ctx.newPage();
       return drawFirstHeader(ctx, invoice, settings);
     }).then(function (sum) {
       drawItems(ctx, invoice);
       drawTotals(ctx, invoice, sum);
-      drawBlock(ctx, 'お振込先', (settings.issuer || {}).bank);
+      if (L.bank) drawBlock(ctx, 'お振込先', (settings.issuer || {}).bank);
       drawBlock(ctx, '備考', invoice.notes);
       drawPageNumbers(ctx);
       return doc.save();
@@ -583,22 +635,23 @@
       .slice(0, 60);
   }
 
-  function filename(invoice) {
-    invoice = invoice || {};
+  function filename(invoice, opts) {
+    var L = labelsFor(opts);
+    invoice = viewFor(invoice, opts);
     var cs = invoice.clientSnapshot || {};
-    var parts = ['請求書', sanitize(invoice.number) || 'draft'];
+    var parts = [L.prefix, sanitize(invoice.number) || 'draft'];
     var c = sanitize(cs.name);
     if (c) parts.push(c);
     return parts.join('_') + '.pdf';
   }
 
-  function download(invoice, settings) {
-    return generate(invoice, settings).then(function (bytes) {
+  function download(invoice, settings, opts) {
+    return generate(invoice, settings, opts).then(function (bytes) {
       var blob = new Blob([bytes], { type: 'application/pdf' });
       var url = URL.createObjectURL(blob);
       var a = document.createElement('a');
       a.href = url;
-      a.download = filename(invoice);
+      a.download = filename(invoice, opts);
       document.body.appendChild(a);
       a.click();
       a.remove();
