@@ -62,6 +62,11 @@ ES modules は使わない（file:// で開いても動くように）。各フ�
       notes: "",
       status: "draft",              // draft | issued | paid
       recurringId: null,            // 定期請求から作られたら元の id
+      estimate: {                   // 任意。見積書を作ったら保存（内容は請求書と同じ、日付と番号だけ別）
+        number: "Q202610-001",      //   初期値 "Q" + 請求書番号
+        issueDate: "2026-10-09",    //   見積日。初期値 = 請求日の14日前
+        validUntil: "2026-11-08"    //   有効期限。初期値 = 見積日の30日後
+      },
       createdAt, updatedAt          // ISO 文字列
     }
   ],
@@ -76,7 +81,7 @@ ES modules は使わない（file:// で開いても動くように）。各フ�
       startDate: "2026-11-01",      // この日以降で最初の発行日から開始
       endDate: "",                  // 空なら無期限
       nextIssueDate: "2026-11-25",  // 次に発行する日（Recurring が管理）
-      titleTemplate: "{YYYY}年{M}月分 保守費用", // 件名の差し込み。{YYYY}{M}{MM} は「対象月」= 発行日の月
+      titleTemplate: "{ym-1}分 保守費用", // 件名の差し込み（下の「差し込み」参照）。品目名・備考にも同じ差し込みが効く
       autoStatus: "draft"           // 生成した請求書の status（draft か issued）
     }
   ]
@@ -110,6 +115,33 @@ Recurring.runDue(state, today = new Date()) → { state, created: [invoice...] }
   // 作るたびに Store の採番を使って number を振り、nextIssueDate を intervalMonths 進める
   // endDate を過ぎたら止める
 Recurring.preview(rec, count = 6) → [ "2026-11-25", ... ] // 今後の発行予定日
+Recurring.fillTemplate(text, issueDate) → string        // 差し込み
+Recurring.buildInvoice(state, rec, issueDate) → invoice  // 1件作る（採番を進める。state.invoices には入れない）
+Recurring.dueDateFor(rec, issueDate) / nextAfter(rec, date)
+```
+
+差し込み（件名・品目名・備考）。基準は「対象月」= 発行日の月:
+
+| 書き方 | 例（発行日 2027-01-25） |
+|---|---|
+| `{year}` `{year-1}` | 2027 / 2026（年単位でずらす） |
+| `{month}` `{month-1}` `{month+1}` | 1 / 12 / 2（月単位でずらす。1月の -1 は 12） |
+| `{MM}` `{MM-1}` | 01 / 12 |
+| `{ym}` `{ym-1}` `{ym+1}` | 2027年1月 / 2026年12月 / 2027年2月（年も繰り上がる。「前月分」はこれ） |
+| `{lastday}` `{lastday-1}` | 31 / 31（その月・前月の末日） |
+| `{date}` | 2027年1月25日 |
+| 旧形式 `{YYYY}` `{M}` `{MM}` | 2027 / 1 / 01 |
+
+Store（js/store.js）:
+
+```js
+Store.load() / Store.save(state)  // state は Store.state にも保持
+Store.nextNumber(dateStr, state?) // 番号を振って settings.nextSeq を進める
+Store.peekNumber(dateStr, state?) // 進めずに次の番号を見る
+Store.formatNumber(fmt, dateStr, seq)
+Store.exportJSON(state)           // seikyu-backup-YYYYMMDD.json をダウンロード
+Store.importJSON(file) → Promise<state|null>  // confirm してから置き換え
+Store.uuid(), Store.today()       // today はローカル日付 "YYYY-MM-DD"
 ```
 
 アプリを開いたときに `runDue` を呼び、作られた請求書があれば画面上部に「定期請求から N 件作成しました」と出す。
@@ -119,7 +151,14 @@ Recurring.preview(rec, count = 6) → [ "2026-11-25", ... ] // 今後の発行�
 ```js
 await InvoicePDF.generate(invoice, settings) → Uint8Array   // A4 縦
 await InvoicePDF.download(invoice, settings)                 // ファイル名: 請求書_{number}_{宛先名}.pdf
+await InvoicePDF.generate(invoice, settings, { docType: 'estimate' }) // 見積書
+await InvoicePDF.download(invoice, settings, { docType: 'estimate' })
 ```
+
+見積書（docType: 'estimate'）: 表題「見積書」、「お見積金額」、有効期限、振込先なし。
+番号・日付は invoice.estimate から。画面では請求書の編集画面と一覧の操作メニューに
+「見積書を作成（2週間前）」ボタン → 見積日・有効期限・見積番号のダイアログ（編集可）→ 保存してPDF / プレビュー。
+保存済みなら初期値はそこから読み、一覧に「見積あり」を表示。
 
 レイアウト（Misoca っぽいオーソドックスな日本の請求書）:
 - 右上: 請求日・請求書番号

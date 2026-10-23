@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>請求書 — seikyu</title>
+  <meta name="theme-color" content="#2f4f4f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f4f4f'/%3E%3Ctext x='16' y='22.5' font-size='17' text-anchor='middle' fill='white' font-family='sans-serif'%3E%E8%AB%8B%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/invoices" aria-label="請求書一覧へ">
+        <span class="brand-mark" aria-hidden="true">請</span>
+        <span class="brand-name">seikyu</span>
+      </a>
+      <nav class="nav" aria-label="メイン">
+        <a href="#/invoices" data-nav="invoices">請求書</a>
+        <a href="#/clients" data-nav="clients">取引先</a>
+        <a href="#/recurring" data-nav="recurring">定期請求</a>
+        <a href="#/settings" data-nav="settings">設定</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="banner" class="banner" hidden></div>
+
+  <main id="app" class="main" tabindex="-1"></main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <div id="preview" class="preview" hidden>
+    <div class="preview-panel" role="dialog" aria-modal="true" aria-label="PDF プレビュー">
+      <div class="preview-head">
+        <span class="preview-title">プレビュー</span>
+        <a id="preview-open" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">新しいタブで開く</a>
+        <button type="button" class="btn btn-ghost btn-sm" data-close-preview>閉じる</button>
+      </div>
+      <iframe id="preview-frame" title="PDF プレビュー"></iframe>
+    </div>
+  </div>
+
+  <div id="estimate" class="dialog" hidden></div>
+
+  <noscript><p class="main">JavaScript を有効にしてください。</p></noscript>
+
+  <script src="vendor/pdf-lib.min.js"></script>
+  <script src="vendor/fontkit.umd.min.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/calc.js"></script>
+  <script src="js/recurring.js"></script>
+  <script src="js/pdf.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
