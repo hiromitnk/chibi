@@ -335,8 +335,8 @@ input[type=date] { min-height: 40px; }
 
 /* 設定 */
 .settings { max-width: 760px; }
-.settings + .card { max-width: 760px; margin-top: 16px; }
-.settings + .card .inline { margin: 12px 0; }
+.settings ~ .card { max-width: 760px; margin-top: 16px; }
+.settings ~ .card .inline { margin: 12px 0; }
 .seal-row { display: flex; gap: 20px; align-items: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line-2); }
 .seal-preview {
   flex: none; width: 88px; height: 88px; border-radius: var(--radius-sm); border: 1px dashed var(--line);
@@ -492,4 +492,31 @@ input[type=date] { min-height: 40px; }
   .table td[data-label]::before { white-space: nowrap; }
   .rec-table tbody tr { grid-template-columns: minmax(0, 1fr); }
   .rec-table td[data-label="金額"] { justify-content: flex-start; }
+}
+
+/* ---------- 同期・ログイン ---------- */
+.sync {
+  margin-left: auto; border: 0; background: none; cursor: default;
+  font: inherit; font-size: 12px; color: var(--ink-3);
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 999px;
+}
+.sync::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--paid); }
+.sync-saving::before { background: var(--ink-3); }
+.sync-offline, .sync-error { color: var(--warn); cursor: pointer; background: var(--warn-soft); }
+.sync-offline::before, .sync-error::before { background: var(--warn); }
+
+.login { max-width: 360px; margin: 12vh auto 0; padding: 28px; text-align: center; }
+.login-title { font-size: 20px; letter-spacing: .14em; margin: 0 0 4px; }
+.login form { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.login input { width: 100%; }
+
+.snapshots { display: flex; flex-direction: column; margin: 8px 0 14px; }
+.snap-row { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--line-2); font-size: 14px; }
+.snap-row span { flex: 1; }
+
+@media (max-width: 720px) {
+  .topbar-inner { position: relative; }
+  .sync { position: absolute; top: 14px; right: var(--gutter); }
+  .snap-row { flex-wrap: wrap; }
+  .snap-row span { flex-basis: 100%; }
 }

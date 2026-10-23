@@ -147,8 +147,7 @@
         var n = (data.invoices || []).length, c = (data.clients || []).length;
         if (!global.confirm('現在のデータを置き換えます（請求書 ' + n + ' 件・取引先 ' + c + ' 件）。よろしいですか？')) { resolve(null); return; }
         var st = normalize(data);
-        Store.state = st;
-        save(st);
+        Store.save(st);
         resolve(st);
       };
       r.readAsText(file);
@@ -161,7 +160,14 @@
     defaults: defaults,
     normalize: normalize,
     load: function () { Store.state = load(); return Store.state; },
-    save: function (state) { if (state) Store.state = state; return save(Store.state); },
+    // ブラウザに控えを書き、サーバー同期があれば送る
+    save: function (state) {
+      if (state) Store.state = state;
+      var ok = save(Store.state);
+      if (global.Sync && global.Sync.mode === 'remote') { global.Sync.push(Store.state); return true; }
+      return ok;
+    },
+    saveLocal: function (state) { if (state) Store.state = state; return save(Store.state); },
     uuid: uuid,
     formatNumber: formatNumber,
     nextNumber: nextNumber,

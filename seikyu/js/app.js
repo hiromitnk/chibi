@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var Store = window.Store, Calc = window.Calc, Recurring = window.Recurring;
+  var Store = window.Store, Calc = window.Calc, Recurring = window.Recurring, Sync = window.Sync;
   var state;
   var app = document.getElementById('app');
 
@@ -36,6 +36,7 @@
   function save() {
     if (!Store.save(state)) toast('保存できませんでした（ブラウザの保存領域がいっぱいかもしれません）', true);
   }
+  function remote() { return Sync && Sync.mode === 'remote'; }
   function findClient(id) { return state.clients.filter(function (c) { return c.id === id; })[0] || null; }
   function findInvoice(id) { return state.invoices.filter(function (c) { return c.id === id; })[0] || null; }
   function findRec(id) { return state.recurring.filter(function (c) { return c.id === id; })[0] || null; }
@@ -874,15 +875,21 @@
         field('備考の初期値', textarea('defaultNotes', s.defaultNotes, 3), { cls: 'span-2' }) +
       '</div></section>' +
 
-      '<div class="form-actions sticky-bottom"><span class="hint">ブラウザ内にだけ保存されます</span><button type="submit" class="btn btn-primary">保存</button></div>' +
+      '<div class="form-actions sticky-bottom"><span class="hint">' + (remote() ? 'サーバーに保存され、どの端末からも使えます' : 'ブラウザ内にだけ保存されます') + '</span><button type="submit" class="btn btn-primary">保存</button></div>' +
       '</form>' +
 
       '<section class="card"><h2 class="card-title">バックアップ</h2>' +
-        '<p class="hint">データはこのブラウザの中だけにあります。ときどき書き出して保管してください。</p>' +
+        '<p class="hint">' + (remote() ? 'サーバーには日ごとの控えも残りますが、念のため手元にも書き出しておくと安心です。' : 'データはこのブラウザの中だけにあります。ときどき書き出して保管してください。') + '</p>' +
         '<div class="inline"><button type="button" class="btn" id="export">JSON を書き出す</button>' +
         '<label class="btn btn-ghost">JSON を読み込む<input type="file" accept="application/json,.json" id="import" hidden></label></div>' +
         '<p class="hint">請求書 ' + state.invoices.length + ' 件 ・ 取引先 ' + state.clients.length + ' 件 ・ 定期請求 ' + state.recurring.length + ' 件</p>' +
-      '</section>';
+      '</section>' +
+      (remote() ?
+      '<section class="card"><h2 class="card-title">同期とサーバーの控え</h2>' +
+        '<p class="hint">その日に最初に変更する直前の内容を、1日1つサーバーに残しています（90日間）。</p>' +
+        '<div id="snapshots" class="snapshots"><span class="muted">読み込み中…</span></div>' +
+        '<div class="inline"><button type="button" class="btn btn-ghost btn-sm" id="logout">この端末からログアウト</button></div>' +
+      '</section>' : '');
 
     var form = document.getElementById('settings-form');
     function drawSeal() {
@@ -926,6 +933,41 @@
     };
 
     document.getElementById('export').onclick = function () { Store.exportJSON(state); toast('書き出しました'); };
+    if (remote()) {
+      Sync.snapshots().then(function (dates) {
+        var box = document.getElementById('snapshots'); if (!box) return;
+        box.innerHTML = dates.length ? dates.map(function (d) {
+          return '<div class="snap-row"><span>' + esc(fmtDateJa(d)) + ' の最初の変更より前</span>' +
+            '<button type="button" class="btn btn-ghost btn-sm" data-snap-dl="' + esc(d) + '">書き出す</button>' +
+            '<button type="button" class="btn btn-ghost btn-sm" data-snap-restore="' + esc(d) + '">この内容に戻す</button></div>';
+        }).join('') : '<span class="muted">まだありません（データを変更した日から残ります）</span>';
+        $$('[data-snap-dl]', box).forEach(function (b) {
+          b.onclick = function () {
+            Sync.snapshot(b.dataset.snapDl).then(function (st) { Store.exportJSON(st); })
+              .catch(function (err) { toast(err.message, true); });
+          };
+        });
+        $$('[data-snap-restore]', box).forEach(function (b) {
+          b.onclick = function () {
+            var d = b.dataset.snapRestore;
+            if (!confirm(fmtDateJa(d) + ' の最初の変更より前の内容に戻します。\nいまの内容は念のため JSON で書き出してから戻します。よろしいですか？')) return;
+            Sync.snapshot(d).then(function (st) {
+              Store.exportJSON(state);
+              state = Store.normalize(st); save(); toast('戻しました（いまの内容は書き出し済み）'); renderSettings();
+            }).catch(function (err) { toast(err.message, true); });
+          };
+        });
+      }).catch(function () {
+        var box = document.getElementById('snapshots'); if (box) box.innerHTML = '<span class="muted">控えを取得できませんでした</span>';
+      });
+      document.getElementById('logout').onclick = function () {
+        if (!confirm('この端末からログアウトします。データはサーバーに残ります。')) return;
+        Sync.logout();
+        try { localStorage.removeItem(Store.KEY); } catch (e) { /* noop */ }
+        location.hash = '#/invoices';
+        location.reload();
+      };
+    }
     document.getElementById('import').onchange = function (e) {
       var f = e.target.files[0]; if (!f) return;
       Store.importJSON(f).then(function (st) {
@@ -978,17 +1020,87 @@
     window.scrollTo(0, 0);
   }
 
-  function init() {
+  var SYNC_LABEL = { synced: '同期済み', saving: '保存中…', offline: 'オフライン・未送信', error: '同期エラー（押して再試行）' };
+  function drawSync(st) {
+    var b = document.getElementById('sync');
+    if (!remote()) { b.hidden = true; return; }
+    b.hidden = false;
+    b.textContent = SYNC_LABEL[st] || '';
+    b.className = 'sync sync-' + st;
+    b.title = st === 'offline' || st === 'error' ? '押すと送り直します' : '';
+  }
+
+  function editing() { return /^#\/(invoices|clients|recurring)\/./.test(location.hash); }
+
+  function adopt(st) {
+    state = Store.normalize(st);
+    Store.saveLocal(state);
+  }
+
+  function renderLogin(msg) {
+    document.querySelector('.nav').hidden = true;
+    app.innerHTML = '<div class="login card"><h1 class="login-title">seikyu</h1>' +
+      '<p class="hint">パスワードを入力してください</p>' +
+      '<form id="login-form"><input type="password" name="pw" autocomplete="current-password" required autofocus>' +
+      '<button type="submit" class="btn btn-primary">ログイン</button></form>' +
+      '<p class="warn-text" id="login-msg">' + esc(msg || '') + '</p></div>';
+    var f = document.getElementById('login-form');
+    f.onsubmit = function (e) {
+      e.preventDefault();
+      var btn = $('button', f); btn.disabled = true;
+      Sync.login(f.elements.pw.value).then(function (ok) {
+        if (ok) { start(); return; }
+        btn.disabled = false;
+        document.getElementById('login-msg').textContent = 'パスワードが違います';
+        f.elements.pw.select();
+      }).catch(function (err) {
+        btn.disabled = false;
+        document.getElementById('login-msg').textContent = err.message;
+      });
+    };
+  }
+
+  var started = false;
+  function start() {
     state = Store.load();
-    runRecurring();
-    window.addEventListener('hashchange', render);
-    // 別タブで変更されたら読み直す（編集中の画面は保たない：一覧系だけ再描画）
-    window.addEventListener('storage', function (e) {
-      if (e.key !== Store.KEY) return;
-      state = Store.load();
-      if (!/^#\/(invoices|clients|recurring)\/./.test(location.hash)) render();
+    app.innerHTML = '<div class="empty"><p class="muted">読み込み中…</p></div>';
+    Sync.init(state).then(function (res) {
+      if (res.mode === 'login') { renderLogin(); return; }
+      document.querySelector('.nav').hidden = false;
+      if (res.state) adopt(res.state);
+      Store.state = state;
+      drawSync(Sync.status);
+      runRecurring();
+      if (!started) {
+        started = true;
+        window.addEventListener('hashchange', render);
+        // 別タブで変更されたら読み直す（編集中の画面は保たない：一覧系だけ再描画）
+        window.addEventListener('storage', function (e) {
+          if (e.key !== Store.KEY) return;
+          state = Store.load();
+          if (!editing()) render();
+        });
+        // 別の端末での変更を取り込む
+        document.addEventListener('visibilitychange', function () { if (!document.hidden) Sync.pull(); });
+        window.addEventListener('online', function () { Sync.retry(); });
+        document.getElementById('sync').onclick = function () { Sync.retry(); };
+      }
+      if (res.error) toast(res.error, true);
+      render();
     });
-    render();
+  }
+
+  function init() {
+    if (!Sync) { Sync = { mode: 'local' }; state = Store.load(); runRecurring(); window.addEventListener('hashchange', render); render(); return; }
+    Sync.onStatus = drawSync;
+    Sync.onLogin = function () { renderLogin('ログインし直してください'); };
+    Sync.onReplace = function (st, why) {
+      adopt(st);
+      runRecurring();
+      if (editing()) showBanner(why === 'conflict' ? '最新の内容を読み込みました' : '別の端末での変更を読み込みました');
+      else render();
+    };
+    start();
   }
 
   if (!Store || !Calc || !Recurring) {
