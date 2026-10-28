@@ -6,6 +6,9 @@ import { buildStages } from "@/lib/stages";
 import { buildSystemPrompt } from "@/lib/recipe";
 import { mockStageText } from "@/lib/mock";
 import type { TailorEvent } from "@/lib/events";
+import { hasDb } from "@/lib/db";
+import { userFromCookieValue, sessionCookie } from "@/lib/auth";
+import { appendStage, closeWork, openWork } from "@/lib/works";
 
 export const runtime = "nodejs";
 export const maxDuration = 300; // Vercel の上限に合わせ、1リクエスト＝1工程
@@ -19,6 +22,7 @@ type Body = {
   order: Order;
   index: number;          // 何番目の工程か（0始まり）
   transcript: string[];   // これまでの工程の全文（index と同じ長さ）
+  workId?: string;        // 2工程目以降。台帳の控えに書き足す先
 };
 
 /** 「===仕上がり=== … ===ここまで===」から題と本文を取り出す */
@@ -33,7 +37,7 @@ function extractFinal(text: string): { title: string; body: string[] } {
 }
 
 export async function POST(req: NextRequest) {
-  const { order, index, transcript } = (await req.json()) as Body;
+  const { order, index, transcript, workId: incomingWorkId } = (await req.json()) as Body;
   if (!order?.title?.trim()) return new Response("品名（お題）が空です", { status: 400 });
 
   const stages = buildStages(order);
@@ -42,6 +46,22 @@ export async function POST(req: NextRequest) {
 
   const st = stages[index];
   const last = index === stages.length - 1;
+  const cost = ticketCost(order);
+
+  // 台帳があれば、お客さまを引いて券を払ってもらう。無ければ今まで通り控えを取らずに仕立てる
+  const user = await userFromCookieValue(req.cookies.get(sessionCookie.name)?.value);
+  if (hasDb && !user) return new Response("お店に入ってから注文してください", { status: 401 });
+
+  let workId = incomingWorkId;
+  if (user) {
+    if (index === 0) {
+      const opened = await openWork(user.id, order, cost);
+      if (!opened) return new Response(`仕立て券が足りません（この注文に${cost}枚、残り${user.tickets}枚）`, { status: 402 });
+      workId = opened;
+    } else if (!workId) {
+      return new Response("控えの番号がありません", { status: 400 });
+    }
+  }
   const useMock = process.env.MOCK === "1" || !process.env.ANTHROPIC_API_KEY;
   const enc = new TextEncoder();
 
@@ -68,16 +88,20 @@ export async function POST(req: NextRequest) {
     async start(controller) {
       const send = (e: TailorEvent) => controller.enqueue(enc.encode(`data: ${JSON.stringify(e)}\n\n`));
       let searches = 0;
+      const t0 = Date.now();
       try {
-        send({ type: "stage-start", id: st.id, no: st.no, label: st.label, index, total: stages.length });
+        send({ type: "stage-start", id: st.id, no: st.no, label: st.label, index, total: stages.length, workId });
+        const noteTexts: string[] = [];
         let full = "";
         let buf = "";
+        // 工程の見出し行（# 2 ｜ 仕入れ 1/3 など）は付箋の h4 と重なるので、付箋には流さない。控え（full）には残る
+        const stripHeading = (p: string) => p.replace(/^#\s*\d+\s*[｜|][^\n]*\n?/, "").trim();
         const flush = (final: boolean) => {
           const parts = buf.split(/\n\s*\n/);
           const tail = final ? "" : parts.pop() ?? "";
-          for (const p of parts) if (p.trim()) send({ type: "note", id: st.id, text: p.trim() });
+          for (const p of parts) { const t = stripHeading(p); if (t) { noteTexts.push(t); send({ type: "note", id: st.id, text: t }); } }
           buf = tail;
-          if (!final && tail.trim()) send({ type: "partial", id: st.id, text: tail.trim() });
+          const t = stripHeading(tail); if (!final && t) send({ type: "partial", id: st.id, text: t });
         };
 
         if (useMock) {
@@ -95,7 +119,7 @@ export async function POST(req: NextRequest) {
           for (let round = 0; round <= MAX_CONTINUATIONS; round++) {
             const s = client.messages.stream({
               model,
-              max_tokens: 16000,
+              max_tokens: 32000,
               system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
               messages,
               ...(tools ? { tools } : {}),
@@ -104,6 +128,7 @@ export async function POST(req: NextRequest) {
               if (block.type === "server_tool_use" && block.name === "web_search") {
                 searches++;
                 const q = (block.input as { query?: string })?.query ?? "";
+                noteTexts.push("🔍 " + q);
                 send({ type: "search", id: st.id, query: q });
               }
             });
@@ -113,17 +138,30 @@ export async function POST(req: NextRequest) {
               }
             }
             const msg = await s.finalMessage();
-            if (msg.stop_reason !== "pause_turn") break;
+            console.log(`[tailor] ${st.label} stop=${msg.stop_reason} in=${msg.usage.input_tokens} out=${msg.usage.output_tokens} cache_read=${msg.usage.cache_read_input_tokens ?? 0}`);
+            if (msg.stop_reason !== "pause_turn") {
+              // からっぽで返ったら「完了」にしない。理由を添えて止める（画面側が一度やり直す）
+              if (!full.trim()) throw new Error(`仕立て手から文章が返りませんでした（stop_reason: ${msg.stop_reason}）。もう一度お試しください`);
+              if (msg.stop_reason === "max_tokens") { const w = "（ここで長さの上限に当たって切れました）"; noteTexts.push(w); send({ type: "note", id: st.id, text: w }); }
+              break;
+            }
             messages.push({ role: "assistant", content: msg.content });
           }
         }
         flush(true);
+        console.log(`[tailor] ${st.label} ${((Date.now() - t0) / 1000).toFixed(1)}s ${full.length}字 検索${searches}回`);
+        if (workId) await appendStage(workId, { id: st.id, no: st.no, label: st.label, notes: noteTexts, text: full, searches });
         send({ type: "stage-end", id: st.id, text: full, last, searches });
         if (last) {
           const { title, body } = extractFinal(full);
-          send({ type: "done", title: title || order.title, body, chars: body.join("").length, tickets: ticketCost(order) });
+          const fin = { title: title || order.title, body, chars: body.join("").length };
+          if (workId) await closeWork(workId, fin);
+          // 券を引くのは最初の工程だけ。ここで読んだ残りは引いたあとの数
+          const left = user ? (index === 0 ? user.tickets - cost : user.tickets) : undefined;
+          send({ type: "done", ...fin, tickets: cost, ticketsLeft: left });
         }
       } catch (err) {
+        console.error(`[tailor] ${st.label} failed after ${((Date.now() - t0) / 1000).toFixed(1)}s`, err);
         send({ type: "error", message: err instanceof Error ? err.message : String(err) });
       } finally {
         controller.close();

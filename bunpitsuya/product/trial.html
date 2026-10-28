@@ -128,6 +128,10 @@
         transform:rotate(-2deg);box-shadow:0 1px 2px rgba(0,0,0,.15)}
   .note h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;font-weight:500;margin:0 0 6px;color:var(--ink-soft)}
   .note p{margin:0}
+  .note h4.fold-toggle{cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+  .note h4 .fold-mark{font-size:9px;letter-spacing:0;color:var(--ink-faint);margin-left:8px}
+  .note h4.fold-toggle:hover{color:var(--ink)}
+
   .note .k{font-weight:600}
   .stack .note:nth-child(odd){transform:rotate(-1.1deg)}
   .stack .note:nth-child(even){transform:rotate(1.2deg)}
@@ -361,7 +365,18 @@ function startStage(st){
   s.label=st.label; s.partial=null;
   if(s.notes[0]) s.notes[0].el.querySelector('h4').textContent=st.label+'　仕立て中';
 }
-function paragraphs(text){ return text.split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean); }
+function renderInline(el, text){
+  el.textContent='';
+  text.split('\n').forEach((line,li)=>{
+    const m=line.match(/^#{1,3}\s+(.*)$/); const body=m?m[1]:line;
+    const holder=m?document.createElement('span'):el; if(m){holder.className='k'; el.append(holder);}
+    body.split(/(\*\*[^*]+\*\*)/g).filter(Boolean).forEach(p=>{
+      if(p.startsWith('**')&&p.endsWith('**')){const b=document.createElement('span'); b.className='k'; b.textContent=p.slice(2,-2); holder.append(b);} else holder.append(p);
+    });
+    if(li<text.split('\n').length-1) el.append('\n');
+  });
+}
+function paragraphs(text){ return text.split(/\n\s*\n/).map(p=>p.replace(/^#\s*\d+\s*[｜|][^\n]*\n?/,'').trim()).filter(Boolean); }
 function renderStage(st, text, final){
   const s=stacks.get(st.no); const ps=paragraphs(text);
   const base=s.baseCount||0; // この工程より前（同じ列の前の周）の付箋数
@@ -369,15 +384,22 @@ function renderStage(st, text, final){
     const idx=base+i; let n=s.notes[idx];
     if(!n){ const d=document.createElement('div'); d.className='note'; if(idx===0){const h=document.createElement('h4'); h.textContent=st.label+(final?'':'　仕立て中'); d.append(h);} const para=document.createElement('p'); d.append(para); s.el.append(d); n={el:d,p:para,text:''}; s.notes[idx]=n;
       d.addEventListener('click',(e)=>{ if(s.el.classList.contains('long')&&!s.el.classList.contains('open')) return; e.stopPropagation(); select(n); }); }
-    n.text=p; n.p.textContent=p; const partial=!final&&i===ps.length-1; n.el.classList.toggle('partial',partial);
+    n.text=p; renderInline(n.p,p); const partial=!final&&i===ps.length-1; n.el.classList.toggle('partial',partial);
   });
   if(final){ s.baseCount=base+ps.length; if(s.notes[0]) s.notes[0].el.querySelector('h4').textContent=st.label; foldIfLong(s); }
 }
 function foldIfLong(s){
   if(s.el.classList.contains('long')) return;
-  if(s.el.scrollHeight>360 && s.notes.length>2){ s.el.classList.add('long'); const h=document.createElement('div'); h.className='hint'; s.el.append(h); s.el.addEventListener('click',()=>s.el.classList.toggle('open')); }
+  if(s.el.scrollHeight>360 && s.notes.length>2){
+    s.el.classList.add('long'); const h=document.createElement('div'); h.className='hint'; s.el.append(h);
+    const toggle=(e)=>{ e.stopPropagation(); const on=s.el.classList.toggle('open'); mark.textContent=on?'▲':'▼'; };
+    // 一番上の付箋の見出しが、開く／畳むのつまみを兼ねる
+    const h4=s.notes[0].el.querySelector('h4'); h4.classList.add('fold-toggle'); const mark=document.createElement('span'); mark.className='fold-mark'; mark.textContent='▼'; h4.append(mark); h4.addEventListener('click',toggle);
+    h.addEventListener('click',toggle);
+    s.el.addEventListener('click',(e)=>{ if(!s.el.classList.contains('open')) toggle(e); });
+  }
 }
-function select(n){ document.querySelectorAll('.note.sel').forEach(x=>x.classList.remove('sel')); if(selected===n){selected=null; $('#reading').hidden=true; return;} selected=n; n.el.classList.add('sel'); $('#reading-body').textContent=n.text; $('#reading').hidden=false; }
+function select(n){ document.querySelectorAll('.note.sel').forEach(x=>x.classList.remove('sel')); if(selected===n){selected=null; $('#reading').hidden=true; return;} selected=n; n.el.classList.add('sel'); renderInline($('#reading-body'),n.text); $('#reading').hidden=false; }
 
 // ---- 清書 ----
 let finalDoc=null;
@@ -387,7 +409,7 @@ function extractFinal(text, fallbackTitle){
   return {title:title||fallbackTitle, body:paragraphs(lines.join('\n'))};
 }
 function showBook(doc, tickets, note){
-  finalDoc=doc; const pg=$('#page'); pg.innerHTML=''; const h=document.createElement('h1'); h.textContent=doc.title; pg.append(h); doc.body.forEach(p=>{const e=document.createElement('p'); e.textContent=p; pg.append(e);});
+  finalDoc=doc; const pg=$('#page'); pg.innerHTML=''; const h=document.createElement('h1'); h.textContent=doc.title; pg.append(h); doc.body.forEach(p=>{const e=document.createElement('p'); renderInline(e,p); pg.append(e);});
   $('#book-meta').textContent=`仕上がり ／ ${doc.body.join('').length.toLocaleString()}字 ／ 券 ${tickets}枚`; $('#book-note').textContent=note||''; $('#sec-book').hidden=false; $('#sec-book').scrollIntoView({behavior:'smooth',block:'start'});
 }
 $('#toggle-hand').addEventListener('click',()=>{const on=$('#page').classList.toggle('hand-mode'); $('#toggle-hand').textContent=on?'明朝で見る':'手書きで見る';});

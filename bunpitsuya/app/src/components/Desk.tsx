@@ -2,24 +2,31 @@
 import { useState } from "react";
 import { STAGE_NAMES } from "@/lib/stages";
 import type { StackState } from "@/lib/useTailor";
+import { renderInline } from "@/lib/inline";
 
 function Stack({ s, sel, onSel }: { s: StackState; sel: string | null; onSel: (k: string, t: string) => void }) {
   const [open, setOpen] = useState(false);
   const long = s.done && s.notes.length > 2;
+  const toggle = (e: React.MouseEvent) => { e.stopPropagation(); setOpen((o) => !o); };
   return (
-    <div className={`stack s${s.no}${long ? " long" : ""}${open ? " open" : ""}`} onClick={long ? () => setOpen(!open) : undefined}>
+    <div className={`stack s${s.no}${long ? " long" : ""}${open ? " open" : ""}`} onClick={long && !open ? toggle : undefined}>
       {s.notes.length === 0 && <div className="note"><h4>{s.label}</h4><p><span className="caret" /></p></div>}
       {s.notes.map((n, i) => {
         const key = `${s.id}:${i}`;
         return (
           <div key={key} className={"note" + (n.partial ? " partial" : "") + (n.search ? " search" : "") + (sel === key ? " sel" : "")}
             onClick={(e) => { if (long && !open) return; e.stopPropagation(); onSel(key, n.text); }}>
-            {i === 0 && <h4>{s.label}{!s.done ? "　仕立て中" : ""}</h4>}
-            <p>{n.text}{n.partial && <span className="caret" />}</p>
+            {/* 一番上の付箋の見出しは、開く／畳むのつまみを兼ねる */}
+            {i === 0 && (
+              <h4 className={long ? "fold-toggle" : undefined} onClick={long ? toggle : undefined}>
+                {s.label}{!s.done ? "　仕立て中" : ""}{long && <span className="fold-mark">{open ? "▲" : "▼"}</span>}
+              </h4>
+            )}
+            <p>{renderInline(n.text)}{n.partial && <span className="caret" />}</p>
           </div>
         );
       })}
-      {long && <div className="hint" />}
+      {long && <div className="hint" onClick={toggle} />}
     </div>
   );
 }
@@ -56,7 +63,7 @@ export function Desk({ stacks }: { stacks: StackState[] }) {
             })}
           </div>
         )}
-        {sel && <div className="reading"><h5>付箋の原文</h5>{sel.text}</div>}
+        {sel && <div className="reading"><h5>付箋の原文</h5>{renderInline(sel.text)}</div>}
       </div>
     </section>
   );
