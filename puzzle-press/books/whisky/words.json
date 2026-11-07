@@ -1,0 +1,1286 @@
+[
+ {
+  "answer": "PEAT",
+  "clue": "Fuel whose smoke gives many Islay malts their character",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "MALT",
+  "clue": "Germinated, dried barley",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "BARLEY",
+  "clue": "Grain used in every single malt Scotch",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "MASH",
+  "clue": "Mixture of ground grain and hot water",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "WORT",
+  "clue": "Sugary liquid drawn off the mash tun",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "YEAST",
+  "clue": "Microbe that turns sugars into alcohol",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "STILL",
+  "clue": "Copper apparatus where spirit is made",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "POT STILL",
+  "clue": "Onion-shaped copper vessel for batch production",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "COLUMN STILL",
+  "clue": "Continuous apparatus also called a Coffey or patent type",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "DISTILLATION",
+  "clue": "Separating alcohol by boiling and condensing",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "FERMENTATION",
+  "clue": "Yeast-driven stage that produces the wash",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "WASH",
+  "clue": "Beer-like liquid fed into the first still",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "WASHBACK",
+  "clue": "Large vessel where fermentation takes place at a Scotch distillery",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "MASH TUN",
+  "clue": "Vessel where milled grain is steeped in hot water",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "GRIST",
+  "clue": "Coarsely milled malt ready for mashing",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "KILN",
+  "clue": "Oven where germinated barley is dried",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "PAGODA",
+  "clue": "Roof style atop many traditional Scottish malt kilns",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "FLOOR MALTING",
+  "clue": "Old method of sprouting barley spread out and turned by hand",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "GERMINATION",
+  "clue": "Sprouting stage before kilning",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "DRAFF",
+  "clue": "Spent grain left after mashing, often used as cattle feed",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "POT ALE",
+  "clue": "Residue left in the wash still after the first distillation",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "LOW WINES",
+  "clue": "Weak spirit from the first distillation at a Scotch distillery",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "FORESHOTS",
+  "clue": "First, volatile portion of a spirit run",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "HEADS",
+  "clue": "Early, unwanted part of a distillation run",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "TAILS",
+  "clue": "Late, oily portion of a distillation run",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "FEINTS",
+  "clue": "Final fraction of a spirit run, redistilled with the next batch",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "HEART",
+  "clue": "Prized middle cut of a distillation run",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "SPIRIT SAFE",
+  "clue": "Locked brass-and-glass box where the stillman judges the cut",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "CONDENSER",
+  "clue": "Device that turns spirit vapor back into liquid",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "WORM TUB",
+  "clue": "Coiled-pipe condenser cooled in a vat of water",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "LYNE ARM",
+  "clue": "Pipe leading from the top of a pot still to the condenser",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "COPPER",
+  "clue": "Metal favored for stills because it strips out sulfur notes",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "SWAN NECK",
+  "clue": "Tapering upper part of a pot still",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "SOUR MASH",
+  "clue": "Process that adds backset from a previous run to a new fermentation",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "BACKSET",
+  "clue": "Spent stillage added to a new batch in the sour mash process",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "MASH BILL",
+  "clue": "Recipe of grains used to make a whiskey",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "CORN",
+  "clue": "Grain that dominates a bourbon recipe",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "WHEAT",
+  "clue": "Grain in many breads and some bourbons",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "STARCH",
+  "clue": "Grain component converted to sugar during mashing",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "PROOF",
+  "clue": "US strength measure equal to twice the ABV",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "ABV",
+  "clue": "Label figure for alcohol strength, briefly",
+  "category": "Production",
+  "difficulty": 1
+ },
+ {
+  "answer": "NEW MAKE",
+  "clue": "Raw spirit straight off the still before casking",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "WHITE DOG",
+  "clue": "Unaged corn spirit, in American slang",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "CUT",
+  "clue": "Distiller's choice of where the heart begins and ends",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "CARAMEL",
+  "clue": "Coloring, E150a, permitted in Scotch",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "MALTSTER",
+  "clue": "Barley processor who steeps, sprouts and kilns grain",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "PHENOLS",
+  "clue": "Smoky compounds measured in parts per million",
+  "category": "Production",
+  "difficulty": 3
+ },
+ {
+  "answer": "ESTERS",
+  "clue": "Compounds behind fruity notes in spirit",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "CHARCOAL",
+  "clue": "Sugar-maple product used to filter Tennessee whiskey",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
+  "answer": "CASK",
+  "clue": "Wooden container for aging spirit",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "BARREL",
+  "clue": "Standard American whiskey container, about 53 gallons",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "OAK",
+  "clue": "Wood required for aging Scotch",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "WHITE OAK",
+  "clue": "Quercus alba, staple of bourbon cooperage",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "CHAR",
+  "clue": "Blackened layer inside a new bourbon barrel",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "TOAST",
+  "clue": "Gentle heating of barrel staves short of burning",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "STAVE",
+  "clue": "Curved wooden plank of a barrel",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "HOOP",
+  "clue": "Metal band holding a barrel together",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "BUNG",
+  "clue": "Stopper for a cask's opening",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "COOPER",
+  "clue": "Barrel maker",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "HOGSHEAD",
+  "clue": "Cask of about 250 liters, often rebuilt from barrels",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "BUTT",
+  "clue": "Large sherry cask of about 500 liters",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "QUARTER CASK",
+  "clue": "Small container that speeds maturation via more wood contact",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "SHERRY",
+  "clue": "Fortified Spanish wine whose casks are prized for aging Scotch",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "OLOROSO",
+  "clue": "Rich, nutty sherry style common in cask aging",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "PEDRO XIMENEZ",
+  "clue": "Sweet sherry grape whose casks lend raisin notes",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "PORT",
+  "clue": "Douro Valley fortified wine used for cask finishing",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "MADEIRA",
+  "clue": "Atlantic island wine whose casks are used for finishing",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "EX-BOURBON",
+  "clue": "Type of used American cask common in Scotch maturation",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "REFILL",
+  "clue": "Describes a cask on its second or later use for Scotch",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "WAREHOUSE",
+  "clue": "Building where barrels age",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "RICKHOUSE",
+  "clue": "Kentucky warehouse with barrels stacked on wooden racks",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "DUNNAGE",
+  "clue": "Traditional low, earthen-floored warehouse style",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "RICK",
+  "clue": "Wooden rack holding barrels in a warehouse",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "AGING",
+  "clue": "Process that mellows spirit in wood over years",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "AGE STATEMENT",
+  "clue": "Label figure giving the youngest whisky's years",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "ANGELS SHARE",
+  "clue": "Spirit lost to evaporation during maturation",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "SOLERA",
+  "clue": "Fractional blending system borrowed from sherry makers",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "ALLIGATOR",
+  "clue": "Heavy char level named for its cracked, scaly look",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "VANILLIN",
+  "clue": "Compound from oak that gives sweet, creamy notes",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "TANNINS",
+  "clue": "Astringent compounds drawn from oak",
+  "category": "Casks & Aging",
+  "difficulty": 2
+ },
+ {
+  "answer": "MIZUNARA",
+  "clue": "Japanese oak prized for casks",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "VALINCH",
+  "clue": "Copper tube for drawing samples from a cask",
+  "category": "Casks & Aging",
+  "difficulty": 3
+ },
+ {
+  "answer": "ISLAY",
+  "clue": "Peaty island of Scotland's southern Hebrides",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "SPEYSIDE",
+  "clue": "Scotch region along a famous salmon river",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "SPEY",
+  "clue": "River giving a Scotch region its name",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "HIGHLANDS",
+  "clue": "Largest Scotch whisky region by area",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "LOWLANDS",
+  "clue": "Southern Scotch region known for light malts",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "CAMPBELTOWN",
+  "clue": "Kintyre town that is its own Scotch region",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "KINTYRE",
+  "clue": "Peninsula home to a small Scotch region",
+  "category": "Regions & Places",
+  "difficulty": 3
+ },
+ {
+  "answer": "ISLANDS",
+  "clue": "Unofficial Scotch grouping including Skye and Orkney",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "SKYE",
+  "clue": "Inner Hebrides island in the Islands whisky grouping",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "ORKNEY",
+  "clue": "Northern archipelago in the Islands whisky grouping",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "JURA",
+  "clue": "Hebridean island next to Islay",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "MULL",
+  "clue": "Hebridean island whose main town is Tobermory",
+  "category": "Regions & Places",
+  "difficulty": 3
+ },
+ {
+  "answer": "ARRAN",
+  "clue": "Firth of Clyde island in the Islands whisky grouping",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "HEBRIDES",
+  "clue": "Scottish island chain that includes Islay",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "SCOTLAND",
+  "clue": "Country of Islay and Speyside",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "IRELAND",
+  "clue": "Country whose whiskey is often triple distilled",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "KENTUCKY",
+  "clue": "Bluegrass State, bourbon's heartland",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "TENNESSEE",
+  "clue": "State whose namesake whiskey is typically maple-charcoal filtered",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "BARDSTOWN",
+  "clue": "Kentucky town billed as the Bourbon Capital of the World",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "JAPAN",
+  "clue": "Asian nation whose whisky industry dates to the 1920s",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "CANADA",
+  "clue": "Country whose whisky is often casually called rye",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "TAIWAN",
+  "clue": "East Asian island known for fast-maturing malts",
+  "category": "Regions & Places",
+  "difficulty": 3
+ },
+ {
+  "answer": "INDIA",
+  "clue": "Country where much local whisky is made from molasses spirit",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "CORK",
+  "clue": "Irish county or bottle stopper",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "DUFFTOWN",
+  "clue": "Speyside town said to stand on seven stills",
+  "category": "Regions & Places",
+  "difficulty": 3
+ },
+ {
+  "answer": "GLEN",
+  "clue": "Scottish valley, in many distillery names",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "BURN",
+  "clue": "Scottish stream, often a distillery's water source",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "LOCH",
+  "clue": "Scottish lake",
+  "category": "Regions & Places",
+  "difficulty": 1
+ },
+ {
+  "answer": "STRATH",
+  "clue": "Broad Scottish river valley",
+  "category": "Regions & Places",
+  "difficulty": 3
+ },
+ {
+  "answer": "APPALACHIA",
+  "clue": "Mountain region tied to moonshine lore",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "PENNSYLVANIA",
+  "clue": "State where early American rye whiskey thrived",
+  "category": "Regions & Places",
+  "difficulty": 2
+ },
+ {
+  "answer": "MONONGAHELA",
+  "clue": "Pennsylvania river valley famed for early American rye",
+  "category": "Regions & Places",
+  "difficulty": 3
+ },
+ {
+  "answer": "SCOTCH",
+  "clue": "Islay or Speyside product",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "BOURBON",
+  "clue": "American whiskey made mainly from corn",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "RYE",
+  "clue": "American whiskey made from at least 51% of a spicy grain",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "SINGLE MALT",
+  "clue": "Whisky from one distillery, made only from barley",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "BLEND",
+  "clue": "Mix of malt and grain whiskies",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "BLENDED MALT",
+  "clue": "Mix of different distilleries' barley whiskies with no grain whisky",
+  "category": "Styles & Categories",
+  "difficulty": 3
+ },
+ {
+  "answer": "GRAIN",
+  "clue": "Kind of Scotch made mostly from wheat or corn in column stills",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "POTEEN",
+  "clue": "Traditional Irish moonshine",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "MOONSHINE",
+  "clue": "Illicit homemade spirit",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "HOOCH",
+  "clue": "Cheap or bootleg liquor, slangily",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "CORN WHISKEY",
+  "clue": "American style made from at least 80% maize",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "STRAIGHT",
+  "clue": "Label term for bourbon aged at least two years in new charred oak",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "CASK STRENGTH",
+  "clue": "Bottled at its natural proof, undiluted",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "HIGH RYE",
+  "clue": "Bourbon style with a larger share of spicy grain",
+  "category": "Styles & Categories",
+  "difficulty": 3
+ },
+ {
+  "answer": "WHEATED",
+  "clue": "Bourbon style using a softer grain in place of rye",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "IRISH",
+  "clue": "Whiskey from the Emerald Isle",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "BLENDED SCOTCH",
+  "clue": "Malt-and-grain mix from Scotland",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "WHISKY",
+  "clue": "Spelling used in Scotland, Canada and Japan",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "WHISKEY",
+  "clue": "Spelling usual in Ireland and the US",
+  "category": "Styles & Categories",
+  "difficulty": 1
+ },
+ {
+  "answer": "USQUEBAUGH",
+  "clue": "Old anglicized Gaelic phrase meaning water of life",
+  "category": "Styles & Categories",
+  "difficulty": 3
+ },
+ {
+  "answer": "AQUA VITAE",
+  "clue": "Latin for water of life",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "SINGLE BARREL",
+  "clue": "Bottling drawn from one cask only",
+  "category": "Styles & Categories",
+  "difficulty": 2
+ },
+ {
+  "answer": "NOSE",
+  "clue": "Aroma, in tasting notes",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "PALATE",
+  "clue": "Taste on the tongue, in tasting notes",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "FINISH",
+  "clue": "Lingering aftertaste",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "BODY",
+  "clue": "Weight or texture in the mouth",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "MOUTHFEEL",
+  "clue": "Texture sensation, in tasting notes",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "LEGS",
+  "clue": "Streaks running down a swirled glass",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "TEARS",
+  "clue": "Legs, by another name",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "SMOKY",
+  "clue": "Like a heavily peated malt",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "PEATED",
+  "clue": "Smoked over burning turf, as much Islay barley is",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "IODINE",
+  "clue": "Antiseptic note found in some coastal malts",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "BRINY",
+  "clue": "Salty, like many coastal malts",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "HONEY",
+  "clue": "Sweet note often found in Speyside malts",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "VANILLA",
+  "clue": "Sweet note from American oak",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "SPICE",
+  "clue": "Pepper or cinnamon note, often from rye",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "OAKY",
+  "clue": "Woody in flavor",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "SULFUR",
+  "clue": "Rubbery off-note that copper helps remove",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "DRY",
+  "clue": "Not sweet",
+  "category": "Tasting Terms",
+  "difficulty": 1
+ },
+ {
+  "answer": "FLORAL",
+  "clue": "Like blossoms, in tasting notes",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "HEATHER",
+  "clue": "Moorland plant whose honeyed note marks some Highland malts",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "CEREAL",
+  "clue": "Grainy, bready note in young malts",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "RAISIN",
+  "clue": "Dried-grape note from sherry casks",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "LEATHER",
+  "clue": "Old-saddle note in long-aged whiskies",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "RANCIO",
+  "clue": "Nutty, earthy note of very old cask-aged spirits",
+  "category": "Tasting Terms",
+  "difficulty": 3
+ },
+ {
+  "answer": "LENGTH",
+  "clue": "How long the finish lasts",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "NOSING GLASS",
+  "clue": "Tulip-shaped vessel for appreciating aromas",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "COPITA",
+  "clue": "Stemmed sherry glass used for tasting whisky",
+  "category": "Tasting Terms",
+  "difficulty": 3
+ },
+ {
+  "answer": "COCONUT",
+  "clue": "Tropical note from American oak lactones",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
+  "answer": "NEAT",
+  "clue": "Served straight, no ice",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "ROCKS",
+  "clue": "Ice, at the bar",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "DRAM",
+  "clue": "Small pour of Scotch",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "JIGGER",
+  "clue": "Bar measuring tool, often 1.5 ounces",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "LOWBALL",
+  "clue": "Short glass, also called an old fashioned",
+  "category": "Serving & Cocktails",
+  "difficulty": 2
+ },
+ {
+  "answer": "HIGHBALL",
+  "clue": "Whisky and soda in a tall glass",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "OLD FASHIONED",
+  "clue": "Cocktail of whiskey, sugar, bitters and an orange twist",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "MANHATTAN",
+  "clue": "Cocktail of whiskey, sweet vermouth and bitters",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "ROB ROY",
+  "clue": "Scotch-based cousin of a Manhattan",
+  "category": "Serving & Cocktails",
+  "difficulty": 2
+ },
+ {
+  "answer": "RUSTY NAIL",
+  "clue": "Scotch stirred with a honeyed whisky liqueur",
+  "category": "Serving & Cocktails",
+  "difficulty": 2
+ },
+ {
+  "answer": "MINT JULEP",
+  "clue": "Kentucky Derby cocktail of bourbon, sugar and fresh leaves",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "WHISKEY SOUR",
+  "clue": "Cocktail of spirit, lemon juice and sugar",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "HOT TODDY",
+  "clue": "Warm drink of whisky, honey, lemon and boiling water",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "IRISH COFFEE",
+  "clue": "Hot drink of whiskey, sugar and cream-topped java",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "BOULEVARDIER",
+  "clue": "Negroni variation made with bourbon or rye",
+  "category": "Serving & Cocktails",
+  "difficulty": 3
+ },
+ {
+  "answer": "PENICILLIN",
+  "clue": "Modern cocktail of Scotch, lemon, honey-ginger syrup and an Islay float",
+  "category": "Serving & Cocktails",
+  "difficulty": 3
+ },
+ {
+  "answer": "BITTERS",
+  "clue": "Aromatic dashes in an Old Fashioned",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "VERMOUTH",
+  "clue": "Fortified wine in a Manhattan",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "SODA",
+  "clue": "Bubbly mixer in a highball",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "SPLASH",
+  "clue": "Small amount of water added to a dram",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "WATER",
+  "clue": "A few drops of this can open up a dram",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "ICE",
+  "clue": "Frozen addition to a lowball",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "CHASER",
+  "clue": "Drink taken after a shot",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "BOILERMAKER",
+  "clue": "Shot of whiskey with a beer",
+  "category": "Serving & Cocktails",
+  "difficulty": 2
+ },
+ {
+  "answer": "NIP",
+  "clue": "Small sip or bottle of spirits",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "QUAICH",
+  "clue": "Shallow two-handled Scottish drinking cup",
+  "category": "Serving & Cocktails",
+  "difficulty": 3
+ },
+ {
+  "answer": "SLAINTE",
+  "clue": "Gaelic toast meaning health",
+  "category": "Serving & Cocktails",
+  "difficulty": 2
+ },
+ {
+  "answer": "MIZUWARI",
+  "clue": "Japanese serve of whisky cut with water and ice",
+  "category": "Serving & Cocktails",
+  "difficulty": 3
+ },
+ {
+  "answer": "TWIST",
+  "clue": "Strip of citrus peel garnish",
+  "category": "Serving & Cocktails",
+  "difficulty": 1
+ },
+ {
+  "answer": "FIFTH",
+  "clue": "750-ml bottle, informally",
+  "category": "Serving & Cocktails",
+  "difficulty": 2
+ },
+ {
+  "answer": "PROHIBITION",
+  "clue": "US ban on alcohol, 1920-1933",
+  "category": "History & Culture",
+  "difficulty": 1
+ },
+ {
+  "answer": "BOOTLEGGER",
+  "clue": "Illegal liquor runner",
+  "category": "History & Culture",
+  "difficulty": 1
+ },
+ {
+  "answer": "SPEAKEASY",
+  "clue": "Secret bar of the 1920s",
+  "category": "History & Culture",
+  "difficulty": 1
+ },
+ {
+  "answer": "EXCISE",
+  "clue": "Tax whose 1823 reform helped legalize Scottish distilling",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "GAUGER",
+  "clue": "Revenue officer who measured spirit in casks",
+  "category": "History & Culture",
+  "difficulty": 3
+ },
+ {
+  "answer": "SMUGGLER",
+  "clue": "Illicit whisky runner in the old Highlands",
+  "category": "History & Culture",
+  "difficulty": 1
+ },
+ {
+  "answer": "REBELLION",
+  "clue": "Whiskey ___ of the 1790s, sparked by a federal tax",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "PHYLLOXERA",
+  "clue": "Vine pest that devastated cognac and boosted Scotch",
+  "category": "History & Culture",
+  "difficulty": 3
+ },
+ {
+  "answer": "FRIAR",
+  "clue": "Cleric named in Scotland's 1494 record of aqua vitae",
+  "category": "History & Culture",
+  "difficulty": 3
+ },
+ {
+  "answer": "ALEMBIC",
+  "clue": "Ancient distilling apparatus",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "COFFEY",
+  "clue": "Aeneas ___, patented a continuous still in 1830",
+  "category": "History & Culture",
+  "difficulty": 3
+ },
+ {
+  "answer": "MEDICINE",
+  "clue": "Category under which doctors could prescribe whiskey in Prohibition",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "REPEAL",
+  "clue": "Twenty-first Amendment action of 1933",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "VOLSTEAD",
+  "clue": "Act that enforced US Prohibition",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "REVENUER",
+  "clue": "Federal agent who busted stills",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "UISGE",
+  "clue": "Gaelic for water, root of whisky",
+  "category": "History & Culture",
+  "difficulty": 3
+ },
+ {
+  "answer": "BURNS",
+  "clue": "Scottish bard who wrote Freedom an' whisky gang thegither",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "HOGMANAY",
+  "clue": "Scottish New Year's Eve celebration",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "HAGGIS",
+  "clue": "Dish addressed in verse and served with a dram each January 25",
+  "category": "History & Culture",
+  "difficulty": 2
+ },
+ {
+  "answer": "TEMPERANCE",
+  "clue": "Movement that pushed for Prohibition",
+  "category": "History & Culture",
+  "difficulty": 1
+ },
+ {
+  "answer": "ROTGUT",
+  "clue": "Slang for cheap, harsh liquor",
+  "category": "History & Culture",
+  "difficulty": 1
+ }
+]

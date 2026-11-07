@@ -1,0 +1,1238 @@
+[
+  {
+    "answer": "BEER",
+    "clue": "Ale or lager, broadly",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "ALE",
+    "clue": "Top-fermented brew",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "LAGER",
+    "clue": "Bottom-fermented brew matured cold",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "STOUT",
+    "clue": "Dark, roasty brew often poured on nitro",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PORTER",
+    "clue": "Dark English style said to be named for London laborers",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PILSNER",
+    "clue": "Crisp pale lager that originated in Bohemia",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "IPA",
+    "clue": "Hop-forward pale style, for short",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PALE ALE",
+    "clue": "Hoppy, golden-to-amber top-fermented style",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "BROWN ALE",
+    "clue": "Nutty English style named for its color",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "LIGHT",
+    "clue": "Low-calorie, as some lagers",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "CRAFT",
+    "clue": "___ beer (independent small-batch brew)",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "MICROBREW",
+    "clue": "Small-batch beer from an independent producer",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "SHANDY",
+    "clue": "Beer mixed with lemonade or ginger beer",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PUMPKIN",
+    "clue": "Fall seasonal ale ingredient, often paired with pie spices",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "BOCK",
+    "clue": "Strong German lager often with a goat on its label",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "DOPPELBOCK",
+    "clue": "Strong lager style whose names often end in -ator",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "MAIBOCK",
+    "clue": "Pale, strong lager traditionally released in spring",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "HEFEWEIZEN",
+    "clue": "Cloudy German wheat beer with banana and clove notes",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "WITBIER",
+    "clue": "Belgian wheat beer spiced with coriander and orange peel",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "SAISON",
+    "clue": "Belgian farmhouse ale style",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "DUBBEL",
+    "clue": "Dark, malty Belgian abbey style",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "TRIPEL",
+    "clue": "Strong, golden Belgian abbey ale",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "LAMBIC",
+    "clue": "Spontaneously fermented Belgian wheat beer",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "KRIEK",
+    "clue": "Belgian lambic made with sour cherries",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "GOSE",
+    "clue": "Salty, tart German wheat style",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "KOLSCH",
+    "clue": "Pale, delicate ale from Cologne",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "MARZEN",
+    "clue": "Amber lager associated with Oktoberfest",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "DUNKEL",
+    "clue": "Dark Munich lager",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "HELLES",
+    "clue": "Pale, malty Munich lager",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "BARLEY WINE",
+    "clue": "Very strong ale that's often cellared for years",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "MILD",
+    "clue": "Low-strength, malty English ale",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "BITTER",
+    "clue": "English pub ale, often ordered as a 'best'",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "HAZY IPA",
+    "clue": "Juicy, cloudy New England style",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "IMPERIAL STOUT",
+    "clue": "Strong dark style once exported to the Russian court",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "OATMEAL STOUT",
+    "clue": "Silky dark ale with a breakfast grain in the mash",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "MILK STOUT",
+    "clue": "Sweet dark ale made with lactose",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "RADLER",
+    "clue": "Cyclist's drink of beer and lemon soda",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "BLACK AND TAN",
+    "clue": "Layered pint topped with stout",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "WINTER WARMER",
+    "clue": "Malty, often spiced cold-weather seasonal",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "EISBOCK",
+    "clue": "Lager concentrated by freezing and removing ice",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "GUEUZE",
+    "clue": "Blend of young and old lambics",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "FRAMBOISE",
+    "clue": "Lambic made with raspberries",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "ALTBIER",
+    "clue": "Dusseldorf's traditional copper-colored ale",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "RAUCHBIER",
+    "clue": "Bamberg specialty made with smoked malt",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "WEE HEAVY",
+    "clue": "Strong, malty Scottish ale",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "SAHTI",
+    "clue": "Finnish farmhouse ale filtered through juniper",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "HOPS",
+    "clue": "Cone-shaped flowers that add bitterness",
+    "category": "Ingredients",
+    "difficulty": 1
+  },
+  {
+    "answer": "MALT",
+    "clue": "Germinated, kiln-dried grain",
+    "category": "Ingredients",
+    "difficulty": 1
+  },
+  {
+    "answer": "BARLEY",
+    "clue": "Grain most commonly malted for brewing",
+    "category": "Ingredients",
+    "difficulty": 1
+  },
+  {
+    "answer": "YEAST",
+    "clue": "Microbe that converts sugar to alcohol",
+    "category": "Ingredients",
+    "difficulty": 1
+  },
+  {
+    "answer": "WATER",
+    "clue": "Ingredient that makes up most of a beer",
+    "category": "Ingredients",
+    "difficulty": 1
+  },
+  {
+    "answer": "HONEY",
+    "clue": "Bee product used in braggots and some ales",
+    "category": "Ingredients",
+    "difficulty": 1
+  },
+  {
+    "answer": "OATS",
+    "clue": "Grain that adds silkiness to stouts",
+    "category": "Ingredients",
+    "difficulty": 2
+  },
+  {
+    "answer": "CORN",
+    "clue": "Adjunct grain in many American lagers",
+    "category": "Ingredients",
+    "difficulty": 2
+  },
+  {
+    "answer": "RICE",
+    "clue": "Adjunct that lightens many mass-market lagers",
+    "category": "Ingredients",
+    "difficulty": 2
+  },
+  {
+    "answer": "LACTOSE",
+    "clue": "Milk sugar in sweet stouts",
+    "category": "Ingredients",
+    "difficulty": 2
+  },
+  {
+    "answer": "CORIANDER",
+    "clue": "Spice seed in witbier",
+    "category": "Ingredients",
+    "difficulty": 2
+  },
+  {
+    "answer": "ORANGE PEEL",
+    "clue": "Witbier flavoring from a citrus fruit's rind",
+    "category": "Ingredients",
+    "difficulty": 2
+  },
+  {
+    "answer": "CRYSTAL",
+    "clue": "___ malt (caramel-like specialty grain)",
+    "category": "Ingredients",
+    "difficulty": 2
+  },
+  {
+    "answer": "CHOCOLATE",
+    "clue": "Dark roasted malt named for a sweet treat",
+    "category": "Ingredients",
+    "difficulty": 2
+  },
+  {
+    "answer": "GRUIT",
+    "clue": "Herb mixture used to flavor beer before hops took over",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "CASCADE",
+    "clue": "Citrusy American hop variety named for a mountain range",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "SAAZ",
+    "clue": "Noble hop from the Czech Republic",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "ROASTED BARLEY",
+    "clue": "Unmalted dark grain giving dry stout its bite",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "ALPHA ACID",
+    "clue": "Hop compound that yields bitterness when boiled",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "BRETT",
+    "clue": "Wild yeast, for short, behind funky flavors",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "ISINGLASS",
+    "clue": "Fish-derived fining agent used in cask ale",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "IRISH MOSS",
+    "clue": "Seaweed added to the boil to aid clarity",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "GYPSUM",
+    "clue": "Mineral added to brewing water to accentuate bitterness",
+    "category": "Ingredients",
+    "difficulty": 3
+  },
+  {
+    "answer": "BREW",
+    "clue": "Make beer",
+    "category": "Brewing Process",
+    "difficulty": 1
+  },
+  {
+    "answer": "FERMENT",
+    "clue": "Turn sugar into alcohol",
+    "category": "Brewing Process",
+    "difficulty": 1
+  },
+  {
+    "answer": "HOMEBREW",
+    "clue": "Make beer in one's own kitchen",
+    "category": "Brewing Process",
+    "difficulty": 1
+  },
+  {
+    "answer": "BREWERY",
+    "clue": "Beer factory",
+    "category": "Brewing Process",
+    "difficulty": 1
+  },
+  {
+    "answer": "MASH",
+    "clue": "Soak crushed grain in hot water to make wort",
+    "category": "Brewing Process",
+    "difficulty": 2
+  },
+  {
+    "answer": "BOIL",
+    "clue": "Kettle stage when bittering hops are added",
+    "category": "Brewing Process",
+    "difficulty": 2
+  },
+  {
+    "answer": "WORT",
+    "clue": "Sugary liquid before fermentation",
+    "category": "Brewing Process",
+    "difficulty": 2
+  },
+  {
+    "answer": "PITCH",
+    "clue": "Add yeast to wort",
+    "category": "Brewing Process",
+    "difficulty": 2
+  },
+  {
+    "answer": "DRY HOP",
+    "clue": "Add cones or pellets late in fermentation for aroma",
+    "category": "Brewing Process",
+    "difficulty": 2
+  },
+  {
+    "answer": "PASTEURIZE",
+    "clue": "Heat-treat for shelf stability",
+    "category": "Brewing Process",
+    "difficulty": 2
+  },
+  {
+    "answer": "MALTING",
+    "clue": "Steeping, sprouting and kiln-drying grain",
+    "category": "Brewing Process",
+    "difficulty": 2
+  },
+  {
+    "answer": "SPARGE",
+    "clue": "Rinse the grain bed with hot water",
+    "category": "Brewing Process",
+    "difficulty": 3
+  },
+  {
+    "answer": "LAUTER",
+    "clue": "Separate wort from the grain husks",
+    "category": "Brewing Process",
+    "difficulty": 3
+  },
+  {
+    "answer": "KRAUSEN",
+    "clue": "Foamy head on actively fermenting beer",
+    "category": "Brewing Process",
+    "difficulty": 3
+  },
+  {
+    "answer": "PRIME",
+    "clue": "Add sugar before bottling for carbonation",
+    "category": "Brewing Process",
+    "difficulty": 3
+  },
+  {
+    "answer": "TRUB",
+    "clue": "Sediment of proteins and hop debris",
+    "category": "Brewing Process",
+    "difficulty": 3
+  },
+  {
+    "answer": "RACK",
+    "clue": "Siphon beer off its sediment",
+    "category": "Brewing Process",
+    "difficulty": 3
+  },
+  {
+    "answer": "ZYMURGY",
+    "clue": "Science of fermentation",
+    "category": "Brewing Process",
+    "difficulty": 3
+  },
+  {
+    "answer": "KEG",
+    "clue": "Tapped container at a frat party",
+    "category": "Equipment",
+    "difficulty": 1
+  },
+  {
+    "answer": "CAN",
+    "clue": "Aluminum vessel for beer",
+    "category": "Equipment",
+    "difficulty": 1
+  },
+  {
+    "answer": "BOTTLE",
+    "clue": "Glass container with a crown cap",
+    "category": "Equipment",
+    "difficulty": 1
+  },
+  {
+    "answer": "VAT",
+    "clue": "Large brewing tank",
+    "category": "Equipment",
+    "difficulty": 1
+  },
+  {
+    "answer": "TUN",
+    "clue": "Large brewing vessel",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "KETTLE",
+    "clue": "Vessel for the boil",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "MASH TUN",
+    "clue": "Vessel for steeping crushed grain",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "FERMENTER",
+    "clue": "Tank where yeast does its work",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "CARBOY",
+    "clue": "Large glass jug for homebrewing",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "AIRLOCK",
+    "clue": "Bubbling valve on a fermenter",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "HYDROMETER",
+    "clue": "Floating gauge of specific gravity",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "SIPHON",
+    "clue": "Tube for transferring beer without disturbing sediment",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "MILL",
+    "clue": "Device that cracks malted grain",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "BARREL",
+    "clue": "Bourbon ___ (aging vessel for stouts)",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "HAND PUMP",
+    "clue": "Bar device for pulling real ale from the cellar",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "KILN",
+    "clue": "Oven for drying malt",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "WIDGET",
+    "clue": "Nitrogen capsule in some stout cans",
+    "category": "Equipment",
+    "difficulty": 2
+  },
+  {
+    "answer": "BRIGHT TANK",
+    "clue": "Vessel for finished, clear beer before packaging",
+    "category": "Equipment",
+    "difficulty": 3
+  },
+  {
+    "answer": "BUNG",
+    "clue": "Stopper for a cask's hole",
+    "category": "Equipment",
+    "difficulty": 3
+  },
+  {
+    "answer": "FIRKIN",
+    "clue": "Nine-imperial-gallon cask",
+    "category": "Equipment",
+    "difficulty": 3
+  },
+  {
+    "answer": "PIN",
+    "clue": "Half a firkin",
+    "category": "Equipment",
+    "difficulty": 3
+  },
+  {
+    "answer": "COOLSHIP",
+    "clue": "Shallow open vessel for cooling lambic wort",
+    "category": "Equipment",
+    "difficulty": 3
+  },
+  {
+    "answer": "FOEDER",
+    "clue": "Large oak vat for aging sour beer",
+    "category": "Equipment",
+    "difficulty": 3
+  },
+  {
+    "answer": "OAST",
+    "clue": "Kiln for drying hops",
+    "category": "Equipment",
+    "difficulty": 3
+  },
+  {
+    "answer": "PINT",
+    "clue": "Standard pub glass size",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "STEIN",
+    "clue": "Beer mug, often lidded",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "MUG",
+    "clue": "Handled glass for a cold one",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "FLIGHT",
+    "clue": "Sampler of several small pours",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "PITCHER",
+    "clue": "Pourable vessel shared at a bar table",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "GROWLER",
+    "clue": "Jug for carrying draft home",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "TAP",
+    "clue": "Bar spigot",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "TAPROOM",
+    "clue": "Brewery's on-site bar",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "BREWPUB",
+    "clue": "Restaurant that makes its own beer",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "BAR",
+    "clue": "Pub counter",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "BIERGARTEN",
+    "clue": "Outdoor drinking area in Bavaria",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "HEAD",
+    "clue": "Foam on a pint",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "DRAFT",
+    "clue": "Served from a keg rather than a bottle",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "SIX-PACK",
+    "clue": "Cardboard carrier of cans or bottles",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "COASTER",
+    "clue": "Cardboard mat under a pint",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "TAB",
+    "clue": "Running bar bill",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "HAPPY HOUR",
+    "clue": "Discounted drinking time",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "PUB CRAWL",
+    "clue": "Tour of several bars in one night",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "SUDS",
+    "clue": "Slang for beer, or its foam",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "BREWSKI",
+    "clue": "Beer, in jocular slang",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHUG",
+    "clue": "Gulp down without stopping",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "SWIG",
+    "clue": "Big gulp",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "TIPSY",
+    "clue": "Slightly buzzed",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "HANGOVER",
+    "clue": "Morning-after headache",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "PROST",
+    "clue": "German toast",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "SLAINTE",
+    "clue": "Irish toast",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "TANKARD",
+    "clue": "Large drinking mug, sometimes pewter",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "CHALICE",
+    "clue": "Stemmed, wide-bowled glass for Belgian ales",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "TULIP",
+    "clue": "Bulbous stemmed glass with a flared lip",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "YARD",
+    "clue": "___ of ale (very tall glass)",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "NITRO",
+    "clue": "___ stout (creamy pour)",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "KANPAI",
+    "clue": "Japanese toast",
+    "category": "Serving & Glassware",
+    "difficulty": 3
+  },
+  {
+    "answer": "NONIC",
+    "clue": "Pint glass with a bulge near the rim",
+    "category": "Serving & Glassware",
+    "difficulty": 3
+  },
+  {
+    "answer": "MASS",
+    "clue": "Munich's one-liter beer mug",
+    "category": "Serving & Glassware",
+    "difficulty": 3
+  },
+  {
+    "answer": "OKTOBERFEST",
+    "clue": "Munich's annual fall festival",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "BAVARIA",
+    "clue": "German state known for beer gardens",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "MUNICH",
+    "clue": "Bavarian capital and festival host city",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "BELGIUM",
+    "clue": "Land of lambics and abbey ales",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "GERMANY",
+    "clue": "Nation of the Reinheitsgebot",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "IRELAND",
+    "clue": "Emerald Isle, famed for dry stout",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "ENGLAND",
+    "clue": "Homeland of bitter and porter",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "CZECHIA",
+    "clue": "Country home to Pilsen",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "INDIA",
+    "clue": "Colonial market for which a hoppy pale ale was named",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "MONK",
+    "clue": "Trappist brewer",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "PROHIBITION",
+    "clue": "U.S. dry era ended by the 21st Amendment",
+    "category": "Regions & History",
+    "difficulty": 1
+  },
+  {
+    "answer": "PILSEN",
+    "clue": "Czech city that gave its name to a pale lager",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "BOHEMIA",
+    "clue": "Historic Czech region known for Saaz hops",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "DUSSELDORF",
+    "clue": "German city known for altbier",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "LONDON",
+    "clue": "City where porter first became popular",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "TRAPPIST",
+    "clue": "Cistercian monk whose abbeys produce certified ales",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "PURITY LAW",
+    "clue": "1516 Bavarian rule limiting beer ingredients",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "EGYPT",
+    "clue": "Ancient Nile land where beer was a dietary staple",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "KENT",
+    "clue": "English county famed for hop gardens",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "YAKIMA",
+    "clue": "Washington valley famed for hop growing",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "MILWAUKEE",
+    "clue": "Wisconsin city historically famed for beer",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "PASTEUR",
+    "clue": "French scientist who wrote a study of beer and its diseases",
+    "category": "Regions & History",
+    "difficulty": 2
+  },
+  {
+    "answer": "BURTON",
+    "clue": "English town famed for its sulfate-rich brewing water",
+    "category": "Regions & History",
+    "difficulty": 3
+  },
+  {
+    "answer": "BAMBERG",
+    "clue": "Franconian city famed for smoked beer",
+    "category": "Regions & History",
+    "difficulty": 3
+  },
+  {
+    "answer": "BRAGGOT",
+    "clue": "Honey-and-malt hybrid of beer and mead",
+    "category": "Regions & History",
+    "difficulty": 3
+  },
+  {
+    "answer": "ALEWIFE",
+    "clue": "Medieval Englishwoman who brewed and sold drink",
+    "category": "Regions & History",
+    "difficulty": 3
+  },
+  {
+    "answer": "NINKASI",
+    "clue": "Sumerian goddess of brewing",
+    "category": "Regions & History",
+    "difficulty": 3
+  },
+  {
+    "answer": "KVASS",
+    "clue": "Slavic fermented drink made from bread",
+    "category": "Regions & History",
+    "difficulty": 3
+  },
+  {
+    "answer": "CHICHA",
+    "clue": "Andean corn beer",
+    "category": "Regions & History",
+    "difficulty": 3
+  },
+  {
+    "answer": "CRISP",
+    "clue": "Clean and refreshing, as a lager",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "HOPPY",
+    "clue": "Bitter and aromatic, like an IPA",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "MALTY",
+    "clue": "Bready and sweet in character",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "SOUR",
+    "clue": "Tart, like a lambic",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "TART",
+    "clue": "Puckery, like a gose",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "HAZY",
+    "clue": "Cloudy, as many juicy IPAs",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "AROMA",
+    "clue": "Smell of a beer",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "ABV",
+    "clue": "Label stat for strength, in brief",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "DRY",
+    "clue": "Lacking residual sweetness",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "FLAT",
+    "clue": "Lacking carbonation",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "CITRUS",
+    "clue": "Hop note like grapefruit or orange",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "FUNKY",
+    "clue": "Barnyard-like, as Brett beers",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "ROASTY",
+    "clue": "Coffee-like, as a stout",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "BODY",
+    "clue": "Fullness on the palate",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "MOUTHFEEL",
+    "clue": "Body and carbonation, as sensed on the tongue",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "FINISH",
+    "clue": "Lingering taste after a sip",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "NOSE",
+    "clue": "Aroma, to a taster",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "IBU",
+    "clue": "Bitterness unit, briefly",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "CARAMEL",
+    "clue": "Toffee-like note from crystal malt",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "CLOVE",
+    "clue": "Spicy note in a hefeweizen",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "BANANA",
+    "clue": "Fruity note in a German wheat beer",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "SKUNKED",
+    "clue": "Light-struck, as beer in clear glass",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "LACING",
+    "clue": "Foam traces left on the glass",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "SRM",
+    "clue": "Color scale used by U.S. brewers, briefly",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "ESTERS",
+    "clue": "Fruity compounds made by yeast",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "PHENOLS",
+    "clue": "Clove-like yeast compounds",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "DIACETYL",
+    "clue": "Compound causing a buttery off-flavor",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "OXIDATION",
+    "clue": "Cause of wet-cardboard staleness in old beer",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "TAVERN",
+    "clue": "Inn's drinking room",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "BARTENDER",
+    "clue": "One pulling pints for patrons",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "COLD ONE",
+    "clue": "Chilled beer, casually",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "TOAST",
+    "clue": "Raise a glass in honor of",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  }
+]
