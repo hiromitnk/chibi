@@ -1,0 +1,1508 @@
+[
+  {
+    "answer": "JUNIPER",
+    "clue": "Berry-like cone that must lead the flavor of any gin",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "CORIANDER",
+    "clue": "Citrusy seed botanical from the cilantro plant",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "ANGELICA",
+    "clue": "Earthy root botanical from a plant in the carrot family",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "ORRIS",
+    "clue": "Powdered iris root used to fix aromas in gin",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "CASSIA",
+    "clue": "Cinnamon-like bark used as a gin botanical",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "CINNAMON",
+    "clue": "Warm bark spice found in some spiced gins",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "CARDAMOM",
+    "clue": "Aromatic pod spice also used in chai",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "LICORICE",
+    "clue": "Sweet root botanical, also a black candy flavor",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "CUBEB",
+    "clue": "Peppery berry botanical also called tailed pepper",
+    "category": "Botanicals",
+    "difficulty": 3
+  },
+  {
+    "answer": "ALMOND",
+    "clue": "Nut that appears, often bitter, in some botanical blends",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "NUTMEG",
+    "clue": "Seed spice grated over eggnog and used in some gins",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "ROSE",
+    "clue": "Flower whose petals perfume some floral gins",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "LAVENDER",
+    "clue": "Purple Provencal flower used in floral gins",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "ELDERFLOWER",
+    "clue": "Creamy white blossom used in gins and cordials",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "BOTANICAL",
+    "clue": "Any plant ingredient that flavors gin",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "GRAPEFRUIT",
+    "clue": "Tart breakfast citrus whose peel appears in some gins",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "LEMONGRASS",
+    "clue": "Citrus-scented Asian grass used as a botanical",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "PINE",
+    "clue": "Resinous tree aroma typical of juniper-forward gins",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "CITRUS",
+    "clue": "Lemon or orange, as a gin flavor family",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "FENNEL",
+    "clue": "Anise-flavored seed botanical",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "ANISE",
+    "clue": "Licorice-flavored seed in some gins and in absinthe",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "CARAWAY",
+    "clue": "Rye bread seed sometimes used as a gin botanical",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "CHAMOMILE",
+    "clue": "Daisy-like flower used in tea and some gins",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "HIBISCUS",
+    "clue": "Red flower used to tint and flavor some gins",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "SAFFRON",
+    "clue": "Costly spice that can tint a spirit gold",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "GINGER",
+    "clue": "Spicy root used in some gins and a fizzy mixer",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "SLOE",
+    "clue": "Tart blackthorn fruit",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "DAMSON",
+    "clue": "Small plum also steeped to make a fruit gin liqueur",
+    "category": "Botanicals",
+    "difficulty": 3
+  },
+  {
+    "answer": "ORANGE",
+    "clue": "Citrus whose dried peel is a common gin botanical",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "CINCHONA",
+    "clue": "Andean bark that is the source of quinine",
+    "category": "Botanicals",
+    "difficulty": 2
+  },
+  {
+    "answer": "TERPENE",
+    "clue": "Pinene or limonene, chemically",
+    "category": "Botanicals",
+    "difficulty": 3
+  },
+  {
+    "answer": "LIMONENE",
+    "clue": "Citrus-scented compound abundant in lemon peel",
+    "category": "Botanicals",
+    "difficulty": 3
+  },
+  {
+    "answer": "ROSEMARY",
+    "clue": "Piney herb sprig used to garnish a G&T",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "THYME",
+    "clue": "Herb whose name sounds like a clock word",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "BASIL",
+    "clue": "Leafy herb muddled into a gin smash",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "SAGE",
+    "clue": "Gray-green herb used in some savory gins",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "CUCUMBER",
+    "clue": "Cool green slice in many modern G&Ts",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "BERRY",
+    "clue": "Juniper fruit, informally",
+    "category": "Botanicals",
+    "difficulty": 1
+  },
+  {
+    "answer": "DISTILL",
+    "clue": "Purify by vaporizing and condensing",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "STILL",
+    "clue": "Copper vessel for making spirits",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "ALEMBIC",
+    "clue": "Ancient type of pot still",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "COPPER",
+    "clue": "Traditional metal for stills",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "MACERATE",
+    "clue": "Soak botanicals in spirit before distilling",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "VAPOR",
+    "clue": "State of spirit passing through a botanical basket in some stills",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "BASKET",
+    "clue": "Perforated holder for botanicals in a vapor-infusion still",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "NEUTRAL SPIRIT",
+    "clue": "High-proof base alcohol redistilled with botanicals",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "ETHANOL",
+    "clue": "Drinking alcohol, chemically",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "PROOF",
+    "clue": "Alcohol strength measure on a U.S. label",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "ABV",
+    "clue": "Label strength figure, for short",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "HEARTS",
+    "clue": "Middle cut of a distillation run, kept for bottling",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "HEADS",
+    "clue": "Volatile first cut of a distillation run, set aside",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "TAILS",
+    "clue": "Final, oily cut of a distillation run",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "FEINTS",
+    "clue": "Low-quality fractions of a run, in British distilling",
+    "category": "Production",
+    "difficulty": 3
+  },
+  {
+    "answer": "CONDENSER",
+    "clue": "Still part that turns vapor back into liquid",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "LYNE ARM",
+    "clue": "Pipe from a still's neck to the condenser",
+    "category": "Production",
+    "difficulty": 3
+  },
+  {
+    "answer": "REFLUX",
+    "clue": "Vapor condensing and falling back inside a still",
+    "category": "Production",
+    "difficulty": 3
+  },
+  {
+    "answer": "RECTIFY",
+    "clue": "Redistill to purify a spirit",
+    "category": "Production",
+    "difficulty": 3
+  },
+  {
+    "answer": "BATCH",
+    "clue": "Single run of a pot still",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "DILUTE",
+    "clue": "Add water to bring a spirit to bottling strength",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "GRAIN",
+    "clue": "Wheat or rye, as a spirit base",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "WHEAT",
+    "clue": "Common cereal base for neutral spirit",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "RYE",
+    "clue": "Cereal used in some spirit bases and breads",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "MOLASSES",
+    "clue": "Sugarcane byproduct used for some neutral spirits",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "MALT WINE",
+    "clue": "Malty distillate that gives genever its character",
+    "category": "Production",
+    "difficulty": 3
+  },
+  {
+    "answer": "FERMENT",
+    "clue": "Turn sugar into alcohol with yeast",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "YEAST",
+    "clue": "Microbe that turns sugar into alcohol",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "MASH",
+    "clue": "Grain-and-water mix before fermenting",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "WASH",
+    "clue": "Fermented liquid ready for the still",
+    "category": "Production",
+    "difficulty": 3
+  },
+  {
+    "answer": "INFUSE",
+    "clue": "Steep, as botanicals in spirit",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "STEEP",
+    "clue": "Soak, as sloes in a spirit",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "BARREL",
+    "clue": "Wooden cask some gins rest in",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "OAK",
+    "clue": "Wood of casks for aged gins",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "CASK",
+    "clue": "Wooden aging vessel",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "LOUCHE",
+    "clue": "Cloudy effect when an oily spirit is chilled or diluted",
+    "category": "Production",
+    "difficulty": 3
+  },
+  {
+    "answer": "CHARGE",
+    "clue": "Load of spirit and botanicals placed in a still",
+    "category": "Production",
+    "difficulty": 3
+  },
+  {
+    "answer": "SPIRIT",
+    "clue": "Distilled alcoholic drink",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "ESSENTIAL OIL",
+    "clue": "Aromatic compound carried from botanicals into the spirit",
+    "category": "Production",
+    "difficulty": 2
+  },
+  {
+    "answer": "RECIPE",
+    "clue": "Distiller's secret list of botanicals",
+    "category": "Production",
+    "difficulty": 1
+  },
+  {
+    "answer": "GIN",
+    "clue": "Juniper-flavored spirit",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "LONDON DRY",
+    "clue": "Juniper-led style with no flavorings added after distilling",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "OLD TOM",
+    "clue": "Slightly sweetened style favored in 19th-century cocktails",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "GENEVER",
+    "clue": "Malty Dutch juniper spirit, ancestor of gin",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "NAVY STRENGTH",
+    "clue": "High-proof gin style with a maritime name",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "SLOE GIN",
+    "clue": "Red liqueur made by steeping blackthorn fruit in spirit",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PINK GIN",
+    "clue": "Old naval drink of gin and aromatic bitters",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "OUDE",
+    "clue": "Maltier genever style, Dutch for 'old'",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "JONGE",
+    "clue": "Lighter genever style, Dutch for 'young'",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "KORENWIJN",
+    "clue": "Genever style rich in malt wine, Dutch for 'grain wine'",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "NEW WESTERN",
+    "clue": "Style where juniper shares the stage with other botanicals",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "COMPOUND GIN",
+    "clue": "Cold-mixed spirit flavored with essences, not redistilled",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "HOLLANDS",
+    "clue": "Old English name for Dutch genever",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "GENEVA",
+    "clue": "Anglicized name once used for genever",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "AGED",
+    "clue": "Like gins rested in oak",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "VODKA",
+    "clue": "Neutral cousin of gin",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "LIQUEUR",
+    "clue": "Sweetened spirit such as sloe gin",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "FLAVORED",
+    "clue": "Like fruit or spice gins, broadly",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PINK",
+    "clue": "Color of many berry-infused gins",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "DRY",
+    "clue": "Not sweet, as a Martini",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "BATHTUB GIN",
+    "clue": "Crude Prohibition-era homemade hooch",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "GIN CRAZE",
+    "clue": "Early-18th-century London binge on cheap spirits",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "HOGARTH",
+    "clue": "Artist of 'Gin Lane'",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "GIN LANE",
+    "clue": "Hogarth print of drunken London squalor",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "BEER STREET",
+    "clue": "Hogarth's cheerful companion to a gin-soaked print",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "GIN ACT",
+    "clue": "18th-century British law aimed at curbing a spirits craze",
+    "category": "History",
+    "difficulty": 3
+  },
+  {
+    "answer": "MOTHERS RUIN",
+    "clue": "Old nickname for gin from its Georgian-era reputation",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "PROHIBITION",
+    "clue": "U.S. dry era of the 1920s",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "SPEAKEASY",
+    "clue": "Illicit 1920s bar",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "BOOTLEGGER",
+    "clue": "Illegal liquor runner",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "HOOCH",
+    "clue": "Cheap liquor, slangily",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "ROYAL NAVY",
+    "clue": "Service whose officers popularized pink gin",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "SCURVY",
+    "clue": "Disease citrus juice was used to prevent at sea",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "MALARIA",
+    "clue": "Disease quinine helps treat",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "RAJ",
+    "clue": "British ___, era when quinine tonics were drunk in India",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "WILLIAM",
+    "clue": "___ of Orange, Dutch-born king whose reign saw English distilling boom",
+    "category": "History",
+    "difficulty": 3
+  },
+  {
+    "answer": "LONDON",
+    "clue": "City of the 18th-century gin craze",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "SCHIEDAM",
+    "clue": "Dutch city famed for genever distilling",
+    "category": "History",
+    "difficulty": 3
+  },
+  {
+    "answer": "APOTHECARY",
+    "clue": "Old-time pharmacist who sold juniper remedies",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "GIN PALACE",
+    "clue": "Lavish Victorian London drinking house",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "TEMPERANCE",
+    "clue": "Movement opposing alcohol",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "DUTCH",
+    "clue": "___ courage (liquid bravery)",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "NETHERLANDS",
+    "clue": "Genever's homeland, along with Belgium",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "BELGIUM",
+    "clue": "Country that shares genever heritage with the Netherlands",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "VICTORIAN",
+    "clue": "Era of opulent London gin palaces",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "GEORGIAN",
+    "clue": "Era of London's gin craze",
+    "category": "History",
+    "difficulty": 3
+  },
+  {
+    "answer": "EXCISE",
+    "clue": "Duty levied on domestically made spirits",
+    "category": "History",
+    "difficulty": 3
+  },
+  {
+    "answer": "SAILOR",
+    "clue": "Navy man with a rum or gin ration, perhaps",
+    "category": "History",
+    "difficulty": 1
+  },
+  {
+    "answer": "REPEAL",
+    "clue": "1933 end of U.S. Prohibition",
+    "category": "History",
+    "difficulty": 2
+  },
+  {
+    "answer": "MARTINI",
+    "clue": "Gin-and-vermouth classic, often stirred",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "NEGRONI",
+    "clue": "Equal-parts gin, sweet vermouth and red bitter aperitivo",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "GIMLET",
+    "clue": "Gin-and-lime cocktail, classically made with cordial",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "TOM COLLINS",
+    "clue": "Tall gin sour topped with soda",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "BRAMBLE",
+    "clue": "Gin sour drizzled with blackberry liqueur",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "AVIATION",
+    "clue": "Gin cocktail with maraschino and violet liqueur",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "LAST WORD",
+    "clue": "Equal-parts gin, lime, maraschino and herbal liqueur",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "CORPSE REVIVER",
+    "clue": "Hangover cocktail whose 'No. 2' uses gin and an absinthe rinse",
+    "category": "Cocktails",
+    "difficulty": 3
+  },
+  {
+    "answer": "BEES KNEES",
+    "clue": "Prohibition-era mix of gin, lemon and honey",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "SOUTHSIDE",
+    "clue": "Gin, citrus, sugar and mint cocktail",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "CLOVER CLUB",
+    "clue": "Raspberry, lemon and egg-white gin sour",
+    "category": "Cocktails",
+    "difficulty": 3
+  },
+  {
+    "answer": "WHITE LADY",
+    "clue": "Gin, orange liqueur and lemon cocktail",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "GIBSON",
+    "clue": "Martini garnished with a cocktail onion",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "VESPER",
+    "clue": "Gin-and-vodka Martini variant from an Ian Fleming novel",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "SLING",
+    "clue": "Singapore ___, tall gin cocktail",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "RICKEY",
+    "clue": "Gin ___ (highball of lime and soda, no sugar)",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "FIZZ",
+    "clue": "Shaken sour topped with soda, served without ice",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "SOUR",
+    "clue": "Spirit, citrus and sweetener drink family",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "PINK LADY",
+    "clue": "Gin, grenadine and egg-white cocktail",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "HANKY PANKY",
+    "clue": "Gin and sweet vermouth with a bitter Italian amaro",
+    "category": "Cocktails",
+    "difficulty": 3
+  },
+  {
+    "answer": "MARTINEZ",
+    "clue": "Sweet vermouth-and-gin drink often called the Martini's ancestor",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "ALEXANDER",
+    "clue": "Creamy gin and creme de cacao classic",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "BRONX",
+    "clue": "Gin, vermouth and orange juice cocktail named for a borough",
+    "category": "Cocktails",
+    "difficulty": 3
+  },
+  {
+    "answer": "PERFECT",
+    "clue": "Like a Martini made with both sweet and dry vermouth",
+    "category": "Cocktails",
+    "difficulty": 3
+  },
+  {
+    "answer": "DIRTY",
+    "clue": "Like a Martini with olive brine",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "WET",
+    "clue": "Like a Martini heavy on vermouth",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "BIJOU",
+    "clue": "Jewel-named classic of gin, sweet vermouth and herbal liqueur",
+    "category": "Cocktails",
+    "difficulty": 3
+  },
+  {
+    "answer": "SALTY DOG",
+    "clue": "Grapefruit highball with a salted rim",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "GREYHOUND",
+    "clue": "Grapefruit juice highball, no salted rim",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "MONKEY GLAND",
+    "clue": "Gin, orange juice, grenadine and absinthe classic",
+    "category": "Cocktails",
+    "difficulty": 3
+  },
+  {
+    "answer": "RAMOS",
+    "clue": "___ fizz, New Orleans drink shaken long with cream and egg white",
+    "category": "Cocktails",
+    "difficulty": 3
+  },
+  {
+    "answer": "SMASH",
+    "clue": "Muddled drink of herbs, spirit and crushed ice",
+    "category": "Cocktails",
+    "difficulty": 2
+  },
+  {
+    "answer": "PUNCH",
+    "clue": "Bowl drink of spirit, citrus, sugar and spice",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "COCKTAIL",
+    "clue": "Mixed drink",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "HIGHBALL",
+    "clue": "Spirit-plus-mixer drink served tall",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "NIGHTCAP",
+    "clue": "Drink before bed",
+    "category": "Cocktails",
+    "difficulty": 1
+  },
+  {
+    "answer": "TONIC",
+    "clue": "Bubbly quinine-laced mixer",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "QUININE",
+    "clue": "Bitter bark compound that flavors tonic",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "SODA",
+    "clue": "Club ___ (bubbly mixer)",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "SELTZER",
+    "clue": "Plain fizzy water",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "VERMOUTH",
+    "clue": "Fortified wine in a Martini",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "BITTERS",
+    "clue": "Aromatic dashes in a pink gin",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "APERITIVO",
+    "clue": "Italian pre-dinner drink category, like a Negroni's red bitter",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "CORDIAL",
+    "clue": "Sweetened lime syrup in a classic Gimlet",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "GRENADINE",
+    "clue": "Red pomegranate syrup",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "MARASCHINO",
+    "clue": "Cherry liqueur in an Aviation",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "VIOLETTE",
+    "clue": "Creme de ___, floral liqueur in an Aviation",
+    "category": "Mixers & Garnishes",
+    "difficulty": 3
+  },
+  {
+    "answer": "CASSIS",
+    "clue": "Creme de ___, blackcurrant liqueur",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "MURE",
+    "clue": "Creme de ___, blackberry liqueur in a Bramble",
+    "category": "Mixers & Garnishes",
+    "difficulty": 3
+  },
+  {
+    "answer": "SIMPLE SYRUP",
+    "clue": "Sugar dissolved in equal parts water",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "HONEY",
+    "clue": "Sweetener in a Bee's Knees",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "EGG WHITE",
+    "clue": "Foaming agent in a Clover Club",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "GINGER ALE",
+    "clue": "Spicy soda mixer",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "BITTER LEMON",
+    "clue": "Cloudy citrus soda with quinine",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "ABSINTHE",
+    "clue": "Anise spirit rinsed in a Corpse Reviver No. 2",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "AQUAFABA",
+    "clue": "Chickpea liquid used as a vegan foaming agent",
+    "category": "Mixers & Garnishes",
+    "difficulty": 3
+  },
+  {
+    "answer": "OLEO SACCHARUM",
+    "clue": "Citrus-oil syrup drawn out of peels with sugar",
+    "category": "Mixers & Garnishes",
+    "difficulty": 3
+  },
+  {
+    "answer": "SHRUB",
+    "clue": "Vinegar-based drinking syrup",
+    "category": "Mixers & Garnishes",
+    "difficulty": 3
+  },
+  {
+    "answer": "ORGEAT",
+    "clue": "Almond syrup",
+    "category": "Mixers & Garnishes",
+    "difficulty": 3
+  },
+  {
+    "answer": "GARNISH",
+    "clue": "Decorative finishing touch on a drink",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "WHEEL",
+    "clue": "Round citrus slice garnish",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "WEDGE",
+    "clue": "Lime piece squeezed into a G&T",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "PEEL",
+    "clue": "Citrus rind",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "ZEST",
+    "clue": "Grated citrus rind",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "TWIST",
+    "clue": "Curled strip of citrus garnish",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "EXPRESS",
+    "clue": "Squeeze a peel to spray its oils over a drink",
+    "category": "Mixers & Garnishes",
+    "difficulty": 3
+  },
+  {
+    "answer": "BRINE",
+    "clue": "Olive liquid in a dirty Martini",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "OLIVE",
+    "clue": "Classic garnish skewered in a Martini",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "ONION",
+    "clue": "Pickled garnish that turns a Martini into a Gibson",
+    "category": "Mixers & Garnishes",
+    "difficulty": 2
+  },
+  {
+    "answer": "LIME",
+    "clue": "Green citrus wedge in many G&Ts",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "LEMON",
+    "clue": "Yellow citrus in a Tom Collins",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHERRY",
+    "clue": "Red fruit garnish on a Tom Collins",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "MINT",
+    "clue": "Herb in a Southside",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "ICE",
+    "clue": "Cubes in a highball",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "SHAKER",
+    "clue": "Vessel for chilling a drink vigorously with ice",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "JIGGER",
+    "clue": "Hourglass-shaped measuring cup",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "STRAINER",
+    "clue": "Tool that holds back ice as a drink is poured",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "HAWTHORNE",
+    "clue": "Spring-rimmed strainer",
+    "category": "Bar Tools",
+    "difficulty": 2
+  },
+  {
+    "answer": "JULEP",
+    "clue": "___ strainer (perforated, spoon-shaped bar tool)",
+    "category": "Bar Tools",
+    "difficulty": 3
+  },
+  {
+    "answer": "MUDDLER",
+    "clue": "Pestle for crushing herbs in a glass",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "BAR SPOON",
+    "clue": "Long, twisted stirring utensil",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "MIXING GLASS",
+    "clue": "Vessel for stirred drinks",
+    "category": "Bar Tools",
+    "difficulty": 2
+  },
+  {
+    "answer": "BOSTON",
+    "clue": "___ shaker (two-part, tin-on-glass or tin-on-tin set)",
+    "category": "Bar Tools",
+    "difficulty": 2
+  },
+  {
+    "answer": "COBBLER",
+    "clue": "Three-piece shaker with a built-in strainer",
+    "category": "Bar Tools",
+    "difficulty": 2
+  },
+  {
+    "answer": "TIN",
+    "clue": "Metal half of a shaker set",
+    "category": "Bar Tools",
+    "difficulty": 2
+  },
+  {
+    "answer": "CHANNEL KNIFE",
+    "clue": "Tool for cutting long citrus twists",
+    "category": "Bar Tools",
+    "difficulty": 3
+  },
+  {
+    "answer": "JUICER",
+    "clue": "Citrus squeezer",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "TONGS",
+    "clue": "Ice-grabbing utensil",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "LEWIS BAG",
+    "clue": "Canvas sack for crushing ice",
+    "category": "Bar Tools",
+    "difficulty": 3
+  },
+  {
+    "answer": "MALLET",
+    "clue": "Wooden hammer used with a Lewis bag",
+    "category": "Bar Tools",
+    "difficulty": 2
+  },
+  {
+    "answer": "SPEED RAIL",
+    "clue": "Bartender's under-counter bottle shelf",
+    "category": "Bar Tools",
+    "difficulty": 3
+  },
+  {
+    "answer": "ATOMIZER",
+    "clue": "Sprayer for a vermouth mist",
+    "category": "Bar Tools",
+    "difficulty": 3
+  },
+  {
+    "answer": "DASHER",
+    "clue": "Bitters bottle top that releases small doses",
+    "category": "Bar Tools",
+    "difficulty": 3
+  },
+  {
+    "answer": "STIR",
+    "clue": "Mix gently with a bar spoon",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "DRY SHAKE",
+    "clue": "Ice-free agitation to froth egg white",
+    "category": "Bar Tools",
+    "difficulty": 3
+  },
+  {
+    "answer": "DOUBLE STRAIN",
+    "clue": "Pour through two sieves for a cleaner drink",
+    "category": "Bar Tools",
+    "difficulty": 3
+  },
+  {
+    "answer": "BUILD",
+    "clue": "Make a drink directly in its glass",
+    "category": "Bar Tools",
+    "difficulty": 2
+  },
+  {
+    "answer": "RINSE",
+    "clue": "Coat a glass with liqueur, then discard the excess",
+    "category": "Bar Tools",
+    "difficulty": 2
+  },
+  {
+    "answer": "CORKSCREW",
+    "clue": "Wine opener with a spiral",
+    "category": "Bar Tools",
+    "difficulty": 1
+  },
+  {
+    "answer": "COUPE",
+    "clue": "Shallow, stemmed cocktail glass",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "NICK AND NORA",
+    "clue": "Small, bell-shaped stemmed cocktail glass",
+    "category": "Serving",
+    "difficulty": 3
+  },
+  {
+    "answer": "COLLINS",
+    "clue": "Tall, narrow glass for highballs",
+    "category": "Serving",
+    "difficulty": 2
+  },
+  {
+    "answer": "COPA",
+    "clue": "Balloon glass for Spanish-style G&Ts",
+    "category": "Serving",
+    "difficulty": 2
+  },
+  {
+    "answer": "ROCKS",
+    "clue": "On the ___ (over ice)",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "NEAT",
+    "clue": "Straight from the bottle, no ice",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHILLED",
+    "clue": "Served cold",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "DOUBLE",
+    "clue": "Two measures in one pour",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "SHOT",
+    "clue": "Small single serving of liquor",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "HAPPY HOUR",
+    "clue": "Late-afternoon drink discount time",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "APERITIF",
+    "clue": "Pre-dinner drink",
+    "category": "Serving",
+    "difficulty": 2
+  },
+  {
+    "answer": "TOAST",
+    "clue": "Raised-glass salute",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHEERS",
+    "clue": "Clinking-glasses word",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "BARTENDER",
+    "clue": "Drink mixer behind the counter",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "MIXOLOGIST",
+    "clue": "Cocktail specialist, fancily",
+    "category": "Serving",
+    "difficulty": 2
+  },
+  {
+    "answer": "TIPPLE",
+    "clue": "Favorite drink, informally",
+    "category": "Serving",
+    "difficulty": 2
+  },
+  {
+    "answer": "STEM",
+    "clue": "Part of a glass you hold to keep a drink cold",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "STRAW",
+    "clue": "Sipping tube",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "TUMBLER",
+    "clue": "Flat-bottomed glass",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "DASH",
+    "clue": "Small splash of bitters",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "PUB",
+    "clue": "British bar",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "SNIFTER",
+    "clue": "Bulbous brandy glass",
+    "category": "Serving",
+    "difficulty": 2
+  },
+  {
+    "answer": "POUR",
+    "clue": "Dispense from the bottle",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "ROUND",
+    "clue": "Drinks for the whole table",
+    "category": "Serving",
+    "difficulty": 1
+  },
+  {
+    "answer": "LOWBALL",
+    "clue": "Short glass for spirits on ice",
+    "category": "Serving",
+    "difficulty": 2
+  }
+]

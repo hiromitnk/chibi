@@ -1,0 +1,1958 @@
+[
+  {
+    "answer": "MERLOT",
+    "clue": "Plush red grape prominent on Bordeaux's Right Bank",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHARDONNAY",
+    "clue": "White grape of white Burgundy and many buttery California whites",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "RIESLING",
+    "clue": "Aromatic white grape of Germany's Mosel",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "MALBEC",
+    "clue": "Red grape that became Argentina's signature",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "SYRAH",
+    "clue": "Northern Rhone red grape called Shiraz in Australia",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "SHIRAZ",
+    "clue": "Australian name for the Syrah grape",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "ZINFANDEL",
+    "clue": "California red grape genetically identical to Italy's Primitivo",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "PINOT NOIR",
+    "clue": "Thin-skinned red grape of Burgundy's Cote d'Or",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "CABERNET",
+    "clue": "___ Sauvignon, star red grape of Bordeaux's Left Bank",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "GAMAY",
+    "clue": "Red grape of Beaujolais",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "MUSCAT",
+    "clue": "Grape family whose wines often smell of fresh grapes",
+    "category": "Grapes",
+    "difficulty": 1
+  },
+  {
+    "answer": "GRENACHE",
+    "clue": "Red grape called Garnacha in Spain",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "GARNACHA",
+    "clue": "Spanish name for Grenache",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "TEMPRANILLO",
+    "clue": "Principal red grape of Rioja",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "SANGIOVESE",
+    "clue": "Principal red grape of Chianti",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "NEBBIOLO",
+    "clue": "Piedmont grape behind Barolo and Barbaresco",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "BARBERA",
+    "clue": "High-acid red grape widely planted in Piedmont",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "VIOGNIER",
+    "clue": "Apricot-scented white grape of Condrieu",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "SEMILLON",
+    "clue": "White grape blended with Sauvignon Blanc in Sauternes",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "CHENIN BLANC",
+    "clue": "Versatile white grape of Vouvray",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "CARMENERE",
+    "clue": "Bordeaux variety rediscovered in Chile, long mistaken for Merlot",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "ALBARINO",
+    "clue": "Crisp white grape of Rias Baixas",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "PRIMITIVO",
+    "clue": "Puglian red grape identical to Zinfandel",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "MONTEPULCIANO",
+    "clue": "Main red grape of Abruzzo",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "PETITE SIRAH",
+    "clue": "Inky red grape also called Durif",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "CABERNET FRANC",
+    "clue": "Red grape of Chinon and Bourgueil",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "CONCORD",
+    "clue": "Labrusca grape famed for juice and jelly",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "MUSCADINE",
+    "clue": "Native Southeastern US grape whose varieties include Scuppernong",
+    "category": "Grapes",
+    "difficulty": 2
+  },
+  {
+    "answer": "PINOT GRIS",
+    "clue": "White grape called Grauburgunder in Germany",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "TANNAT",
+    "clue": "Tannic red grape of Madiran, now Uruguay's signature",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "PINOTAGE",
+    "clue": "South Africa's signature red crossing",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "VERDEJO",
+    "clue": "White grape of Spain's Rueda",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "TORRONTES",
+    "clue": "Floral white grape of Argentina",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "MOURVEDRE",
+    "clue": "Red grape called Monastrell in Spain",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "CINSAULT",
+    "clue": "Light red grape common in Provence rose blends",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "PETIT VERDOT",
+    "clue": "Late-ripening Bordeaux blending grape",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "MARSANNE",
+    "clue": "White Rhone grape often paired with Roussanne",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "AGLIANICO",
+    "clue": "Red grape behind Taurasi",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "MALVASIA",
+    "clue": "Ancient grape family that gave Madeira's Malmsey its name",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "TREBBIANO",
+    "clue": "Italian grape the French call Ugni Blanc",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "CORVINA",
+    "clue": "Main grape of Valpolicella and Amarone",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "ZWEIGELT",
+    "clue": "Austrian red crossing of Blaufrankisch and St. Laurent",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "BLAUFRANKISCH",
+    "clue": "Austrian red grape known as Lemberger in Washington State",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "FURMINT",
+    "clue": "Hungarian grape central to Tokaji",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "ASSYRTIKO",
+    "clue": "Crisp white grape of Santorini",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "VERMENTINO",
+    "clue": "White grape of Sardinia, called Rolle in Provence",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "CARIGNAN",
+    "clue": "Red grape widespread in Languedoc, called Carinena in Spain",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "DOLCETTO",
+    "clue": "Soft Piedmont red whose name means 'little sweet one'",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "PALOMINO",
+    "clue": "Main grape used for sherry",
+    "category": "Grapes",
+    "difficulty": 3
+  },
+  {
+    "answer": "NAPA",
+    "clue": "California valley famed for Cabernet",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "SONOMA",
+    "clue": "California county that includes the Russian River Valley",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "BORDEAUX",
+    "clue": "French region with a Left Bank and a Right Bank",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "BURGUNDY",
+    "clue": "French region called Bourgogne by locals",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHAMPAGNE",
+    "clue": "French region around Reims and Epernay",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "RIOJA",
+    "clue": "Spanish region known for oak-aged Tempranillo",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHIANTI",
+    "clue": "Tuscan red once sold in straw-wrapped flasks",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "TUSCANY",
+    "clue": "Italian region home to Montalcino",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "OREGON",
+    "clue": "State whose Willamette Valley is known for Pinot Noir",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "PROVENCE",
+    "clue": "Southern French region famed for pale rose",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHILE",
+    "clue": "Long, narrow South American wine country",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "ITALY",
+    "clue": "Country of Chianti and Barolo",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "MENDOZA",
+    "clue": "Argentine province famed for Malbec",
+    "category": "Regions",
+    "difficulty": 1
+  },
+  {
+    "answer": "PIEDMONT",
+    "clue": "Northwest Italian region of Barolo",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "MOSEL",
+    "clue": "Steep-sloped German river valley famed for Riesling",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "RHONE",
+    "clue": "French valley of Chateauneuf-du-Pape",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "LOIRE",
+    "clue": "French valley home to Sancerre and Vouvray",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "ALSACE",
+    "clue": "French region bordering Germany, known for Riesling",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "BAROSSA",
+    "clue": "South Australian valley known for old-vine Shiraz",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "MARLBOROUGH",
+    "clue": "New Zealand region famed for zesty Sauvignon Blanc",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "DOURO",
+    "clue": "Portuguese river valley where port grapes grow",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "SANCERRE",
+    "clue": "Loire appellation known for Sauvignon Blanc",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "CHABLIS",
+    "clue": "Burgundy district known for steely Chardonnay",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "BAROLO",
+    "clue": "Piedmont red made from Nebbiolo",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "MEDOC",
+    "clue": "Bordeaux's Left Bank peninsula",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "SAINT-EMILION",
+    "clue": "Right Bank Bordeaux appellation and hilltop town",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "BEAUJOLAIS",
+    "clue": "Gamay-centric region just south of the Maconnais",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "JEREZ",
+    "clue": "Andalusian town that gave sherry its name",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "NIAGARA",
+    "clue": "Ontario peninsula known for icewine",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "FINGER LAKES",
+    "clue": "Upstate New York region known for Riesling",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "WILLAMETTE",
+    "clue": "Oregon valley famed for Pinot Noir",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "MONTALCINO",
+    "clue": "Tuscan hill town of Brunello",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "VALPOLICELLA",
+    "clue": "Veneto red region near Verona",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "ASTI",
+    "clue": "Piedmont town known for a sweet Moscato sparkler",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "VOUVRAY",
+    "clue": "Loire appellation for Chenin Blanc",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "REIMS",
+    "clue": "Champagne city with chalk cellars and a famed cathedral",
+    "category": "Regions",
+    "difficulty": 2
+  },
+  {
+    "answer": "BARBARESCO",
+    "clue": "Piedmont Nebbiolo appellation neighboring Barolo",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "PAUILLAC",
+    "clue": "Medoc commune famed for First Growth Cabernet blends",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "MARGAUX",
+    "clue": "Medoc appellation known for perfumed reds",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "POMEROL",
+    "clue": "Merlot-dominated Right Bank Bordeaux appellation",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "LANGUEDOC",
+    "clue": "Vast Mediterranean French region west of the Rhone",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "PRIORAT",
+    "clue": "Catalan region known for slate soils called llicorella",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "TOKAJ",
+    "clue": "Hungarian region famed for sweet aszu wines",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "PASO ROBLES",
+    "clue": "Central Coast California AVA known for Zinfandel and Rhone blends",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "CARNEROS",
+    "clue": "Cool district straddling southern Napa and Sonoma",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "STELLENBOSCH",
+    "clue": "South African wine town east of Cape Town",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "COONAWARRA",
+    "clue": "South Australian district famed for terra rossa soil",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "MAIPO",
+    "clue": "Chilean valley near Santiago known for Cabernet",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "RHEINGAU",
+    "clue": "German region on the Rhine known for Riesling",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "POUILLY-FUME",
+    "clue": "Loire Sauvignon Blanc from across the river from Sancerre",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "HERMITAGE",
+    "clue": "Northern Rhone hill famed for Syrah",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "COTE-ROTIE",
+    "clue": "Northern Rhone appellation whose name means 'roasted slope'",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "TAVEL",
+    "clue": "Rhone appellation devoted to rose",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "EPERNAY",
+    "clue": "Champagne town on the Avenue de Champagne",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "BEAUNE",
+    "clue": "Burgundy town famed for its Hospices charity auction",
+    "category": "Regions",
+    "difficulty": 3
+  },
+  {
+    "answer": "OAK",
+    "clue": "Wood for most wine barrels",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "BARREL",
+    "clue": "Cask for aging wine",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "CASK",
+    "clue": "Wooden barrel",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "VAT",
+    "clue": "Large fermenting container",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "TANK",
+    "clue": "Stainless steel fermenter",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "YEAST",
+    "clue": "Microbe that converts sugar to alcohol",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "PRESS",
+    "clue": "Machine that squeezes juice from grapes",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "CRUSH",
+    "clue": "Harvest-season grape processing, in industry lingo",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "FERMENTATION",
+    "clue": "Process that turns sugar into alcohol",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "BLEND",
+    "clue": "Wine made from more than one grape variety",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "VINTNER",
+    "clue": "Winemaker or wine merchant",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "WINERY",
+    "clue": "Place where grapes become vino",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "COOPER",
+    "clue": "Barrel maker",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "SULFITES",
+    "clue": "Preservatives noted on US wine labels",
+    "category": "Winemaking",
+    "difficulty": 1
+  },
+  {
+    "answer": "MUST",
+    "clue": "Freshly crushed grape juice with skins and seeds",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "LEES",
+    "clue": "Spent yeast settled at the bottom of a tank",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "MALOLACTIC",
+    "clue": "Kind of conversion that softens acidity and can add buttery notes",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "RACKING",
+    "clue": "Siphoning wine off its sediment into a clean vessel",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "FINING",
+    "clue": "Clarifying with agents like egg white or bentonite",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "CAP",
+    "clue": "Mass of skins floating atop fermenting red wine",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "POMACE",
+    "clue": "Leftover skins, seeds and stems after pressing",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "MACERATION",
+    "clue": "Skin contact that extracts color and tannin",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "ENOLOGY",
+    "clue": "Science of winemaking",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "BUNG",
+    "clue": "Stopper for a barrel's hole",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "STAVE",
+    "clue": "Curved wooden slat of a barrel",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "TOAST",
+    "clue": "Charring level inside a barrel",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "CUVEE",
+    "clue": "Specific blend or batch, often named on Champagne labels",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "AMPHORA",
+    "clue": "Clay vessel revived by some natural winemakers",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "FORTIFY",
+    "clue": "Add brandy to, as when making port",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "VINIFY",
+    "clue": "Make into wine",
+    "category": "Winemaking",
+    "difficulty": 2
+  },
+  {
+    "answer": "SUR LIE",
+    "clue": "Aged on spent yeast, as Muscadet often is",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "CHAPTALIZE",
+    "clue": "Add sugar to must to raise the final alcohol",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "BATONNAGE",
+    "clue": "Stirring of the lees in barrel",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "PUNCH DOWN",
+    "clue": "Push the cap of skins back into fermenting red",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "SAIGNEE",
+    "clue": "Rose method of bleeding juice from a red vat",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "RIDDLING",
+    "clue": "Gradual turning of sparkling bottles to coax sediment to the neck",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "DISGORGEMENT",
+    "clue": "Removal of yeast sediment from a sparkler's neck",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "DOSAGE",
+    "clue": "Sugar-and-wine mix added to a sparkler just before corking",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "ASSEMBLAGE",
+    "clue": "French term for blending base wines",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "CHARMAT",
+    "clue": "Tank method used for most Prosecco",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "QVEVRI",
+    "clue": "Georgian clay vessel buried for winemaking",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "SOLERA",
+    "clue": "Fractional blending system used for sherry",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "FLOR",
+    "clue": "Yeast film that protects fino sherry from air",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "NEGOCIANT",
+    "clue": "Merchant who buys grapes or wine to bottle under its own label",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "CARBONIC",
+    "clue": "___ maceration, whole-berry technique common in Beaujolais",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "WHOLE CLUSTER",
+    "clue": "Fermentation style using uncrushed bunches, stems and all",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "BRIX",
+    "clue": "Scale measuring sugar in grape juice",
+    "category": "Winemaking",
+    "difficulty": 3
+  },
+  {
+    "answer": "DRY",
+    "clue": "Not sweet",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "SWEET",
+    "clue": "Like dessert wines",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "TANNIN",
+    "clue": "Mouth-drying compound from grape skins and seeds",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "BODY",
+    "clue": "Weight of a wine on the palate",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "NOSE",
+    "clue": "Wine's aroma, to a taster",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "FINISH",
+    "clue": "Lingering taste after swallowing",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "LEGS",
+    "clue": "Streaks running down a swirled glass",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "CRISP",
+    "clue": "Refreshingly acidic",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "OAKY",
+    "clue": "Tasting of vanilla and toast from barrel aging",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "BUTTERY",
+    "clue": "Like a creamy, rich Chardonnay",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "FRUITY",
+    "clue": "Bursting with berry or citrus flavor",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "CORKED",
+    "clue": "Tainted by TCA and smelling of musty cardboard",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "ACIDITY",
+    "clue": "Tartness that makes wine taste fresh",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "SWIRL",
+    "clue": "Rotate in the glass to aerate",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "SIP",
+    "clue": "Small taste",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "SPIT",
+    "clue": "Expel a sample, at a serious tasting",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "PALATE",
+    "clue": "Sense of taste, to a taster",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "BLIND",
+    "clue": "Kind of tasting with labels hidden",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "FLIGHT",
+    "clue": "Set of wines tasted side by side",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "VINTAGE",
+    "clue": "Harvest year on a label",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "SEDIMENT",
+    "clue": "Deposit in an old red's bottle",
+    "category": "Tasting Terms",
+    "difficulty": 1
+  },
+  {
+    "answer": "BOUQUET",
+    "clue": "Complex aromas developed through aging",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "JAMMY",
+    "clue": "Tasting of cooked, very ripe fruit",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "EARTHY",
+    "clue": "Evoking soil or forest floor",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "MINERALITY",
+    "clue": "Stony quality much debated by tasters",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "BALANCE",
+    "clue": "Harmony of fruit, acid, tannin and alcohol",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "VELVETY",
+    "clue": "Smooth and plush in texture",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "FLABBY",
+    "clue": "Lacking enough acidity",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "HOT",
+    "clue": "Overly alcoholic on the finish",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "ASTRINGENT",
+    "clue": "Puckering, like an overly tannic young red",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "OXIDIZED",
+    "clue": "Flat and nutty from too much air exposure",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "FLINTY",
+    "clue": "Like the smoky, stony notes of some Chablis",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "VERTICAL",
+    "clue": "Tasting of one wine across several vintages",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "OFF-DRY",
+    "clue": "Slightly sweet",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "TEARS",
+    "clue": "Droplets on the glass, also called legs",
+    "category": "Tasting Terms",
+    "difficulty": 2
+  },
+  {
+    "answer": "AUSTERE",
+    "clue": "Tight and lacking obvious fruit",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "PETROL",
+    "clue": "Aroma typical of aged Riesling",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "BRETT",
+    "clue": "Spoilage yeast causing barnyard aromas, for short",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "MADERIZED",
+    "clue": "Browned and stale, like a heat-damaged white",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "VEGETAL",
+    "clue": "Green-pepperish, as underripe Cabernet can be",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "PYRAZINE",
+    "clue": "Compound behind green bell pepper notes",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "CLOSED",
+    "clue": "Temporarily muted, as a wine in an awkward phase",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "HORIZONTAL",
+    "clue": "Tasting of many wines from a single vintage",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "TCA",
+    "clue": "Compound behind cork taint, briefly",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "TARTRATES",
+    "clue": "Harmless crystals called 'wine diamonds'",
+    "category": "Tasting Terms",
+    "difficulty": 3
+  },
+  {
+    "answer": "CORK",
+    "clue": "Bark stopper",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "DECANTER",
+    "clue": "Vessel for aerating a red",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "DECANT",
+    "clue": "Pour off sediment into a carafe",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "CARAFE",
+    "clue": "Simple pitcher for house wine",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "CORKSCREW",
+    "clue": "Opener with a worm",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "STEM",
+    "clue": "Part of a wineglass you should hold",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "BOWL",
+    "clue": "Wide part of a wineglass",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "FLUTE",
+    "clue": "Tall, slender sparkling wine glass",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "COUPE",
+    "clue": "Wide, shallow Champagne glass",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "MAGNUM",
+    "clue": "Bottle holding two standard bottles' worth",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "ICE BUCKET",
+    "clue": "Tableside chiller for a bottle of white",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "SOMMELIER",
+    "clue": "Restaurant wine steward",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "WINE LIST",
+    "clue": "Restaurant menu of bottles",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "SALUD",
+    "clue": "Spanish toast",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "POUR",
+    "clue": "Serving, in bar lingo",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHILL",
+    "clue": "Cool down, as a rose",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "RACK",
+    "clue": "Storage frame for bottles",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "CELLAR",
+    "clue": "Underground storage for bottles",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "CORKAGE",
+    "clue": "Restaurant fee for bringing your own bottle",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "BYOB",
+    "clue": "Carry-in policy at some restaurants, briefly",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "SPLIT",
+    "clue": "Quarter-size bottle of bubbly",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "PUNT",
+    "clue": "Indentation in a bottle's base",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "CAPSULE",
+    "clue": "Foil covering over a bottle's cork",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "AERATOR",
+    "clue": "Gadget that oxygenates wine as it's poured",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "SABER",
+    "clue": "Open bubbly with a blade, dramatically",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "SCREW CAP",
+    "clue": "Twist-off closure common in New Zealand",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "SPITTOON",
+    "clue": "Tasting-room bucket",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "WINE KEY",
+    "clue": "Waiter's folding opener",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "CAVE",
+    "clue": "French term for a wine cellar",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "BIN",
+    "clue": "Cellar storage section",
+    "category": "Serving & Glassware",
+    "difficulty": 2
+  },
+  {
+    "answer": "MUSELET",
+    "clue": "Wire cage on a Champagne cork",
+    "category": "Serving & Glassware",
+    "difficulty": 3
+  },
+  {
+    "answer": "TASTEVIN",
+    "clue": "Shallow silver cup worn by old-school sommeliers",
+    "category": "Serving & Glassware",
+    "difficulty": 3
+  },
+  {
+    "answer": "ROSE",
+    "clue": "Pink wine, accented in French",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "BLUSH",
+    "clue": "Pinkish wine, often off-dry",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PORT",
+    "clue": "Fortified wine from the Douro Valley",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "SHERRY",
+    "clue": "Fortified Andalusian wine with styles like fino",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PROSECCO",
+    "clue": "Italian sparkler made mainly from Glera grapes",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "MOSCATO",
+    "clue": "Sweet, often fizzy Italian wine from Muscat grapes",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "CAVA",
+    "clue": "Spanish sparkler made by the traditional method",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "BRUT",
+    "clue": "Dry style of sparkling wine",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "SANGRIA",
+    "clue": "Spanish punch with fruit",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "MULLED",
+    "clue": "Spiced and warmed, as winter wine",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "SPRITZER",
+    "clue": "Wine and soda drink",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "MIMOSA",
+    "clue": "Brunch mix of sparkling wine and orange juice",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "BELLINI",
+    "clue": "Prosecco and peach puree cocktail",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "PLONK",
+    "clue": "Cheap, ordinary wine, in British slang",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "VINO",
+    "clue": "Wine, informally",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "VIN",
+    "clue": "French word for wine",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "JUG",
+    "clue": "___ wine (cheap stuff in big bottles)",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "HOUSE",
+    "clue": "___ wine, a restaurant's default pour",
+    "category": "Styles",
+    "difficulty": 1
+  },
+  {
+    "answer": "MADEIRA",
+    "clue": "Fortified wine from a Portuguese island, deliberately heated",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "SAUTERNES",
+    "clue": "Sweet Bordeaux white made from botrytized grapes",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "AMARONE",
+    "clue": "Rich Veneto red made from dried grapes",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "SOAVE",
+    "clue": "Dry Veneto white made mainly from Garganega",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "BRUNELLO",
+    "clue": "___ di Montalcino, Tuscan Sangiovese red",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "MUSCADET",
+    "clue": "Dry Loire white made from Melon de Bourgogne",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "CREMANT",
+    "clue": "French sparkler made outside Champagne by the traditional method",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "SEKT",
+    "clue": "German sparkling wine",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "LAMBRUSCO",
+    "clue": "Fizzy red from Emilia-Romagna",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "ICEWINE",
+    "clue": "Sweet nectar from grapes frozen on the vine",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "NOUVEAU",
+    "clue": "Beaujolais ___, released each November",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "DEMI-SEC",
+    "clue": "Moderately sweet sparkling style",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "BLANC DE BLANCS",
+    "clue": "Sparkler made only from white grapes",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "FINO",
+    "clue": "Pale, dry sherry style",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "TAWNY",
+    "clue": "Port style aged in wood until brownish",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "RUBY",
+    "clue": "Youthful, fruity port style",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "VINHO VERDE",
+    "clue": "Light, often spritzy Portuguese white",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "RETSINA",
+    "clue": "Greek wine flavored with pine resin",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "KIR",
+    "clue": "White wine with creme de cassis",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "CLARET",
+    "clue": "British term for red Bordeaux",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "SUPER TUSCAN",
+    "clue": "Italian red often using Bordeaux grapes outside traditional rules",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "ORANGE",
+    "clue": "Like white wine made with extended skin contact",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "NATURAL",
+    "clue": "___ wine, made with minimal intervention",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "PET-NAT",
+    "clue": "Lightly sparkling wine bottled before fermentation finishes",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "OENOPHILE",
+    "clue": "Wine lover",
+    "category": "Styles",
+    "difficulty": 2
+  },
+  {
+    "answer": "BLANC DE NOIRS",
+    "clue": "White sparkler made from red grapes",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "OLOROSO",
+    "clue": "Rich, oxidatively aged sherry style",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "AMONTILLADO",
+    "clue": "Sherry style aged first under flor, then oxidatively",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "HOCK",
+    "clue": "Old British term for Rhine wine",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "SPATLESE",
+    "clue": "German 'late harvest' Pradikat level",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "AUSLESE",
+    "clue": "German Pradikat level meaning 'select harvest'",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "KABINETT",
+    "clue": "Lowest-ripeness German Pradikat level",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "TROCKEN",
+    "clue": "German for dry, on a wine label",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "VIN SANTO",
+    "clue": "Tuscan dessert wine traditionally made from dried grapes",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "CRIANZA",
+    "clue": "Spanish aging category below Reserva",
+    "category": "Styles",
+    "difficulty": 3
+  },
+  {
+    "answer": "VINE",
+    "clue": "Grape plant",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "VINEYARD",
+    "clue": "Grape farm",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "HARVEST",
+    "clue": "Picking time",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "CLUSTER",
+    "clue": "Bunch of grapes",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "GRAPE",
+    "clue": "Vine fruit",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "FROST",
+    "clue": "Spring threat to tender vine buds",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "SLOPE",
+    "clue": "Hillside site, often favored for drainage",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "CHATEAU",
+    "clue": "Bordeaux wine estate",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "ORGANIC",
+    "clue": "Farmed without synthetic chemicals",
+    "category": "Vineyard",
+    "difficulty": 1
+  },
+  {
+    "answer": "TERROIR",
+    "clue": "Sense of place from soil and climate",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "VARIETAL",
+    "clue": "Wine labeled by a single grape",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "TRELLIS",
+    "clue": "Support system for vines",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "CANOPY",
+    "clue": "Leafy part of a vine managed for sun exposure",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "ROOTSTOCK",
+    "clue": "Base plant onto which vinifera is grafted",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "GRAFT",
+    "clue": "Join a scion to a rootstock",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "PHYLLOXERA",
+    "clue": "Root louse that ravaged European vineyards",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "PRUNING",
+    "clue": "Winter cutting back of vines",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "VINIFERA",
+    "clue": "Vitis ___, species of most wine grapes",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "VITIS",
+    "clue": "Genus of grapevines",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "MILDEW",
+    "clue": "Fungal vine disease, powdery or downy",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "TERRACE",
+    "clue": "Stepped vineyard on a steep hillside",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "CHALK",
+    "clue": "Soil famously underlying Champagne",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "SLATE",
+    "clue": "Rock-type soil of the Mosel",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "GRAVEL",
+    "clue": "Free-draining soil of the Medoc's best sites",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "YIELD",
+    "clue": "Crop size, often limited for quality",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "CRU",
+    "clue": "Vineyard of recognized quality, in French",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "DOMAINE",
+    "clue": "Burgundian wine estate",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "BIODYNAMIC",
+    "clue": "Farming approach based on Rudolf Steiner's ideas",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "TENDRIL",
+    "clue": "Curling shoot that grips supports",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "MICROCLIMATE",
+    "clue": "Local weather of a single vineyard site",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "BOTRYTIS",
+    "clue": "Fungus that shrivels grapes for Sauternes and Tokaji",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "NOBLE ROT",
+    "clue": "Benign mold prized for sweet wines",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "GRAND CRU",
+    "clue": "Top vineyard classification in Burgundy",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "APPELLATION",
+    "clue": "Legally defined wine-growing area",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "AOC",
+    "clue": "French wine-origin system, briefly",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "AVA",
+    "clue": "US designated grape-growing region, briefly",
+    "category": "Vineyard",
+    "difficulty": 2
+  },
+  {
+    "answer": "VERAISON",
+    "clue": "Onset of ripening, when red grapes change color",
+    "category": "Vineyard",
+    "difficulty": 3
+  },
+  {
+    "answer": "BUD BREAK",
+    "clue": "Spring stage when vines start growing",
+    "category": "Vineyard",
+    "difficulty": 3
+  },
+  {
+    "answer": "CLONE",
+    "clue": "Genetically identical vine selection",
+    "category": "Vineyard",
+    "difficulty": 3
+  },
+  {
+    "answer": "VENDANGE",
+    "clue": "French word for grape harvest",
+    "category": "Vineyard",
+    "difficulty": 3
+  },
+  {
+    "answer": "VIGNERON",
+    "clue": "French grape grower",
+    "category": "Vineyard",
+    "difficulty": 3
+  },
+  {
+    "answer": "CLOS",
+    "clue": "Walled vineyard, in Burgundy",
+    "category": "Vineyard",
+    "difficulty": 3
+  },
+  {
+    "answer": "HANG TIME",
+    "clue": "Period grapes stay on the vine before picking",
+    "category": "Vineyard",
+    "difficulty": 3
+  },
+  {
+    "answer": "PREMIER CRU",
+    "clue": "Burgundy vineyard tier just below the top",
+    "category": "Vineyard",
+    "difficulty": 3
+  },
+  {
+    "answer": "DOCG",
+    "clue": "Italy's top wine classification, briefly",
+    "category": "Vineyard",
+    "difficulty": 3
+  }
+]
