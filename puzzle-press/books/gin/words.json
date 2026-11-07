@@ -54,18 +54,6 @@
     "difficulty": 3
   },
   {
-    "answer": "ALMOND",
-    "clue": "Nut that appears, often bitter, in some botanical blends",
-    "category": "Botanicals",
-    "difficulty": 2
-  },
-  {
-    "answer": "NUTMEG",
-    "clue": "Seed spice grated over eggnog and used in some gins",
-    "category": "Botanicals",
-    "difficulty": 1
-  },
-  {
     "answer": "ROSE",
     "clue": "Flower whose petals perfume some floral gins",
     "category": "Botanicals",
@@ -102,12 +90,6 @@
     "difficulty": 2
   },
   {
-    "answer": "PINE",
-    "clue": "Resinous tree aroma typical of juniper-forward gins",
-    "category": "Botanicals",
-    "difficulty": 1
-  },
-  {
     "answer": "CITRUS",
     "clue": "Lemon or orange, as a gin flavor family",
     "category": "Botanicals",
@@ -128,24 +110,6 @@
   {
     "answer": "CARAWAY",
     "clue": "Rye bread seed sometimes used as a gin botanical",
-    "category": "Botanicals",
-    "difficulty": 2
-  },
-  {
-    "answer": "CHAMOMILE",
-    "clue": "Daisy-like flower used in tea and some gins",
-    "category": "Botanicals",
-    "difficulty": 2
-  },
-  {
-    "answer": "HIBISCUS",
-    "clue": "Red flower used to tint and flavor some gins",
-    "category": "Botanicals",
-    "difficulty": 2
-  },
-  {
-    "answer": "SAFFRON",
-    "clue": "Costly spice that can tint a spirit gold",
     "category": "Botanicals",
     "difficulty": 2
   },
@@ -178,54 +142,6 @@
     "clue": "Andean bark that is the source of quinine",
     "category": "Botanicals",
     "difficulty": 2
-  },
-  {
-    "answer": "TERPENE",
-    "clue": "Pinene or limonene, chemically",
-    "category": "Botanicals",
-    "difficulty": 3
-  },
-  {
-    "answer": "LIMONENE",
-    "clue": "Citrus-scented compound abundant in lemon peel",
-    "category": "Botanicals",
-    "difficulty": 3
-  },
-  {
-    "answer": "ROSEMARY",
-    "clue": "Piney herb sprig used to garnish a G&T",
-    "category": "Botanicals",
-    "difficulty": 1
-  },
-  {
-    "answer": "THYME",
-    "clue": "Herb whose name sounds like a clock word",
-    "category": "Botanicals",
-    "difficulty": 1
-  },
-  {
-    "answer": "BASIL",
-    "clue": "Leafy herb muddled into a gin smash",
-    "category": "Botanicals",
-    "difficulty": 1
-  },
-  {
-    "answer": "SAGE",
-    "clue": "Gray-green herb used in some savory gins",
-    "category": "Botanicals",
-    "difficulty": 1
-  },
-  {
-    "answer": "CUCUMBER",
-    "clue": "Cool green slice in many modern G&Ts",
-    "category": "Botanicals",
-    "difficulty": 1
-  },
-  {
-    "answer": "BERRY",
-    "clue": "Juniper fruit, informally",
-    "category": "Botanicals",
-    "difficulty": 1
   },
   {
     "answer": "DISTILL",
@@ -312,12 +228,6 @@
     "difficulty": 2
   },
   {
-    "answer": "FEINTS",
-    "clue": "Low-quality fractions of a run, in British distilling",
-    "category": "Production",
-    "difficulty": 3
-  },
-  {
     "answer": "CONDENSER",
     "clue": "Still part that turns vapor back into liquid",
     "category": "Production",
@@ -354,24 +264,6 @@
     "difficulty": 2
   },
   {
-    "answer": "GRAIN",
-    "clue": "Wheat or rye, as a spirit base",
-    "category": "Production",
-    "difficulty": 1
-  },
-  {
-    "answer": "WHEAT",
-    "clue": "Common cereal base for neutral spirit",
-    "category": "Production",
-    "difficulty": 1
-  },
-  {
-    "answer": "RYE",
-    "clue": "Cereal used in some spirit bases and breads",
-    "category": "Production",
-    "difficulty": 2
-  },
-  {
     "answer": "MOLASSES",
     "clue": "Sugarcane byproduct used for some neutral spirits",
     "category": "Production",
@@ -379,7 +271,7 @@
   },
   {
     "answer": "MALT WINE",
-    "clue": "Malty distillate that gives genever its character",
+    "clue": "Grain distillate that gives genever its rich character",
     "category": "Production",
     "difficulty": 3
   },
@@ -432,40 +324,16 @@
     "difficulty": 1
   },
   {
-    "answer": "CASK",
-    "clue": "Wooden aging vessel",
-    "category": "Production",
-    "difficulty": 1
-  },
-  {
     "answer": "LOUCHE",
     "clue": "Cloudy effect when an oily spirit is chilled or diluted",
     "category": "Production",
     "difficulty": 3
   },
   {
-    "answer": "CHARGE",
-    "clue": "Load of spirit and botanicals placed in a still",
-    "category": "Production",
-    "difficulty": 3
-  },
-  {
-    "answer": "SPIRIT",
-    "clue": "Distilled alcoholic drink",
-    "category": "Production",
-    "difficulty": 1
-  },
-  {
     "answer": "ESSENTIAL OIL",
     "clue": "Aromatic compound carried from botanicals into the spirit",
     "category": "Production",
     "difficulty": 2
-  },
-  {
-    "answer": "RECIPE",
-    "clue": "Distiller's secret list of botanicals",
-    "category": "Production",
-    "difficulty": 1
   },
   {
     "answer": "GIN",
@@ -505,7 +373,7 @@
   },
   {
     "answer": "PINK GIN",
-    "clue": "Old naval drink of gin and aromatic bitters",
+    "clue": "Old naval drink of juniper spirit and aromatic bitters",
     "category": "Styles",
     "difficulty": 2
   },
@@ -558,30 +426,6 @@
     "difficulty": 2
   },
   {
-    "answer": "VODKA",
-    "clue": "Neutral cousin of gin",
-    "category": "Styles",
-    "difficulty": 1
-  },
-  {
-    "answer": "LIQUEUR",
-    "clue": "Sweetened spirit such as sloe gin",
-    "category": "Styles",
-    "difficulty": 1
-  },
-  {
-    "answer": "FLAVORED",
-    "clue": "Like fruit or spice gins, broadly",
-    "category": "Styles",
-    "difficulty": 1
-  },
-  {
-    "answer": "PINK",
-    "clue": "Color of many berry-infused gins",
-    "category": "Styles",
-    "difficulty": 1
-  },
-  {
     "answer": "DRY",
     "clue": "Not sweet, as a Martini",
     "category": "Styles",
@@ -625,7 +469,7 @@
   },
   {
     "answer": "MOTHERS RUIN",
-    "clue": "Old nickname for gin from its Georgian-era reputation",
+    "clue": "Old British nickname for gin",
     "category": "History",
     "difficulty": 2
   },
@@ -670,12 +514,6 @@
     "clue": "Disease quinine helps treat",
     "category": "History",
     "difficulty": 1
-  },
-  {
-    "answer": "RAJ",
-    "clue": "British ___, era when quinine tonics were drunk in India",
-    "category": "History",
-    "difficulty": 2
   },
   {
     "answer": "WILLIAM",
@@ -742,18 +580,6 @@
     "clue": "Era of London's gin craze",
     "category": "History",
     "difficulty": 3
-  },
-  {
-    "answer": "EXCISE",
-    "clue": "Duty levied on domestically made spirits",
-    "category": "History",
-    "difficulty": 3
-  },
-  {
-    "answer": "SAILOR",
-    "clue": "Navy man with a rum or gin ration, perhaps",
-    "category": "History",
-    "difficulty": 1
   },
   {
     "answer": "REPEAL",
@@ -960,20 +786,8 @@
     "difficulty": 1
   },
   {
-    "answer": "COCKTAIL",
-    "clue": "Mixed drink",
-    "category": "Cocktails",
-    "difficulty": 1
-  },
-  {
     "answer": "HIGHBALL",
     "clue": "Spirit-plus-mixer drink served tall",
-    "category": "Cocktails",
-    "difficulty": 1
-  },
-  {
-    "answer": "NIGHTCAP",
-    "clue": "Drink before bed",
     "category": "Cocktails",
     "difficulty": 1
   },
@@ -992,12 +806,6 @@
   {
     "answer": "SODA",
     "clue": "Club ___ (bubbly mixer)",
-    "category": "Mixers & Garnishes",
-    "difficulty": 1
-  },
-  {
-    "answer": "SELTZER",
-    "clue": "Plain fizzy water",
     "category": "Mixers & Garnishes",
     "difficulty": 1
   },
@@ -1104,18 +912,6 @@
     "difficulty": 3
   },
   {
-    "answer": "SHRUB",
-    "clue": "Vinegar-based drinking syrup",
-    "category": "Mixers & Garnishes",
-    "difficulty": 3
-  },
-  {
-    "answer": "ORGEAT",
-    "clue": "Almond syrup",
-    "category": "Mixers & Garnishes",
-    "difficulty": 3
-  },
-  {
     "answer": "GARNISH",
     "clue": "Decorative finishing touch on a drink",
     "category": "Mixers & Garnishes",
@@ -1200,8 +996,20 @@
     "difficulty": 1
   },
   {
-    "answer": "ICE",
-    "clue": "Cubes in a highball",
+    "answer": "ROSEMARY",
+    "clue": "Piney herb sprig used to garnish a G&T",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "BASIL",
+    "clue": "Leafy herb muddled into a gin smash",
+    "category": "Mixers & Garnishes",
+    "difficulty": 1
+  },
+  {
+    "answer": "CUCUMBER",
+    "clue": "Cool green slice in many modern G&Ts",
     "category": "Mixers & Garnishes",
     "difficulty": 1
   },
@@ -1284,12 +1092,6 @@
     "difficulty": 1
   },
   {
-    "answer": "TONGS",
-    "clue": "Ice-grabbing utensil",
-    "category": "Bar Tools",
-    "difficulty": 1
-  },
-  {
     "answer": "LEWIS BAG",
     "clue": "Canvas sack for crushing ice",
     "category": "Bar Tools",
@@ -1350,12 +1152,6 @@
     "difficulty": 2
   },
   {
-    "answer": "CORKSCREW",
-    "clue": "Wine opener with a spiral",
-    "category": "Bar Tools",
-    "difficulty": 1
-  },
-  {
     "answer": "COUPE",
     "clue": "Shallow, stemmed cocktail glass",
     "category": "Serving",
@@ -1392,12 +1188,6 @@
     "difficulty": 1
   },
   {
-    "answer": "CHILLED",
-    "clue": "Served cold",
-    "category": "Serving",
-    "difficulty": 1
-  },
-  {
     "answer": "DOUBLE",
     "clue": "Two measures in one pour",
     "category": "Serving",
@@ -1428,12 +1218,6 @@
     "difficulty": 1
   },
   {
-    "answer": "CHEERS",
-    "clue": "Clinking-glasses word",
-    "category": "Serving",
-    "difficulty": 1
-  },
-  {
     "answer": "BARTENDER",
     "clue": "Drink mixer behind the counter",
     "category": "Serving",
@@ -1458,44 +1242,8 @@
     "difficulty": 1
   },
   {
-    "answer": "STRAW",
-    "clue": "Sipping tube",
-    "category": "Serving",
-    "difficulty": 1
-  },
-  {
     "answer": "TUMBLER",
     "clue": "Flat-bottomed glass",
-    "category": "Serving",
-    "difficulty": 1
-  },
-  {
-    "answer": "DASH",
-    "clue": "Small splash of bitters",
-    "category": "Serving",
-    "difficulty": 1
-  },
-  {
-    "answer": "PUB",
-    "clue": "British bar",
-    "category": "Serving",
-    "difficulty": 1
-  },
-  {
-    "answer": "SNIFTER",
-    "clue": "Bulbous brandy glass",
-    "category": "Serving",
-    "difficulty": 2
-  },
-  {
-    "answer": "POUR",
-    "clue": "Dispense from the bottle",
-    "category": "Serving",
-    "difficulty": 1
-  },
-  {
-    "answer": "ROUND",
-    "clue": "Drinks for the whole table",
     "category": "Serving",
     "difficulty": 1
   },

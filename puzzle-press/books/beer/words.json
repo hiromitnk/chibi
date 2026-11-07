@@ -1210,5 +1210,29 @@
     "clue": "Cause of wet-cardboard staleness in old beer",
     "category": "Tasting Terms",
     "difficulty": 3
+  },
+  {
+    "answer": "TAVERN",
+    "clue": "Inn's drinking room",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "BARTENDER",
+    "clue": "One pulling pints for patrons",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "COLD ONE",
+    "clue": "Chilled beer, casually",
+    "category": "Serving & Glassware",
+    "difficulty": 1
+  },
+  {
+    "answer": "TOAST",
+    "clue": "Raise a glass in honor of",
+    "category": "Serving & Glassware",
+    "difficulty": 1
   }
 ]
