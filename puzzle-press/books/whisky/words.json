@@ -84,6 +84,12 @@
   "difficulty": 2
  },
  {
+  "answer": "GRIST",
+  "clue": "Coarsely milled malt ready for mashing",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
   "answer": "KILN",
   "clue": "Oven where germinated barley is dried",
   "category": "Production",
@@ -222,6 +228,12 @@
   "difficulty": 1
  },
  {
+  "answer": "STARCH",
+  "clue": "Grain component converted to sugar during mashing",
+  "category": "Production",
+  "difficulty": 2
+ },
+ {
   "answer": "PROOF",
   "clue": "US strength measure equal to twice the ABV",
   "category": "Production",
@@ -282,6 +294,12 @@
   "difficulty": 2
  },
  {
+  "answer": "CASK",
+  "clue": "Wooden container for aging spirit",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
   "answer": "BARREL",
   "clue": "Standard American whiskey container, about 53 gallons",
   "category": "Casks & Aging",
@@ -322,6 +340,24 @@
   "clue": "Metal band holding a barrel together",
   "category": "Casks & Aging",
   "difficulty": 1
+ },
+ {
+  "answer": "BUNG",
+  "clue": "Stopper for a cask's opening",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "COOPER",
+  "clue": "Barrel maker",
+  "category": "Casks & Aging",
+  "difficulty": 1
+ },
+ {
+  "answer": "HOGSHEAD",
+  "clue": "Cask of about 250 liters, often rebuilt from barrels",
+  "category": "Casks & Aging",
+  "difficulty": 2
  },
  {
   "answer": "BUTT",
@@ -816,6 +852,12 @@
   "difficulty": 1
  },
  {
+  "answer": "TEARS",
+  "clue": "Legs, by another name",
+  "category": "Tasting Terms",
+  "difficulty": 2
+ },
+ {
   "answer": "SMOKY",
   "clue": "Like a heavily peated malt",
   "category": "Tasting Terms",
@@ -1074,6 +1116,12 @@
   "difficulty": 1
  },
  {
+  "answer": "BOILERMAKER",
+  "clue": "Shot of whiskey with a beer",
+  "category": "Serving & Cocktails",
+  "difficulty": 2
+ },
+ {
   "answer": "NIP",
   "clue": "Small sip or bottle of spirits",
   "category": "Serving & Cocktails",
@@ -1222,6 +1270,12 @@
   "clue": "Dish addressed in verse and served with a dram each January 25",
   "category": "History & Culture",
   "difficulty": 2
+ },
+ {
+  "answer": "TEMPERANCE",
+  "clue": "Movement that pushed for Prohibition",
+  "category": "History & Culture",
+  "difficulty": 1
  },
  {
   "answer": "ROTGUT",
