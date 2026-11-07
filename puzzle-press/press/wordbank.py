@@ -32,6 +32,17 @@ def _tokens(answer: str):
     return [t for t in re.split(r"[ -]", answer) if len(t) >= 3]
 
 
+def _clue_words(clue: str) -> set:
+    """ヒント中の単語（小文字）。'S と末尾の S を外した形も含める（Martini's → martini）。"""
+    out = set()
+    for w in re.findall(r"[a-z]+(?:'s)?", clue.lower()):
+        w = w.removesuffix("'s")
+        out.add(w)
+        if len(w) > 3 and w.endswith("s"):
+            out.add(w[:-1])
+    return out
+
+
 def validate(entries: list[Entry]):
     """(errors, warnings) を返す。errors があれば本は作らない。"""
     errors, warnings = [], []
@@ -92,19 +103,23 @@ class Picker:
             self.entries,
             key=lambda e: self.usage[e.letters] * 3.0 + cost[e.difficulty] + self.rng.random() * 2.5,
         )
-        chosen, used_tokens, long_count = [], set(), 0
+        chosen, used_tokens, clue_words, long_count = [], set(), set(), 0
         for e in scored:
             if len(chosen) >= n:
                 break
             toks = set(_tokens(e.answer)) | {e.letters}
             if toks & used_tokens:
                 continue  # PALE ALE と ALE のように同じ語を含む答えは同じ問題に入れない
+            words = _clue_words(e.clue)
+            if {t.lower() for t in toks} & clue_words or words & {t.lower() for t in used_tokens}:
+                continue  # 他の問題のヒントに答えが出てしまう組み合わせ（MONK と TRAPPIST など）は避ける
             if len(e.letters) >= 10:
                 if long_count >= 4:
                     continue
                 long_count += 1
             chosen.append(e)
             used_tokens |= toks
+            clue_words |= words
         return chosen
 
     def commit(self, entries: list[Entry]):
