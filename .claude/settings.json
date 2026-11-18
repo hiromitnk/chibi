@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__freee__freee_auth_status",
+      "mcp__freee__freee_get_current_company",
+      "mcp__freee__freee_list_companies",
+      "mcp__freee__freee_api_get",
+      "mcp__freee__freee_api_bulk_get",
+      "mcp__freee__freee_api_put",
+      "mcp__freee__freee_api_post"
+    ]
+  }
+}
